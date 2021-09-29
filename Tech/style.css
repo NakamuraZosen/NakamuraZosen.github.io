@@ -1,0 +1,289 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800&display=swap');
+
+/*style for all of page*/
+body{
+  margin: 0;
+  font-family: "游ゴシック", sans-serif;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #440088;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #440088;
+  font-size: 1.5em;
+}
+
+main {
+  background-color: whitesmoke;
+  color: #252525;
+  margin-top: 100px;
+}
+
+/*style for header on pc*/
+header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  background-color: #440088;
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__wrapper {
+  width:90%;
+  height:100%;
+  margin: 0 auto;
+}
+
+.header__container {
+  display: flex;
+  height: 100%
+}
+
+.header__logo {
+  width: 180px;
+  min-width: 180px;
+  margin: 0;
+}
+
+.header__logo-ja {
+  height: 50px;
+  margin: 0;
+  font-family: "游明朝", serif;
+  font-size: 2em;
+  letter-spacing: 0.4em;
+}
+
+.header__logo-en {
+  height: 20px;
+  font-family: "Arial", sans-serif;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+}
+
+@media screen and (min-width: 768px) {
+  #header__nav-button {
+    display: none;
+  }
+
+  #header__nav {
+    width: 500px;
+    height: 100%;
+    margin-left: auto;
+  }
+  
+  .header__list {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  
+  .header__item {
+    flex: 1 1;
+    display: flex;
+    border-left: 1px solid silver;
+  }
+  
+  .header__item:last-child {
+    border-right: 1px solid silver;
+  }
+  
+  .header__item-link{
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .header__list span {
+    display: flex;
+    align-items: center;
+    word-break: keep-all;
+  }
+  
+  .header__item-link:hover span {
+    border-bottom: 4px solid #fff;
+  }
+}
+
+/*style for header on phone*/
+@media screen and (max-width: 767px) {
+  #header__nav {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    width: 40%;
+    height: 200px;
+    background-color: #440088;
+    color: #fff;
+    transition: .5s;
+  }
+
+  .header__nav-open {
+    transform: translateY(280px);
+  }
+
+  .header__list {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .header__item {
+    padding: 0.5em 0;
+    border-top: 1px solid silver;
+  }
+
+  .header__item:last-child {
+    border-bottom: 1px solid silver;
+  }
+
+  .header__item a {
+    display: flex;
+    color: #fff;
+  }
+
+  #header__nav-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    background-color: #440088;
+    border: none;
+    z-index: 10;
+  }
+
+  .header__nav-button-line {
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+  .header__nav-button-line::before , .header__nav-button-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+
+  }
+  .header__nav-button-line::before {
+    transform: translateY(-10px);
+  }
+  .header__nav-button-line::after {
+    transform: translateY(10px);
+  }
+
+}
+
+/*style for footer*/
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #440088;
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__sns {
+  position: relative;
+  top: 20px;
+}
+
+.footer__sns-index {
+  text-align: center;
+}
+
+.footer__sns-list {
+  display: flex;
+  justify-content: center;
+  padding: 0%;
+}
+
+.footer__item {
+  padding: 0% 20px;
+}
+
+.footer__item:first-child {
+  border-right: 1px solid silver;
+}
+
+.footer__copyright {
+  position: relative;
+  text-align: center;
+  top: 50px;
+  font-size: 0.7em;
+}
+
+/*style for content*/
+h1{
+  text-align: center;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 2em;
+}
+
+.Title {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+
+.Title__subtitle {
+  text-align: center;
+}
+
+.Types {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+}
+
+.Types__description {
+  text-align: center;
+}
+
+.Types__list {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.Types__item {
+  padding: 1em 0;
+  border-bottom: 1px solid silver;
+}
+
+.Types__item:last-child {
+  border-bottom: none;
+}
