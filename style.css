@@ -15,7 +15,7 @@ ul{
 h1 {
   text-align: center;
   font-family: 'M PLUS 1p', sans-serif;
-  color: #440088;
+  color: #fff;
 }
 
 h2 {
@@ -28,7 +28,7 @@ h2 {
 main {
   background-color: whitesmoke;
   color: #252525;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 /*style for header on pc*/
@@ -246,6 +246,10 @@ footer a {
 }
 
 /*style for content*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .hero {
   position: relative;
