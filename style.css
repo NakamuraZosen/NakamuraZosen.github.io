@@ -62,10 +62,15 @@ header a {
   width: 180px;
   min-width: 180px;
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo a {
+  display: block;
 }
 
 .header__logo-ja {
-  height: 50px;
   margin: 0;
   font-family: 'Noto Serif JP', "游明朝", serif;
   font-size: 2em;
@@ -73,7 +78,7 @@ header a {
 }
 
 .header__logo-en {
-  height: 20px;
+  margin: 0;
   font-family: "Arial", sans-serif;
   font-size: 0.6em;
   letter-spacing: 0.2em;
