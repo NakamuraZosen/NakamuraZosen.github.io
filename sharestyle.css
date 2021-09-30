@@ -5,6 +5,7 @@
 body{
   margin: 0;
   font-family: "游ゴシック", sans-serif;
+  background-color: whitesmoke;
 }
 
 ul{
@@ -19,7 +20,6 @@ h1 ,h2 {
 }
 
 main {
-  background-color: whitesmoke;
   color: #252525;
   margin-top: 80px;
 }
