@@ -44,6 +44,7 @@ a {
 .hero__img {
   width: 100%;
   height: 56.25vw;
+  background-color: silver;
 }
 
 .youtubelink {
