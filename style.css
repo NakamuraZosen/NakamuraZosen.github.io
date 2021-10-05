@@ -10,6 +10,8 @@ a {
 .hero {
   position: relative;
   margin-top: 80px;
+  height: 56.25vw;
+  background-color: silver;
 }
 
 .hero__text {
@@ -43,8 +45,6 @@ a {
 
 .hero__img {
   width: 100%;
-  height: 56.25vw;
-  background-color: silver;
 }
 
 .youtubelink {
