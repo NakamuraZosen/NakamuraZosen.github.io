@@ -2,9 +2,16 @@
 @import url(../sharestyle.css);
 
 /*style for content*/
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .img {
-  width: 90%;
-  height: 45vw;
+  width: 100%;
+  max-width: 1440px;
+  height: 40vw;
+  max-height: 576px;
   margin: 0 auto;
   background-color: gray;
 }
