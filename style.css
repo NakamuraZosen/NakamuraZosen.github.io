@@ -10,8 +10,7 @@ a {
 .hero {
   position: relative;
   margin-top: 80px;
-  height: 56.25vw;
-  background-color: silver;
+  width: 100%;
 }
 
 .hero__text {
