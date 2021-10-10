@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+  <head>
+    <title>SCS-F1｜固定兵装制御装置 - 中村のマインクラフト</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#440088">
+    <meta name="keywords" content="マインクラフト,中村造船,回路,船,装置">
+    <meta name="description" content="">
+    <link href="../style_ships.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header__wrapper">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="https://NakamuraZosen.github.io/">
+              <p class="header__logo-ja">
+                中村造船
+              </p>
+              <div class="header__logo-en">
+                NAKAMURA SHIPBUILDING
+              </div>
+            </a>
+          </div>
+
+          <button type="button" id="header__nav-button">
+            <span class="header__nav-button-line"></span>
+          </button>
+
+          <nav id="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a href="https://NakamuraZosen.github.io/Products/" class="header__item-link"><span>作品</span></a></li>
+              <li class="header__item"><a href="https://NakamuraZosen.github.io/Tech/" class="header__item-link"><span>回路の小技</span></a></li>
+              <li class="header__item"><a href="https://NakamuraZosen.github.io/News/" class="header__item-link"><span>ニュース</span></a></li>
+              <li class="header__item"><a href="https://NakamuraZosen.github.io/About/" class="header__item-link"><span>中村とは</span></a></li>
+            </ul>
+          </nav>
+
+          <script src="../script.js"></script>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="img">
+        <img src="scsf1.webp" alt="SCS-F1" title="SCS-F1">
+      </div>
+      <div class="overview">
+        <h1 class="overview__name">固定兵装制御装置 SCS-F1</h1>
+        <p class="overview__charactristics">
+          第二世代四天王プラットフォームを構成する装置<br>
+          固定型のTNT砲を制御する。<br>
+        </p>
+      </div>
+
+      <div class="spacification">
+        <h2 class="spacification__name">仕様</h2>
+        <div class="spacification__container">
+          <div class="spacification__content">
+            <h3 class="spacification__content-name">大きさ</h3>
+            <ul class="spacification__content-list">
+              <li class="spacification__content-item">全長:8m</li>
+              <li class="spacification__content-item">全幅:5m</li>
+              <li class="spacification__content-item">全高:7m</li>
+            </ul>
+          </div>
+          <div class="spacification__content">
+            <h3 class="spacification__content-name">主な搭載艦</h3>
+            <ul class="spacification__content-list">
+              <li class="spacification__content-item"><a href="../Battleship/index.html">有馬・中村</a></li>
+              <li class="spacification__content-item"><a href="../Destroyer/index.html">RB9</a></li>
+            </ul>
+          </div>
+        </div>        
+      </div>
+
+      <div class="description">
+        <h2 class="description__name">解説</h2>
+        <h3 class="description__chapter">SCSとは</h3>
+        <p>
+          　TNT砲の真下に設置し、<b>FCS</b>からの信号を砲塔に送る装置です。SCSは兵装ゲート装置の一種であり、SCSにセンサー部を追加したものが<b>砲塔制御装置TCS</b>です。
+        </p>
+        <h3 class="description__chapter">開発経緯</h3>
+        <p>
+          　従来の第一世代四天王プラットフォームではこの機能はFCSに内蔵されていました。第二世代四天王プラットフォームのFCSはシリアル制御のスペース確保のため、本装置に機能が移されました。
+        </p>
+        <h3 class="description__chapter">ゲート部</h3>
+        <p>
+          　どの兵装を射撃するのかを選択する回路です。<br>
+          　第二世代四天王プラットフォームでは、すべての兵装へ同時に発射信号を出し、それをゲートで開通又は遮断することで各兵装を選択します。<br>
+          　FCSからは、発射信号と選択信号が送られ、選択信号がONなら、発射信号を開通します。
+        </p>
+        <h3 class="description__chapter">暴発防止部（BB回路）</h3>
+        <p>
+          　暴発を防止する回路です。<br>
+          　発射信号出力中に遮断する、あるいは発射信号遮断中に開通する等すると発射信号の長さが変わり、キャノン暴発の原因になります。また、装薬追加後に発射を行わず、装薬が放置されることも暴発の原因になります。<br>
+          　これらを防ぐのが暴発防止回路です。
+        </p>
+      </div>
+      <div class="links">
+        <h2 class="links__name">さらに詳しく</h2>
+        <div class="links__container">
+          <a href="../FCS/index.html">FCSとは</a><br>
+          <a href="../TCS/index.html">TCSとは</a>
+        </div>
+      </div>
+      <div class="movies">
+        <h2 class="movies__name">解説動画</h2>
+        <div class="movies__container">
+        
+        </div>
+      </div>
+      <div class="backbutton">
+        <a href="../index.html"><span>作品一覧へ戻る</span></a>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="footer__sns">
+        <h3 class="footer__sns-index">SNS</h3>
+        <ul class="footer__sns-list">
+          <li class="footer__item"><a href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer" class="footer__item-link">公式YouTube</a></li>
+          <li class="footer__item"><a href="https://twitter.com/NHI_nakamura" target="_blank" rel="noopener noreferrer" class="footer__item-link">公式Twitter</a></li>
+        </ul>
+      </div>
+      <p class="footer__copyright">©2021 Nakamura Shipbuilding, All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
