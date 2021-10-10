@@ -84,6 +84,18 @@ img {
   justify-content: center;
 }
 
+.links {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+
+.links__container {
+  width: 10em;
+  margin: 16px auto;
+}
+
 .backbutton {
   height: 40px;
   width: 10em;
