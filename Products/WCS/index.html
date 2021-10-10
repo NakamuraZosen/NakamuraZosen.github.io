@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=ja dir="ltr">
   <head>
-    <title>FCS-F1｜シリアル入力対応射撃管制装置 - 中村のマインクラフト</title>
+    <title>WCS-F1｜無線通信の制御 - 中村のマインクラフト</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#440088">
@@ -44,13 +44,13 @@
 
     <main>
       <div class="img">
-        <img src="fcsf1.webp" alt="FCS-F1" title="FCS-F1">
+        <img src="wcsf1.webp" alt="WCS-F1" title="WCS-F1">
       </div>
       <div class="overview">
-        <h1 class="overview__name">射撃管制装置 FCS-F1</h1>
+        <h1 class="overview__name">無線兵装制御装置及び操作室 WCS-F1</h1>
         <p class="overview__charactristics">
-          第二世代四天王プラットフォームを構成する主たる装置<br>
-          上級反撃システム、及びシリアル入力に対応<br>
+          第二世代四天王プラットフォームを構成する装置<br>
+          無線通信の制御を担う<br>
         </p>
       </div>
 
@@ -60,8 +60,8 @@
           <div class="spacification__content">
             <h3 class="spacification__content-name">大きさ</h3>
             <ul class="spacification__content-list">
-              <li class="spacification__content-item">全長:35m</li>
-              <li class="spacification__content-item">全幅:15m</li>
+              <li class="spacification__content-item">全長:25m</li>
+              <li class="spacification__content-item">全幅:13m</li>
               <li class="spacification__content-item">全高:7m</li>
             </ul>
           </div>
@@ -77,38 +77,30 @@
 
       <div class="description">
         <h2 class="description__name">解説</h2>
-        <h3 class="description__chapter">FCSとは</h3>
+        <h3 class="description__chapter">WCSとは</h3>
         <p>
-          　船のTNTキャノンを制御する装置群（四天王プラットフォーム）の最も重要な装置です。艦橋、WCS、及びダメージセンサーから命令を集め、情報を処理し、各<b>砲塔制御装置</b>等へと命令を出す役割を担います。<br>
-          　FCSは電源装置部、選択制御部、反撃システム制御部から成ります。電源装置は発射の信号をすべての兵装制御装置に出し、選択回路はどの兵装を射撃するのかを選択します。選択回路ON時に発射信号が開通することで兵装を射撃しますが、ゲートの機能は砲塔制御装置及び固定兵装制御装置に内蔵されています。
+          　無線通信による兵装選択を保存し、FCSへとシリアル出力する装置です。CICも内蔵しています。<br>
         </p>
         <h3 class="description__chapter">開発経緯</h3>
         <p>
-          　無線通信に対応することが最大の要求でした。従来の制御装置では無線通信からの信号を入力する端子のスペースが残されていませんでした。そこで、シリアル通信を活用することにしました。<br>
-          　従来のFCS(主制御装置CSJ11)にシリアル入力制御部を追加し、その代わりに従来のFCSに内蔵されていたCICを外付けとして設計しました。CICは<b>WCS</b>に内蔵され、無線通信制御と一体で機能します。
+          　WCSは第二世代四天王プラットフォームにて新たに登場した装置です。無線通信による兵装選択を保存する機能とCICの機能があります。<br>
+          　第一世代四天王プラットフォームのFCSにはCICが内蔵されていました。第二世代では従来のFCS(主制御装置CSJ11)にシリアル入力制御部を追加し、その代わりに従来のFCSに内蔵されていたCICを外付けとして設計しました。<br>
+          　その外付けCICと、無線通信による兵装選択を保存する機能を合わせたのがWCSです。
         </p>
-        <h3 class="description__chapter">電源装置</h3>
+        <h3 class="description__chapter">CIC</h3>
         <p>
-          　各兵装へ発射信号を出す装置です。「電源装置を作動させる」というと兵装を射撃することを表します。<br>
-          　装薬追加、自動連射などの機能を持ち、各信号の長さを調整することができます。本装置に搭載されている電源装置は第三世代です。
+          　CICは艦内で艦橋に代わる第二の操作室です。被弾により損傷しないよう、水中に配置されています。<br>
+          　本装置のCICは、無線による兵装選択の状況を表示する役割もあります。
         </p>
-        <h3 class="description__chapter">選択制御部</h3>
+        <h3 class="description__chapter">無線制御部</h3>
         <p>
-          　どの兵装を射撃するのかを選択する回路です。<br>
-          　パラレル入力、シリアル入力に対応、パラレル入力なら選択回路は入力端子から出力端子へとつながるのみです。シリアル入力は、一連の入力信号を検出すると電源装置を作動させます。<br>
-          　シリアル入力からの操作中は、パラレル入力が遮断されます。
-        </p>
-        <h3 class="description__chapter">反撃システム制御部</h3>
-        <p>
-          　敵の攻撃による船体の損傷を検知し、自動で射撃を行う機能です。<br>
-          　ダメージセンサーからの入力を検出すると、電源装置を作動させます。センサーの信号から兵装を選択することもできます。
+          　無線による兵装選択を保存する装置です。
         </p>
       </div>
       <div class="links">
         <h2 class="links__name">さらに詳しく</h2>
         <div class="links__container">
-          <a href="../WCS/index.html">WCSとは</a><br>
-          <a href="../TCS/index.html">砲塔制御装置とは</a>
+          <a href="../FCS/index.html">FCSとは</a><br>
         </div>
       </div>
       <div class="movies">
