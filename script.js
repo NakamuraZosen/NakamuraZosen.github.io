@@ -5,5 +5,7 @@ function hamburger() {
     hamburger();
   } , false);
 
+function writecookie() {
   document.cookie = 'visited=true';
   console.log(document.cookie);
+}
