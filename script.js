@@ -5,16 +5,3 @@ function hamburger() {
     hamburger();
   } , false);
 
-function writecookie() {
-  document.cookie = 'visited=true';
-  console.log(document.cookie);
-}
-
-function readcookie() {
-  if (document.cookie == 'visited=true') {
-    
-  } else {
-    alert('初めて');
-  }
-  console.log(document.cookie);
-}
