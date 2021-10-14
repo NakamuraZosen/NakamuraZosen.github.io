@@ -7,6 +7,7 @@ function hamburger() {
 
 function writecookie() {
   document.cookie = 'visited=true';
+  console.log(document.cookie);
 }
 
 function readcookie() {
@@ -15,4 +16,5 @@ function readcookie() {
   } else {
     alert('初めて');
   }
+  console.log(document.cookie);
 }
