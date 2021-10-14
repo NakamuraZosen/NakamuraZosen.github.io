@@ -10,9 +10,9 @@ window.onload = function() {
   var StartPositionOfVisited = CookieData.indexOf('visited=',0);
 
   if (StartPositionOfVisited == -1) {
-    alert('初めまして');
+    alert('なかむらのホームページへようこそ。もしよければブックマークしてください。検索しても出てきませんから( ﾉД`)ｼｸｼｸ…');
     var expire = new Date();
-    expire.setTime( expire.getTime() + 1000 * 3600 * 24 * 1 );
+    expire.setTime( expire.getTime() + 1000 * 3600 * 24 * 365 );
     document.cookie = 'visited=true; path=/; expires='+ expire;
   } else {
   }
