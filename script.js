@@ -12,7 +12,7 @@ window.onload = function() {
   if (StartPositionOfVisited == -1) {
     alert('初めまして');
     var expire = new Date();
-    expire.setTime( expire.getTime() + 1000 * 3600 * 24 * 1 );
+    expire.setTime( expire.getTime() + 1000 * 3600 * 24 * 365 );
     document.cookie = 'visited=true; path=/; expires='+ expire;
   } else {
   }
