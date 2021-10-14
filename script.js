@@ -5,12 +5,14 @@ function hamburger() {
   document.getElementById('header__nav').classList.toggle('header__nav-open');
 }
 
-var CookieData = document.cookie + ';';
-var StartPositionOfVisited = CookieData.indexOf('visited=',0);
+window.onload = function() {
+  var CookieData = document.cookie + ';';
+  var StartPositionOfVisited = CookieData.indexOf('visited=',0);
 
-if (StartPositionOfVisited == -1) {
-  alert('初めまして');
-  document.cookie = 'visited=true';
-} else {
+  if (StartPositionOfVisited == -1) {
+    alert('初めまして');
+    document.cookie = 'visited=true';
+  } else {
+  }
+  console.log(document.cookie);
 }
-console.log(document.cookie);
