@@ -11,8 +11,11 @@ window.onload = function() {
 
   if (StartPositionOfVisited == -1) {
     alert('初めまして');
-    document.cookie = 'visited=true; max-age=365*24*60*60; path=/';
+    var expire = new Date();
+    expire.setTime( expire.getTime() + 1000 * 3600 * 24 * 1 );
+    document.cookie = 'visited=true; path=/; expires='+ expire;
   } else {
   }
   console.log(document.cookie);
 }
+
