@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url(../sharestyle.css);
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;800&display=swap');
+/*style for content*/
+.Title {
+  height: 50vh;
+  border-bottom: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Title__name {
+  color: dimgray;
+  font-family: 'Noto Serif JP', "游明朝", serif;
+  white-space: nowrap;
+  font-size: 9vw;
+}
+.Title__subtitle {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 300;
+  letter-spacing: .2rem;
+  line-height: 3;
+  color: dimgray;
+}
+@media screen and (min-width: 768px) {
+  .Title__subtitle {
+    text-align: center;
+    margin: 7em 1em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Title__subtitle {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 4em auto;
+  }
+}
+
+.sns {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex: 1 1;
+}
+.sns__container {
+  width: 500px;
+  color: #fff;
+  border-radius: 20px;
+  margin: 30px;
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.sns__container:hover {
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  transition: .2s;
+}
+.yt {
+  background-color: #f00;
+}
+.tw {
+  background-color: rgb(29, 155, 240);
+}
+.hp {
+  background-color: #440088;
+}
+@media screen and (max-width: 767px) {
+  .sns {
+    flex-wrap: wrap;
+  }
+  .sns__container {
+    margin: 20px 0;
+  }
+}
+.sns__name {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+  width: 90%;
+  color: #fff;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid silver;
+}
+.sns__content {
+  width: 90%;
+  margin: 0 auto;
+}
+.sns__index-wrapper {
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid silver;
+  border-radius: 20px;
+}
+.sns__link-wrapper {
+  height: 100px;
+  width: 70%;
+  margin: 20px auto;
+  border: 1px solid silver;
+  border-radius: 20px;
+}
+.sns__link-wrapper a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.sns__link-wrapper:hover {
+  background-color: white;
+  color: dimgray;
+  transition: .2s;
+}
