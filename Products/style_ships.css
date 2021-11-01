@@ -133,7 +133,7 @@ img {
   margin: 20px auto;
   text-align: center;
   line-height: 2;
-  cursor : pointer;
+  cursor: pointer;
 }
 #iframeModal__closeButton:hover {
   color: #fff;
