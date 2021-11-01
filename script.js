@@ -15,7 +15,7 @@ window.onload = function() {
     alert('なかむらのホームページへようこそ。もしよければブックマークしてください。検索しても出てきませんから( ﾉД`)ｼｸｼｸ…');
     var expire = new Date();
     expire.setTime( expire.getTime() + 1000 * 3600 * 24 * 365 );
-    document.cookie = 'visited=true; path=/; expires='+ expire;
+    document.cookie = 'visited=true; path=/; secure; expires='+ expire;
   } else {
   }
   console.log(document.cookie);
@@ -25,10 +25,15 @@ window.onload = function() {
 var openButton = document.getElementById('relatedMovie__button');
 var closeButton = document.getElementById('iframeModal__closeButton');
 var modalBackground = document.getElementById('iframeModal__background');
+var loaded = false;
 
 openButton.addEventListener('click', openModal);
 function openModal() {
   modalBackground.style.display = 'flex';
+  if (loaded == false) {
+    closeButton.insertAdjacentHTML('beforebegin','<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/eWcYph5I_84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    loaded = true;
+  };
 };
 
 closeButton.addEventListener('click', closeModal);
