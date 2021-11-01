@@ -193,7 +193,7 @@ a {
   height: 315px;
   max-width: 90%;
   max-height: 50.625vw;
-  cursor : pointer;
+  cursor: pointer;
 }
 #relatedMovie__button:hover {
   background-color: rgba(0, 0, 0, 0.5);
