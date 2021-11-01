@@ -46,8 +46,6 @@
               <li class="header__item"><a href="./About/index.html" class="header__item-link"><span>中村とは</span></a></li>
             </ul>
           </nav>
-
-          <script src="script.js"></script>
         </div>
       </div>
   </header>
@@ -64,7 +62,7 @@
     </div>
 
     <div class="youtubelink">
-      <a class="youtubelink__link" href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer">
+      <a class="youtubelink__link" href="#">
         <span>公式YouTubeチャンネルはこちら</span> 
       </a>
     </div>
@@ -91,21 +89,31 @@
       <a class="lineup__more" href="./Products/index.html">MORE</a>
     </div>
 
-    <div class="youtubeiframe">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/eWcYph5I_84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
+    <div class="relatedMovie">
+      <h2>関連動画</h2>
+      <div class="relatedMovie__container">
+        <span id="relatedMovie__button"></span>  
+        <img src="thumbnail.webp" alt="play movie">             
+      </div>
+    </div>
+    <div id="iframeModal__background">
+      <div class="iframeModal__card">
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/eWcYph5I_84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="iframeModal__closeButton">閉じる</div>
+      </div>
     </div>
 
   </main>
   <footer class="footer">
     <div class="footer__sns">
-      <h3 class="footer__sns-index">SNS</h3>
+      <p class="footer__sns-index">SNS</p>
         <ul class="footer__sns-list">
           <li class="footer__item"><a href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer" class="footer__item-link">公式YouTube</a></li>
-          <li class="footer__item"><a href="#" class="footer__item-link">公式Twitter</a></li>
+          <li class="footer__item"><a href="https://twitter.com/NHI_nakamura" target="_blank" rel="noopener noreferrer" class="footer__item-link">公式Twitter</a></li>
         </ul>
       </div>
-      <p class="footer__copyright">©2021 Nakamura Shipbuilding, All rights reserved.</p>
+      <small class="footer__copyright">©2021 Nakamura Shipbuilding, All rights reserved.</small>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
