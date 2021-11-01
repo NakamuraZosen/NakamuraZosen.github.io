@@ -209,7 +209,7 @@ a {
   justify-content: center;
   align-items: center;
   display: none;
-  transition: .2s;
+  z-index: 9;
 }
 .iframeModal__card {
   width: 80%;
