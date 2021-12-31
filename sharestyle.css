@@ -7,179 +7,142 @@ body{
   font-family: "游ゴシック", sans-serif;
   background-color: whitesmoke;
 }
-
 ul{
   list-style: none;
   padding: 0;
 }
-
 h1 ,h2 {
   text-align: center;
   font-family: 'M PLUS 1p', sans-serif;
   color: #440088;
 }
-
 main {
   color: #333;
   line-height: 1.6;
-  margin-top: 80px;
 }
 
 /*style for header on pc*/
 header {
   width: 100%;
-  height: 80px;
-  position: absolute;
-  top: 0px;
   background-color: #440088;
   color: #fff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-
 header a {
   text-decoration: none;
   color: inherit;
 }
-
-.header__wrapper {
-  width:90%;
-  height:100%;
-  margin: 0 auto;
-}
-
-.header__container {
-  display: flex;
-  height: 100%
-}
-
-.header__logo {
-  width: 180px;
-  min-width: 180px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.header__logo a {
-  display: block;
-}
-
-.header__logo-ja {
-  margin: 0;
-  font-family: 'Noto Serif JP', "游明朝", serif;
-  font-size: 2em;
-  letter-spacing: 0.4em;
-}
-
-.header__logo-en {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-}
-
 @media screen and (min-width: 768px) {
+  /*style of header logo*/
+  .header__logo {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .header__logo a {
+    display: block;
+  }
+  .header__logo-ja {
+    margin: 0;
+    text-align: center;
+    font-family: 'Noto Serif JP', "游明朝", serif;
+    font-size: 2em;
+    letter-spacing: 0.4em;
+  }
+  .header__logo-en {
+    margin: 0;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+  }
+  /*hide nav button on pc*/
   #header__nav-button {
     display: none;
   }
-
+  /*style of nav bar*/
   #header__nav {
-    width: 500px;
-    height: 100%;
-    margin-left: auto;
-  }
-  
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #440088;
+    background-color: #fff;
+    border-bottom: 2px solid  #440088;
+  }  
   .header__list {
     height: 100%;
+    width: 80%;
+    max-width: 1000px;
     display: flex;
     justify-content: flex-end;
-    margin: 0;
-  }
-  
+    margin: 0 auto;
+  }  
   .header__item {
     flex: 1 1;
     display: flex;
     border-left: 1px solid silver;
-  }
-  
+  }  
   .header__item:last-child {
     border-right: 1px solid silver;
   }
-  
   .header__item-link{
     display: flex;
     flex: 1 1;
     justify-content: center;
     padding: 0;
-  }
-  
+  }  
   .header__list span {
     display: flex;
     align-items: center;
     word-break: keep-all;
-  }
-  
-  .header__item-link:hover span {
-    border-bottom: 4px solid #fff;
+  }  
+  .header__item-link:hover {
+    background-color: silver;
+    transition: .2s;
   }
 }
 
 /*style for header on phone*/
 @media screen and (max-width: 767px) {
-  #header__nav {
-    position: absolute;
-    top: -300px;
-    right: 0;
-    width: 50%;
-    height: 300px;
-    background-color: #440088;
-    color: #fff;
-    z-index: 10;
-    transition: .5s;
-  }
-
-  .header__nav-open {
-    transform: translateY(380px);
-  }
-
-  .header__list {
-    width: 90%;
-    height: 90%;
-    margin: 5% auto;
-    padding: 0;
+  .header__container {
     display: flex;
-    flex-direction: column;
-  }
-
-  .header__item {
-    flex: 1 1;
-    display: flex;
-    border-top: 1px solid silver;
-  }
-
-  .header__item:last-child {
-    border-bottom: 1px solid silver;
-  }
-
-  .header__item-link {
-    flex: 1 1;
-    display: flex;
+    /*put it for centering button. container height depend on logo height*/
     align-items: center;
-    color: #fff;
   }
-
+  /*header logo*/
+  .header__logo {
+    width: 15em;
+    padding: 5px 0;
+  }
+  .header__logo a {
+    display: block;
+  }
+  .header__logo-ja {
+    margin: 0;
+    text-align: center;
+    font-family: 'Noto Serif JP', "游明朝", serif;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+  }
+  .header__logo-en {
+    margin: 0;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+  }
+  /*nav button*/
   #header__nav-button {
-    position: absolute;
     width: 40px;
     height: 40px;
-    top: 20px;
-    right: 20px;
-    padding: 0;
     background-color: #440088;
-    border: none;
+    margin-left: auto;
+    margin-right: 10px;
     z-index: 10;
+    /*cancel default button sytle*/
+    border: none;
+    padding: 0;
   }
-
   .header__nav-button-line {
     display: block;
     position: relative;
@@ -188,7 +151,6 @@ header a {
     margin: 0 auto;
     background-color: #fff;
   }
-
   .header__nav-button-line::before , .header__nav-button-line::after {
     content: "";
     position: absolute;
@@ -196,7 +158,6 @@ header a {
     width: 100%;
     height: 3px;
     background-color: #fff;
-
   }
   .header__nav-button-line::before {
     transform: translateY(-10px);
@@ -204,7 +165,44 @@ header a {
   .header__nav-button-line::after {
     transform: translateY(10px);
   }
-
+  /*style of nav*/
+  #header__nav {
+    position: absolute;
+    top: -300px;
+    right: 0;
+    width: 50%;
+    height: 300px;
+    background-color: #440088;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #fff;
+    z-index: 10;
+    transition: .5s;
+  }
+  .header__nav-open {
+    transform: translateY(380px);
+  }
+  .header__list {
+    width: 90%;
+    height: 90%;
+    margin: 5% auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__item {
+    flex: 1 1;
+    display: flex;
+    border-top: 1px solid silver;
+  }
+  .header__item:last-child {
+    border-bottom: 1px solid silver;
+  }
+  .header__item-link {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }  
 }
 
 /*style for footer*/
@@ -217,36 +215,29 @@ footer {
   color: #fff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
-
 footer a {
   text-decoration: none;
   color: inherit;
 }
-
 .footer__sns {
   position: relative;
   top: 20px;
 }
-
 .footer__sns-index {
   text-align: center;
   font-weight: bold;
 }
-
 .footer__sns-list {
   display: flex;
   justify-content: center;
   padding: 0%;
 }
-
 .footer__item {
   padding: 0% 20px;
 }
-
 .footer__item:first-child {
   border-right: 1px solid silver;
 }
-
 .footer__copyright {
   position: relative;
   text-align: center;
