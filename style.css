@@ -106,14 +106,12 @@ a {
 }
 .lineup__index--description h2 {
   color: #fff;
-  font-size: 4vw;
   border-bottom: 1px solid white;
   margin-bottom: 2em;
   letter-spacing: .5em;
 }
 .lineup__index--description p {
   color: #fff;
-  font-size: 2vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -132,8 +130,11 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .lineup__index--description {
-    font-size: 1vw;
+  .lineup__index--description h2 {
+    font-size: 5vw;
+  }
+  .lineup__index--description p {
+    font-size: 2vw;
   }
   .lineup__list {
     display: block;
