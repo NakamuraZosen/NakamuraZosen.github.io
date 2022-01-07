@@ -103,13 +103,17 @@ a {
 .lineup__index--description {
   position: absolute;
   text-align: center;
-  color: #fff;
 }
-.lineup h2 {
+.lineup__index--description h2 {
   color: #fff;
+  font-size: 4vw;
   border-bottom: 1px solid white;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   letter-spacing: .5em;
+}
+.lineup__index--description p {
+  color: #fff;
+  font-size: 2vw;
 }
 
 @media screen and (min-width: 768px) {
