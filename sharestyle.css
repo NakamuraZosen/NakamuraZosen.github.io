@@ -29,6 +29,8 @@ header a {
 @media screen and (min-width: 768px) {
   header {
     width: 100%;
+    /*spacer for included header*/
+    height: 119.5px;
     background-color: #440088;
     color: #fff;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -106,6 +108,8 @@ header a {
 @media screen and (max-width: 767px) {
   header {
     width: 100%;
+    /*spacer for included header*/
+    height: 56px;
     color: #440088;
     border-bottom: 2px solid #440088;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
