@@ -37,23 +37,21 @@ img {
   justify-content: center;
 }
 .spacification__content {
-  width: 150px;
-  margin-bottom: 1em;
+  margin: 0 1em 1em 1em;
 }
 .spacification__content-name {
   text-align: center;
-  margin-top: 0;
 }
 /*style for table*/
 table {
   margin: 0 auto;
   border-collapse: collapse;
 }
-td {
+td, th {
   padding: .2em .8em;
   border-bottom: 1px solid silver;
 }
-tr:first-child td {
+tr:first-child td, th {
   border-top: 1px solid silver;
 }
 /*style for old list*/
