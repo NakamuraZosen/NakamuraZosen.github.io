@@ -31,31 +31,38 @@ img {
   margin: 0 auto;
   border-bottom: 1px solid silver;
 }
-
 .spacification__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .spacification__content {
-  width: 100px;
-  margin: 0 2em;
+  width: 150px;
+  margin-bottom: 1em;
 }
-
 .spacification__content-name {
   text-align: center;
   margin-top: 0;
 }
-
+/*style for table*/
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+td {
+  padding: .2em .8em;
+  border-bottom: 1px solid silver;
+}
+tr:first-child td {
+  border-top: 1px solid silver;
+}
+/*style for old list*/
 .spacification__content-list {
   padding: 0;
 }
-
 .spacification__content-item {
   border-top: 1px solid silver;
 }
-
 .spacification__content-item:last-child {
   border-bottom: 1px solid silver;
 }
@@ -155,7 +162,7 @@ img {
 .backbutton {
   height: 40px;
   width: 10em;
-  margin: 0 auto;
+  margin: 20px auto;
   border: 1px solid silver;
   display: flex;
 }
