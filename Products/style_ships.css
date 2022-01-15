@@ -118,7 +118,7 @@ tr:first-child td, th {
   justify-content: center;
   align-items: center;
   display: none;
-  z-index: 9;
+  z-index: 10;
 }
 .iframeModal__card {
   width: 80%;
@@ -126,7 +126,7 @@ tr:first-child td, th {
   background-color: #fff;
   border-radius: 20px;
 }
-.iframeModal__card iframe {
+.iframeModal__card iframe, img {
   display: block;
   width: 90%;
   height: 40.5vw;  
