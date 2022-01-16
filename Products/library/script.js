@@ -55,15 +55,22 @@ const closeButton = document.getElementById('iframeModal__closeButton');
 const modalBackground = document.getElementById('iframeModal__background');
 
 document.addEventListener('click', function(e) {
+  //avoid matches closebutton
   if (e.target.matches('td')) {
-    //avoid matches closebutton
-    var shipNo = e.target.parentNode.id;
     modalBackground.style.display = 'flex';
+    var clickedTr = e.target.parentNode;
+    //load img
+    var shipNo = clickedTr.id;
     var imgElement = document.createElement('img');
     imgElement.src = shipNo + '.webp';
     imgElement.alt = shipNo + 'の画像はありません。';
     imgElement.title = shipNo;
     imgElement.id = 'img';
+    //load ship name
+    var shipName = clickedTr.children[1].textContent;
+    var shipClass = clickedTr.children[3].textContent;
+    document.getElementById('shipName').insertAdjacentText('afterbegin',shipName + '級' + shipClass);
+
     closeButton.before(imgElement);
   };
 });
@@ -71,5 +78,6 @@ document.addEventListener('click', function(e) {
 modalBackground.addEventListener('click', closeModal);
 function closeModal() {
   document.getElementById('img').remove();
+  document.getElementById('shipName').textContent = '';
   modalBackground.style.display = 'none';
 };
