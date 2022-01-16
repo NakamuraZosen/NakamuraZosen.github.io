@@ -126,7 +126,7 @@ tr:first-child td, th {
   background-color: #fff;
   border-radius: 20px;
 }
-.iframeModal__card iframe, img {
+.iframeModal__card iframe, .iframeModal__card img {
   display: block;
   width: 90%;
   height: 40.5vw;  
@@ -137,7 +137,7 @@ tr:first-child td, th {
     width: 95%;
     height: auto;
   }
-  .iframeModal__card iframe, img {
+  .iframeModal__card iframe, .iframeModal__card img {
     width: 95%;
     height: auto;  
   }
