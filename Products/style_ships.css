@@ -137,9 +137,12 @@ tr:first-child td, th {
     width: 95%;
     height: auto;
   }
-  .iframeModal__card iframe, .iframeModal__card img {
+  .iframeModal__card iframe {
     width: 95%;
-    height: auto;  
+    height: 50.766vw;
+  }
+  .iframeModal__card img {
+    width: 95%;
   }
 }
 #iframeModal__closeButton {
