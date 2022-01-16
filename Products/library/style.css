@@ -1,0 +1,20 @@
+.tablesorter-default {
+  width: auto;
+  margin: auto;
+  text-align: inherit;
+}
+.tablesorter-default th {
+  background-color: silver;
+}
+.tablesorter-default td {
+  background-color: whitesmoke;
+}
+
+.overview__rank {
+  width: 30em;
+  margin: 0 auto;
+}
+
+.iframeModal__card img {
+  height: auto;
+}
