@@ -62,7 +62,7 @@ document.addEventListener('click', function(e) {
     //load img
     var shipNo = clickedTr.id;
     var imgElement = document.createElement('img');
-    imgElement.src = shipNo + '.webp';
+    imgElement.src = './img/' + shipNo + '.webp';
     imgElement.alt = shipNo + 'の画像はありません。';
     imgElement.title = shipNo;
     imgElement.id = 'img';
