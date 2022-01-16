@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-208873990-1');
+  </script>
+
+  <title>すべての作品 - 中村のマインクラフト</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#440088">
+  <meta name="keywords" content="マインクラフト,中村造船,回路,船,ブログ">
+  <meta name="description"
+    content="過去のすべての艦艇のリストです。">
+  <link rel="stylesheet" href="../style_ships.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="header" id="header">
+
+  </header>
+
+  <main>
+    <div class="overview">
+      <h1 class="overview__name">過去のすべての艦艇</h1>
+      <p class="overview__charactristics">
+        過去のすべての艦艇のリストです。<br>
+        各項目で並べ替えることができます。項目をクリックすると画像が表示されます。見られる画像は今後増えていきます。
+      </p>
+    </div>
+
+    <ol class="overview__rank">
+      <br>
+      「等級」とは艦のハイテク度を表します。
+      <li>四天王プラットフォームを搭載する艦。最もハイテク</li>
+      <li>TNTキャノンか、水流装甲を搭載する艦。</li>
+      <li>TNTキャノンも水流装甲も搭載しない見た目だけの艦。</li>
+      <li>船の構造から逸脱している船。</li>
+      <br>
+    </ol>
+    
+    <div id="iframeModal__background">
+      <div class="iframeModal__card">
+        <div id="iframeModal__closeButton">閉じる</div>
+      </div>
+    </div>
+
+    <table class="sort-table">
+      <thead>
+        <tr>
+          <th>艦番号</th><th>艦級</th><th>竣工日時</th><th>艦種</th><th>等級</th><th>全長</th><th>総ブロック数</th>
+        </tr>
+      </thead>
+      <tbody class="output_csv">
+      </tbody>
+    </table>
+
+    <div class="backbutton">
+      <a href="../index.html"><span>作品一覧へ戻る</span></a>
+    </div>
+  </main>
+
+  <footer id="footer">
+
+  </footer>
+  <script src="../../shareScript.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
