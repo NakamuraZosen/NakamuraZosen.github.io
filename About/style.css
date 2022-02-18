@@ -26,6 +26,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .icon__img {
+    width: 80%;
+  }
   .Title__subtitle {
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -49,7 +52,9 @@
   box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.5);
 }
 .sns__container:hover {
-  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: translateX(5px);
+  transform: translateY(5px);
   transition: .2s;
 }
 .yt {
