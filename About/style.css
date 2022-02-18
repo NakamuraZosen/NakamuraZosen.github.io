@@ -2,24 +2,21 @@
 @import url(../sharestyle.css);
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;800&display=swap');
 /*style for content*/
-.Title {
-  height: 50vh;
+.icon {
+  padding: 20px;
   border-bottom: 1px solid silver;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Title__name {
-  color: dimgray;
-  font-family: 'Noto Serif JP', "游明朝", serif;
-  white-space: nowrap;
-  font-size: 9vw;
+.icon__img {
+  border-radius: 9999px;
 }
 .Title__subtitle {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 300;
   letter-spacing: .2rem;
-  line-height: 3;
+  line-height: 2;
   color: dimgray;
 }
 @media screen and (min-width: 768px) {
