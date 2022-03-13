@@ -176,6 +176,7 @@ tr:first-child td, th {
   border-bottom: 1px solid silver;
 }
 .distributions__step {
+  font-weight: bold;
   margin: 0 auto;
   display: flex;
   justify-content: center;
