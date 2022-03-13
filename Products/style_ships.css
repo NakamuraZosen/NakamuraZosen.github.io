@@ -169,24 +169,20 @@ tr:first-child td, th {
   width: 10em;
   margin: 16px auto;
 }
-
 .backbutton {
-  height: 40px;
-  width: 10em;
+  width: max-content;
   margin: 20px auto;
-  border: 1px solid silver;
-  display: flex;
+  border: 2px solid silver;
+  border-radius: 9999px;
 }
-
 .backbutton a {
-  flex: 1 1;
+  display: block;
+  padding: .5em 1em;
   text-decoration: none;
   color: inherit;
-  display: flex;
-  justify-content: center;
 }
-
-.backbutton span {
-  display: flex;
-  align-items: center;
+.backbutton:hover {
+  background-color: #408;
+  color: #fff;
+  transition: .2s;
 }
