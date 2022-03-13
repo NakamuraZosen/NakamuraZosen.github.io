@@ -169,6 +169,63 @@ tr:first-child td, th {
   width: 10em;
   margin: 16px auto;
 }
+.distributions {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.distributions__step {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.distributions__step span {
+  padding: 1em 2em;
+  border-radius: 9px;
+  background-color: lightgray;
+}
+.arrow{
+  position: relative;
+  display: inline-block;
+  margin: 0 16px;
+  padding: 0 0 0 16px;
+  color: #000;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+}
+.arrow::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+.sample5-2::before{
+  width: 8px;
+  height: 8px;
+  border-top: 4px solid lightgray;
+  border-right: 4px solid lightgray;
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 767px) {
+  .distributions__step {
+    display: block;
+  }
+  .distributions__step span {
+    display: block;
+    padding: 1em 2em;
+  }
+  .arrow {
+    margin: 0 50%;
+  }
+  .sample5-2::before{
+    transform: rotate(135deg);
+  }
+}
 .backbutton {
   width: max-content;
   margin: 20px auto;
