@@ -226,7 +226,13 @@ tr:first-child td, th {
     transform: rotate(135deg);
   }
 }
+.backbutton:hover {
+  background-color: blueviolet;
+  transition: .2s;
+}
 .backbutton {
+  color: #fff;
+  background-color: #408;
   width: max-content;
   margin: 20px auto;
   border: 2px solid silver;
@@ -237,9 +243,4 @@ tr:first-child td, th {
   padding: .5em 1em;
   text-decoration: none;
   color: inherit;
-}
-.backbutton:hover {
-  background-color: #408;
-  color: #fff;
-  transition: .2s;
 }
