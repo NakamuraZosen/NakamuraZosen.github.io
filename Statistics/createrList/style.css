@@ -1,0 +1,20 @@
+.tablesorter-default {
+  width: auto;
+  margin: auto;
+  text-align: inherit;
+}
+.tablesorter-default th {
+  background-color: silver;
+}
+.tablesorter-default td {
+  background-color: whitesmoke;
+}
+.tablesorter-default tr:nth-child(even) td {
+  background-color: #eee;
+}
+.tablesorter-default a {
+  display: block;
+  max-height: 4em;
+  overflow: hidden;
+  word-break: break-all;
+}
