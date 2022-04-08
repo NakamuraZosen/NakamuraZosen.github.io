@@ -30,10 +30,29 @@ function convert_array(csv_data) {
 
 // テーブル描画
 function draw_table(data_array) {
+  //append thead and tbody
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+  output_csv_element.appendChild(thead);
+  output_csv_element.appendChild(tbody);
+
+  //create thead  
+  const thead_tr = document.createElement('tr');
+  thead.appendChild(thead_tr);
+  data_array[0].forEach(element => {
+    let th = document.createElement('th');
+    th.innerText = element
+    thead_tr.appendChild(th);
+  });
+
+  //create tbody
+  data_array.shift();
+
   data_array.forEach((elements,index) => {
-    const tr = document.createElement('tr');
+    let tr = document.createElement('tr');
     tr.id = 'no' + (index + 1);
-    output_csv_element.appendChild(tr);
+    tbody.appendChild(tr);
+
     elements.forEach(element => {
       let td = document.createElement('td');
       if (element.startsWith('https://') === true) {
@@ -44,8 +63,8 @@ function draw_table(data_array) {
         td.appendChild(anchor);
       } else {
         td.innerText = element
-      }
-      tr.appendChild(td);
+      };
+        tr.appendChild(td);
     });
   });
   //tablesorter
