@@ -67,6 +67,8 @@ function draw_table(data_array) {
         tr.appendChild(td);
     });
   });
+  //channel quantity
+  document.getElementById('channels').innerText = '調査済みチャンネル数：' + data_array.length;
   //tablesorter
   $(function() {
     $(".sort-table").tablesorter();
