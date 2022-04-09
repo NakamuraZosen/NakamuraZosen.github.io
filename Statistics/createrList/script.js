@@ -73,6 +73,15 @@ function draw_table(data_array) {
   });
 }
 
-import_csv('https://NakamuraZosen.github.io/Statistics/createrList/createrList.csv');
+//select research date form url query parameter
+const params = new URLSearchParams(window.location.search);
+const target = document.getElementById('researchDate');
+if (params.has("date") == true) {
+  target.innerHTML = "調査日時：" + params.get("date");
+  import_csv('https://NakamuraZosen.github.io/Statistics/createrList/createrList_' + params.get("date") + '.csv');
+} else {
+  target.innerHTML = "調査日時が選択されていません。";
+}
 
 //reference: freelance321.com/javascript/load-csv/
+//reference: www.ipentec.com/document/javascript-get-url-parameter
