@@ -2,6 +2,10 @@
 @import url(./sharestyle.css);
 
 /*style for content*/
+ul{
+  list-style: none;
+  padding: 0;
+}
 .Title {
   width: 90%;
   max-width: 1728px;
