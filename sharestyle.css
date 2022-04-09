@@ -7,7 +7,7 @@ body{
   font-family: "游ゴシック", sans-serif;
   background-color: whitesmoke;
 }
-ul{
+header ul, footer ul{
   list-style: none;
   padding: 0;
 }
