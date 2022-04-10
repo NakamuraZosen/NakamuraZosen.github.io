@@ -9,7 +9,9 @@
 .tablesorter-default td {
   background-color: whitesmoke;
 }
-
+.tablesorter-default tr:nth-child(even) td {
+  background-color: #eee;
+}
 .overview__rank {
   width: 30em;
   max-width: 100%;
