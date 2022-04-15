@@ -5,6 +5,7 @@
 h3 {
   padding-left: 1em;
   border-left: 6px solid #440088;
+  border-bottom: 1px solid silver;
 }
 .card {
   width: 90%;
