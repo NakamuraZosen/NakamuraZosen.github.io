@@ -35,7 +35,7 @@ header.insertAdjacentHTML('afterbegin', `
 <nav id="header__nav">
   <ul class="header__list">
     <li class="header__item"><a href="https://NakamuraZosen.github.io/Products/index.html" class="header__item-link"><span>作品</span></a></li>
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/Tech/index.html" class="header__item-link"><span>イベント情報</span></a></li>
+    <li class="header__item"><a href="https://NakamuraZosen.github.io/Events/index.html" class="header__item-link"><span>イベント情報</span></a></li>
     <li class="header__item"><a href="https://NakamuraZosen.github.io/News/index.html" class="header__item-link"><span>ニュース</span></a></li>
     <li class="header__item"><a href="https://NakamuraZosen.github.io/About/index.html" class="header__item-link"><span>中村とは</span></a></li>
   </ul>
