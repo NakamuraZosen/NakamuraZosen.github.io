@@ -30,7 +30,7 @@ header a {
   header {
     width: 100%;
     /*spacer for included header*/
-    height: 119.5px;
+    height: 143px;
     background-color: #440088;
     color: #fff;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -44,7 +44,8 @@ header a {
     display: block;
   }
   .header__logo-ja {
-    margin: 0;
+    width: max-content;
+    margin: 0 auto;
     text-align: center;
     font-family: 'Noto Serif JP', "游明朝", serif;
     font-size: 2em;
@@ -64,7 +65,7 @@ header a {
   /*style of nav bar*/
   #header__nav {
     width: 100%;
-    height: 40px;
+    height: 4em;
     margin: 0 auto;
     font-family: 'M PLUS 1p', sans-serif;
     color: #440088;
@@ -89,15 +90,16 @@ header a {
   }
   .header__item-link{
     display: flex;
+    flex-direction: column;
     flex: 1 1;
     justify-content: center;
+    align-items: center;
     padding: 0;
   }  
-  .header__list span {
-    display: flex;
-    align-items: center;
-    word-break: keep-all;
-  }  
+  .header__list small {
+    color: #333;
+    font-size: 0.5em;
+  }
   .header__item-link:hover {
     background-color: silver;
     transition: .2s;
@@ -209,10 +211,14 @@ header a {
     border-bottom: 1px solid silver;
   }
   .header__item-link {
-    flex: 1 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }  
+  .header__list small {
+    color: #333;
+    font-size: 0.5em;
+  }
 }
 
 /*style for footer*/
