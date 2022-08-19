@@ -11,12 +11,14 @@ a {
   color: inherit;
 }
 .title {
+  border-top: 2px solid #440088;
+  border-bottom: 2px solid #440088;
   font-family: 'M PLUS 1p', sans-serif;
-  font-size: 6vw;
-  margin: 40px 0;
+  font-size: 4vw;
+  margin: 0%;
 }
 .hero {
-  background: url(./heropc.webp)
+  background: url(./heropc.jpg)
   no-repeat
   center;
   background-size: cover;
@@ -31,7 +33,7 @@ a {
 .hero__text-title { 
   width: max-content;
   font-family: 'M PLUS 1p', sans-serif;
-  font-size: 5vw;
+  font-size: 3.5vw;
   margin: 0;
 }
 .hero__text--button {
