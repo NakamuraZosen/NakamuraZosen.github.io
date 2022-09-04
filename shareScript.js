@@ -51,9 +51,9 @@ footer.insertAdjacentHTML('afterbegin', `
   <p class="footer__sns-index">SNS</p>
   <ul class="footer__sns-list">
     <li class="footer__item"><a href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank"
-      rel="noopener noreferrer" class="footer__item-link">公式YouTube</a></li>
+      rel="noopener noreferrer" class="footer__item-link">公式YouTube<span class="material-symbols-outlined">open_in_new</span></a></li>
     <li class="footer__item"><a href="https://twitter.com/NHI_nakamura" target="_blank" rel="noopener noreferrer"
-      class="footer__item-link">公式Twitter</a></li>
+      class="footer__item-link">公式Twitter<span class="material-symbols-outlined">open_in_new</span></a></li>
   </ul>
 </div>
 <p class="footer__copyright">©2021 Nakamaru Nakamura Shipbuilding, All rights reserved.</p>
