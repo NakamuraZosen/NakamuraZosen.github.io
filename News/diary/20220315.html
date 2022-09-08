@@ -2,12 +2,21 @@
 <html lang=ja dir="ltr">
 
 <head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag() { dataLayer.push(arguments); }
+     gtag('js', new Date());
+ 
+     gtag('config', 'UA-208873990-1');
+   </script>
   <title>Litematicaの使い方 - 中村のマインクラフト</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,ブログ">
-  <meta name="description" content='Minecraftのワールド上でコピーや移動ができるMod "Litematica" の使い方を解説します。'>
+  <meta name="description" content='Minecraftのワールド上でコピーや移動ができるMod "Litematica" の使い方を画像付きで解説します。'>
   <link href="../style_news.css" rel="stylesheet">
 </head>
 
@@ -34,6 +43,7 @@
         <p>
           この記事では、MCEditユーザーが多用していたであろう、コピペ、反転の操作を解説する
         </p>
+        <small>2022/09/08　画像を追加しました。読みやすいように画像を小さくしているので、拡大するなら画像を新しいタブで開いてください</small>
         <ol class="index">目次
           <li>
             <a href="#mustConfig">初期設定</a>
@@ -56,8 +66,13 @@
           <li>
             Mキーでメニューを開き、右上のConfiguration Menuをクリック
           </li>
+          <img src="./img/litematica_1.webp" alt="">
+          <img src="./img/litematica_2.webp" alt="">
           <li>
             Hotkeysの中の、executeOperationがNONEになっているので、そこをクリックしてから割り当てたいキーを押下。今回はEnterキーにしてみた。
+          </li>
+          <li>
+            Escキーで戻れる。
           </li>
         </ol>
         <h3>Area Selection Mode: simple</h3>
@@ -69,6 +84,7 @@
             Mキーでメニューを開き、左下のArea Selection Mode: normalをクリックしてsmpleにする。
           </li>
         </ol>
+        <img src="./img/litematica_3.webp" alt="">
         <h2 class="content__name" id="basicCnP">基本的なコピペ（保存可、ワールド跨ぎ可）</h2>
         <p>選択範囲に名前を付けて保存する方法。これならワールドを跨げるし、ゲーム再起動後でもペーストできる。しかし、操作が煩雑。なお、schematicという用語が登場するが、これはMCEditやAmuletで扱う物とは違う。
         </p>
@@ -80,8 +96,13 @@
           <li>
             ctrl+マウスホイールでarea selection にして、左右クリックで範囲選択する。
           </li>
+          <img src="./img/litematica_4.webp" alt="">
           <li>
             Mキーでメニューを開き、Area Editor からSave Schematic
+          </li>
+          <img src="./img/litematica_5.webp" alt="">
+          <li>
+            名前を付けて保存する
           </li>
         </ol>
         <h3>ペーストの基本的な操作</h3>
@@ -95,23 +116,26 @@
           <li>
             先ほど保存したデータがあるので、選択して、左下のLoad Schematicをクリック
           </li>
+          <img src="./img/litematica_6.webp" alt="">
           <li>
             するとUIの裏でプレビュー（schematic placementと呼ぶ）が表示されているので、EscでUIを閉じる
           </li>
           <li>
             地面をクリックしたり、alt+マウスホイールで前後移動する
           </li>
+          <img src="./img/litematica_7.webp" alt="">
           <li>
             Enterキーでペースト実行
           </li>
+          <img src="./img/litematica_8.webp" alt="">
           <li>
-            最後に、Mキーでメニューを開き、Loaded SchematicsからUnloadでプレビューを消す。
+            すると、青い枠線が残るので、最後に、Mキーでメニューを開き、Loaded SchematicsからUnloadでプレビューを消す。
           </li>
         </ol>
         <h3>ペーストするときに回転、反転する</h3>
         <ol>
           <li>
-            上記3番でloadした後、Mキーでメニューを開き、Loaded Schematicsからloadしたいものを選択して、画面下のSchematic Placementsをクリック
+            上記3番でloadした後、Mキーでメニューを開き、<s>Loaded Schematicsからloadしたいものを選択して、画面下の</s>メニュー画面左上のSchematic Placementsをクリック
           </li>
           <li>
             Configureをクリック
@@ -120,6 +144,7 @@
             画面右下あたりにRotationとMirrorがある。ちゃんとリピーターの向き等も反転する。
           </li>
         </ol>
+        <img src="./img/litematica_9.webp" alt="">
         <h3>やっておきたい設定</h3>
         <p>デフォルト設定のままペーストすると、ペースト先にブロックがあった場合に置き換えられない。つまり、船を海ワールドに移動すると水面下が消滅する。そこで空気以外は元のブロックを置き換えられるように設定るする。</p>
         <ol>
@@ -130,6 +155,7 @@
             Genericの下の方にある、pasteReplaceBehaviorをWith non-airにする。
           </li>
         </ol>
+        <img src="./img/litematica_10.webp" alt="">
         <h2 class="content__name" id="simpleCnP">簡単な1クリックコピペ</h2>
         <p>Litematicaの真骨頂であるが、メニュー上に無いのでショートカットキーでしか操作できず、しかもデフォルトでショートカットキーが設定されていない。こんな便利機能をなぜ全力で隠すのか。</p>
         <h3>まずキー割り当て</h3>
