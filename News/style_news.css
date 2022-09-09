@@ -44,6 +44,17 @@ h3 {
 .index a {
   text-overflow: ellipsis;
 }
+img {
+  width: 480px;
+  height: 270px;
+  object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  img {
+    height: 180px;
+    width: 100%;
+  }
+}
 .tableArea__container {
   display: flex;
   flex-wrap: wrap;
