@@ -1,5 +1,5 @@
 //bookmark alart of cookie
-window.onload = function () {
+/*window.onload = function () {
   var CookieData = document.cookie + ';';
   var StartPositionOfVisited = CookieData.indexOf('visited=', 0);
 
@@ -12,6 +12,7 @@ window.onload = function () {
   }
   console.log(document.cookie);
 };
+*/
 
 //include header
 let header = document.getElementById('header');
