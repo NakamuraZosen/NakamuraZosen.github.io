@@ -19,7 +19,7 @@ let header = document.getElementById('header');
 header.insertAdjacentHTML('afterbegin', `
 <div class="header__container">
 <div class="header__logo">
-  <a href="https://NakamuraZosen.github.io/index.html">
+  <a href="https://NakamuraZosen.github.io/">
     <p class="header__logo-ja">
       中丸・中村造船
     </p>
