@@ -158,7 +158,7 @@ tr:first-child td, th {
 
 .distributions {
   width: 90%;
-  max-width: 1728px;
+  max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid silver;
 }
