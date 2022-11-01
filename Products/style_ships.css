@@ -6,18 +6,18 @@ img {
   width: 100%;
   height: 100%;
 }
-
 .img {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1000px;
   height: 40vw;
-  max-height: 576px;
+  max-height: 400px;
   margin: 0 auto;
   background-color: gray;
 }
+
 .overview {
   width: 90%;
-  max-width: 1728px;
+  max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid silver;
 }
@@ -27,7 +27,7 @@ img {
 
 .spacification {
   width: 90%;
-  max-width: 1728px;
+  max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid silver;
 }
@@ -54,35 +54,35 @@ td, th {
 tr:first-child td, th {
   border-top: 1px solid silver;
 }
-/*style for old list*/
-.spacification__content-list {
-  padding: 0;
-}
-.spacification__content-item {
-  border-top: 1px solid silver;
-}
-.spacification__content-item:last-child {
-  border-bottom: 1px solid silver;
-}
+/*end of changed area*/
 
 .description {
   width: 90%;
-  max-width: 1728px;
+  max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid silver;
 }
-
 .description__chapter {
   padding-left: 1em;
   border-left: 6px solid #440088;
 }
 
-.relatedMovie {
+.links {
   width: 90%;
-  max-width: 1728px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.links__container {
+  width: 10em;
+  margin: 16px auto;
 }
 
+.relatedMovie {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
 .relatedMovie__container {
   width: 560px;
   height: 315px;
@@ -91,11 +91,9 @@ tr:first-child td, th {
   margin: 0 auto;
   background-color: gray;
 }
-
 .relatedMovie__container img {
   width: 100%;
 }
-
 #relatedMovie__button {
   position: absolute;
   width: 560px;
@@ -119,6 +117,7 @@ tr:first-child td, th {
   align-items: center;
   display: none;
   z-index: 10;
+  transition: .5s;
 }
 .iframeModal__card {
   width: 80%;
@@ -134,12 +133,11 @@ tr:first-child td, th {
 }
 @media screen and (max-width: 767px) {
   .iframeModal__card {
-    width: 95%;
-    height: auto;
+    width: 100%;
   }
   .iframeModal__card iframe {
-    width: 95%;
-    height: 50.766vw;
+    width: 100%;
+    height: 60vw;
   }
   .iframeModal__card img {
     width: 95%;
@@ -158,17 +156,6 @@ tr:first-child td, th {
   background-color: gray;
 }
 
-.links {
-  width: 90%;
-  max-width: 1728px;
-  margin: 0 auto;
-  border-bottom: 1px solid silver;
-}
-
-.links__container {
-  width: 10em;
-  margin: 16px auto;
-}
 .distributions {
   width: 90%;
   max-width: 1728px;
@@ -186,6 +173,7 @@ tr:first-child td, th {
   border-radius: 9px;
   background-color: lightgray;
 }
+/*arrow icon*/
 .arrow{
   position: relative;
   display: inline-block;
@@ -227,6 +215,7 @@ tr:first-child td, th {
     transform: rotate(135deg);
   }
 }
+
 .backbutton:hover {
   background-color: blueviolet;
   transition: .2s;
@@ -241,7 +230,7 @@ tr:first-child td, th {
 }
 .backbutton a {
   display: block;
-  padding: .5em 1em;
+  padding: 1em 2em;
   text-decoration: none;
   color: inherit;
 }
