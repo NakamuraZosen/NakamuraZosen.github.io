@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+
+<head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag() { dataLayer.push(arguments); }
+     gtag('js', new Date());
+ 
+     gtag('config', 'UA-208873990-1');
+   </script>
+  <title>はりぼてエアクラフトの導入と使い方とクラッシュしたときの対処法 - 中村のマインクラフト</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#440088">
+  <meta name="keywords" content="マインクラフト,中村造船,回路,船,ブログ">
+  <meta name="description" content='Minecraft向けのMOD「はりぼてエアクラフト」の導入と使い方。readmeで設定を変える。クラッシュしたときはMCEditで復旧可能'>
+  <link href="../style_news.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header" id="header">
+
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="Title">
+        <p>
+          2022年11月15日
+        </p>
+        <h1 class="Title__name">はりぼてエアクラフトの導入と使い方とクラッシュしたときの対処法</h1>
+        <p class="Title__subtitle">
+        </p>
+      </div>
+      <div class="content">
+        <h2 class="content__name">使用目的</h2>
+        <p>
+          Minecraft向けのMOD「はりぼてエアクラフト」は一塊のブロックを移動させたり回転させることができるMODである。
+        </p>
+        <p>
+          元はニコニコ動画配信者の企画のために視聴者が開発したMODであるが、現在はもっぱらMincraft軍事部カテゴリーの配信者が使用している。<br>
+          対応するマインクラフトのバージョンは1.7.10までである。
+        </p>
+        <h3>はりぼてのここがすごい！</h3>
+        <ul>
+          <li>軽い！</li>
+          <li>バグが少ない！</li>
+          <li>余計な機能がない！</li>
+        </ul>
+        <h3>はりぼてのここが悪い！</h3>
+        <ul>
+          <li>開発者失踪済み</li>
+        </ul>
+        <ol class="index">目次
+          <li>
+            <a href="#i1">導入</a>
+          </li>
+          <li>
+            <a href="#i2">使い方</a>
+          </li>
+          <li>
+            <a href="#i3">やっておいた方がいい設定</a>
+          </li>
+          <li>
+            <a href="#i4">バグでクラッシュしたときの対処法</a>
+          </li>
+        </ol>
+
+        <h2 class="content__name" id="i1">導入</h2>
+        <p>
+          もともとマインクラフト非公式日本フォーラムで配布されていたが、2019年にサイバー攻撃により閉鎖されたため現在はウェブアーカイブの「Wayback Machine」からダウンロードするしかない。
+        </p>
+        <p>          
+          以下でZIPのみダウンロード（ウェブアーカイブに移動する）
+          <a href="https://web.archive.org/web/20190715150654/http://forum.minecraftuser.jp/download/file.php?id=48572" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/20190715150654/http://forum.minecraftuser.jp/download/file.php?id=48572</a><br>
+          これを、zipのままmodsフォルダーに入れる。<br>
+          .minecraft/forge1.7.10のフォルダ/mods←この中
+        </p>
+        <p>
+          以下がそのフォーラムの配布ページ。表示に時間がかかる。上記のリンクはこのページの中のHariboteAirCraft_172v3.zip。他のバージョンもある。
+          <a href="https://web.archive.org/web/20150719055948/http://forum.minecraftuser.jp/viewtopic.php?t=10418" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/20150719055948/http://forum.minecraftuser.jp/viewtopic.php?t=10418</a>
+        </p>
+        <h2 class="content__name" id="i2">使い方</h2>
+        <h3>動かしたいブロック塊に羅針盤を設置</h3>
+        <ol>
+          <li>羅針盤ブロックを右クリックすると、ブロックの塊がエンティティ化（はりぼて化）する。<br>
+            面同士で接しているブロックが一つの塊と認識されます。コンフィグで設定した以上のブロックが繋がっている場合は適当な位置で分割される。
+          </li>
+          <li>
+            はりぼて化すると自動的にはりぼての上に座る。降りるにはShiftキー、再び乗るにははりぼての上で足元を見ながら右クリック（羅針盤ブロックでなくてもよい）。
+          </li>
+          <li>テンキーで移動する。テンキーが無い人は<s>買いましょう。</s> コンフィグを変更しましょう。<br>移動方法は下の画像を参照</li>
+          <li>"/"キーではりぼてを解除</li>
+        </ol>
+        <img src="./img/haribote-aircraft-tutrial_1.webp" alt="">
+
+        <h2 class="content__name" id="i3">やっておいた方がいい設定</h2>
+        <h3>設定変更方法</h3>
+        <p>
+          zip内のReadme.txtが説明書兼コンフィグファイル。この内容を書き換えて設定する。
+        </p>
+        <h3>やっておいた方がいい設定</h3>
+        <ul>
+          <li>blockLimit=2000　必要ならさらに増やす</li>
+          <li>renderIgnore=93　リピーターを描画しない。バグ対策</li>
+        </ul>
+        <p>
+          リピーターをコンパレータでロックした状態ではりぼて化するとクラッシュし、ワールドに入れなくなるというバグがある。
+        </p>
+        <img src="./img/haribote-aircraft-tutrial_2.webp" alt="">
+
+        <h2 class="content__name" id="i4">クラッシュしたときの対処法</h2>
+        <p>
+          はりぼて化によってクラッシュした場合、ワールドに入れなくなる。ワールド内の原因となっているはりぼてを外部ツールで削除すれば、はりぼては戻ってこないがワールドには入れるようになる。
+        </p>
+        <h3>MCEditを使う</h3>
+        <p>
+          ワールドを読み込むと、はりぼてがエンティティとして表示されている。この範囲を選択し、「Delete Entity」で削除してセーブ。
+        </p>
+        <p>
+          MCEditの使い方記事もかくかも。
+        </p>
+        <p>          
+          終わったらMCEditを終了し、マイクラでワールドを読み込む
+        </p>
+        <img src="./img/haribote-aircraft-tutrial_3.webp" alt="">
+      </div>
+    </div>
+    <div class="backbutton">
+      <a href="../index.html"><span>ニュース一覧へ戻る</span></a>
+    </div>
+  </main>
+
+  <footer id="footer">
+
+  </footer>
+  <script src="../../shareScript.js"></script>
+</body>
+
+</html>
