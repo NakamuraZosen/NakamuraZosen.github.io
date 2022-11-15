@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-208873990-1');
+  </script>
+
+  <title>夢洲世代装置群｜無線通信に最適化した艦船統合制御システム - 中村のマインクラフト</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#440088">
+  <meta name="keywords" content="マインクラフト,中村造船,回路,船,戦艦">
+  <meta name="description" content="マインクラフトのレッドストーン回路でTNTキャノンを制御する装置です。">
+  <link href="../style_ships.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header" id="header">
+
+  </header>
+
+  <main>
+    <div class="img">
+      <img class="hero" src="hero.webp" alt="夢洲世代装置群一覧" title="夢洲世代装置群一覧">
+    </div>
+    
+    <div class="overview">
+      <h1 class="overview__name">夢洲世代装置群</h1>
+      <p class="overview__charactristics">
+        中村の最新艦船制御システム。<br>
+        艦橋からの直感的操作と無線による操作を干渉なく共存。<br>
+      </p>
+    </div>
+
+    <div class="spacification">
+      <h2 class="spacification__name">仕様</h2>
+      <div class="spacification__container">
+        <div class="spacification__content">
+          <h3 class="spacification__content-name">主な採用艦</h3>
+          <table>
+            <tr>
+              <td><a href="../yumeshima/index.html">夢洲級フリゲート</a> </td>
+            </tr>
+            <tr>
+              <td>夢洲2級フリゲート</td>
+            </tr>
+          </table>
+        </div>
+        <div class="spacification__content">
+          <h3 class="spacification__content-name">対応する装置</h3>
+          <table>
+            <tr>
+              <th>機能</th><th>型番</th>
+            </tr>
+            <tr>
+              <td>砲塔制御装置</td><td>TCS-Y1</td>
+            </tr>
+            <tr>
+              <td>固定兵装制御装置</td><td>SCS-Y1</td>
+            </tr>
+            <tr>
+              <td>コクピットシステム</td><td>CCS-Y2</td>
+            </tr>
+            <tr>
+              <td>ダメージセンサー</td><td>DMS-Y2</td>
+            </tr>
+            <tr>
+              <td>直上レーダー</td><td>SPY-A1</td>
+            </tr>
+            <tr>
+              <td>予備操作室</td><td>CIC-Y1</td>
+            </tr>
+            <tr>
+              <td>ネザースター送信機</td><td>NSC-Y2</td>
+            </tr>
+          </table>
+        </div>
+        <div class="spacification__content">
+          <h3 class="spacification__content-name">対応する兵装</h3>
+          <table>
+            <tr>
+              <th>種別</th><th>型番</th>
+            </tr>
+            <tr>
+              <td>幅7単装砲</td><td><a href="../mky2/index.html">Mark Y2</a></td>
+            </tr>
+            <tr>
+              <td>対空砲</td><td><a href="../typeF/index.html">Type F</a></td>
+            </tr>
+            <tr>
+              <td></td><td>今後増やして参ります</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h2 class="description__name">主制御装置 FCS-Y11</h2>
+      <h3 class="description__chapter">主制御装置FCSとは</h3>
+      <p>
+        艦のTNTキャノンを制御する装置群の最も重要な装置です。艦橋、無線受信機、及びダメージセンサーから命令を集め、情報を処理し、各兵装へと命令を出す役割を担います。<br>
+        FCSは電源装置、アイテム選別機、選択制御部、反撃システム制御部から成ります。電源装置は発射の信号をすべての兵装制御装置に出し、選択回路はどの兵装を射撃するのかを選択します。選択回路ON時に発射信号が開通することで兵装を射撃しますが、ゲートの機能は砲塔制御装置及び固定兵装制御装置に内蔵されています。
+      </p>
+      <ul>
+        <li>電源装置：射撃の命令を受け、キャノンを駆動する信号を生成します。駆動信号は弾頭と装薬の二系統あり、それぞれの信号の長さを変えることで弾頭の飛翔をコントロールすることができます。</li>
+        <li>アイテム選別機：無線と予備操作室からのネザースターによる命令を受け取ります。アイテム選別機は16系統存在し、発射、リセット、兵装選択、パラメーター設定、自動反撃システム等すべての機能を利用可能です。</li>
+        <li>選択制御部：艦橋からの信号を受け取る部分です。</li>
+        <li>反撃システム制御部：前方右、前方左、後方右、後方左の4か所のダメージセンサーからの信号を受け取り、対応する兵装を選択すると同時に発射します。</li>
+      </ul>
+      <h3 class="description__chapter">開発経緯</h3>
+      <p>
+        有馬級戦艦に搭載した前作システムは、艦橋からの操作を処理するFCSと、無線からの操作を処理するWCSに分離したため大型化しました。<br>
+        今作では、上記の二つの機能を一つの装置に統合し、機能を損なうことなく小型化しました。
+      </p>
+      <p>
+        新型電源装置と新型砲塔の採用により、細やかな弾頭制御が可能になりました。<br>        
+        前作では射撃パラメーター設定項目は装薬追加機能のみでしたが、今作では新たに射撃クロック数の項目を追加し、DDCC相当の制御が可能になりました。
+      </p>
+      <h3 class="description__chapter">新型電源装置による弾頭制御</h3>
+      <p>
+        新開発電源装置により、ようやく射撃クロック数の変更に対応しDDCC相当の制御が可能になりましたが、その設定項目の追加には課題がありました。<br>
+        信号長調節タイマーには小型化に適したホッパー式を用いています。ところで、アイテムの数で信号の長さを調節するということは、設定項目をリセットしたときに射撃クロック数が0となってしまうことを意味します。
+        ところが、通常、射撃クロック数は最大（開発者環境では16クロック）で運用するものですから、操作性に難があったのです。
+      </p>
+      <p>
+        そこで、予め最大クロック数に相当する長さの信号を生成し、それをホッパータイマーによって遮断する方式を導入しました。<br>
+        これによって操作性が改善。さらに、装薬量が射撃クロック数に寄らず一定となることで、1クロック射撃や空砲といった芸当が可能になる副作用を得ました。
+      </p>
+      <p>
+        また、将来的なTDCC以上へのアップグレードに備え、着発信管機能を搭載しました。<br>
+        従来のキャノンは弾頭装填の終了と同時に装薬を起爆させるため、信管調節ができませんでした。そこで今作では、装薬装填の終了と同時に装薬を起爆させる方式に改めることで、TDCCや中落のような制御が可能になりました。<br>
+        しかし、これによりキャノンの回路に変更が加わったため、従来の兵装、及びその制御装置との互換性が無くなりました。
+      </p>
+      <h3 class="description__chapter">無線制御との親和</h3>
+      <p>
+        中村造船では、射撃パラメーターの設定まで含め、すべての操作を艦橋から、又は無線によって操作できるように設計してあります。
+      </p>
+      <p>
+        有馬級戦艦に搭載した前作システムでは、無線による射撃パラメーターの設定が困難を極めていました。<br>
+        まず赤砂と砂を数個発射、その後パラメーターの数だけ砂利を発射、設定を固定するため、赤砂を16回発射、そして兵装選択して発射……。
+        このようになったのは、ホッパータイマーへのアイテムの投入を信号を連打することで行っていたからです。
+        さらに、パラメーターの選択は兵装選択の一つという扱いで、その設定アイテム投入は射撃の信号と連動するため、予め兵装選択をすべて解除しなくてはならず、設定変更後はまた兵装選択しなおさなくてはなりません。
+      </p>
+      <p>
+        今作では、設定用アイテムとなるネザースターそのものを送信し、それをホッパータイマー内に直接投入することで、すべての問題を解決しました。<br>
+        また、二つの射撃パラメーターのリセットは兵装選択のリセットと連動しており、現在の設定を忘れてしまったらすぐに元の状態に戻せます。
+      </p>
+      <h3 class="description__chapter">電源装置という独自規格</h3>
+      <p>      
+        かねてより、中村造船は射撃パラメーターの設定に電源装置という独自規格を採用して参りました。これはDCC系やDCC系RCに相当する機能を持つ装置です。<br>
+        今日、艦船の制御にDCC系RCが普及しておりますが、これを採用しない理由は上記の通り、設定項目をリセットしたときに射撃クロック数が0となってしまう点と、艦橋や無線による遠隔操作に対応できない点です。
+        いずれかに対応しようと試作を繰り返しましたが、どうしても大型化してしまいます。<br>
+        一方電源装置は、ホッパータイマーに付きまとう問題であるアイテムの戻る時間を確保しなければならなず、高速連射性能にしわ寄せしているのが現状です。
+      </p>
+    </div>
+
+    <div class="description">
+      <h2 class="description__name">装置群</h2>
+      <h3 class="description__chapter">砲塔制御装置 TCS-Y1 & 単装砲 Mark Y2</h3>
+      <p>
+        砲塔制御装置は、砲塔指向センサー及び兵装選択機構を内蔵した装置です。対応する砲塔制御装置と砲塔を組み合わせて使用します。<br>
+        装薬装填の終了と同時に装薬を起爆させる方式に改めたことに伴い、回路を対応するものへ更新しました。
+      </p>
+      <p>砲塔の特徴</p>
+      <ul>
+        <li>0から18までの射撃クロック数に対応</li>
+        <li>美観のため砲身を直結</li>
+        <li>射撃に連動して水流装甲を整形</li>
+      </ul>
+      <h3 class="description__chapter">艦橋システム CCS-Y2</h3>
+      <p>
+        艦橋の操作設備一式をユニット化したものです。中央に操縦台があり、その周囲を囲むようにレバーが配置されています。<br>
+        艦橋からネザースターによる操作を行えるよう、ホッパーを設置しました。また、前作（有馬に搭載されていたもの）で発生していたBUDによる不具合を修正しました。
+      </p>
+      <ul>
+        <li>ピストン16系統+ホッパーの接続が可能</li>
+        <li>パラメーター設定インジケータを2組搭載</li>
+        <li>水流装甲付き</li>
+        <li>水平面のレバーにはランプ付き</li>
+      </ul>
+      <h3 class="description__chapter">ダメージセンサー DMS-Y2</h3>
+      <p>
+        トロッコが爆風によって破壊されることを利用し、被弾を検知します。<br>
+        前作で発生していた、破壊形状やエンティティの読み込み状況によって出力がオン状態に固定される不具合を修正しました。
+      </p>
+      <h3 class="description__chapter">予備操作室 CIC-Y1</h3>
+      <p>
+        艦橋が破壊されたときの予備として機能する操作室です。<br>
+        喫水線下に配置し、制御装置に繋がるホッパーに接続します。
+      </p>
+      <h3 class="description__chapter">直上レーダー SPY A-1</h3>
+      <p>
+        日照センサーで直上のブロックの有無を検知します。<br>
+        有馬級戦艦以来採用されている直上イージスシステム向けレーダーです。
+      </p>
+      <h3 class="description__chapter">固定兵装制御装置 SCS-Y1</h3>
+      <p>
+        固定兵装の制御装置です。
+      </p>
+      <p>
+        ※夢洲級には搭載されていません
+      </p>
+      <h3 class="description__chapter">アダプター</h3>
+      <p>
+        舷側兵装のために回路を枝分れさせるためのアダプターです。搭載兵装の多い有馬級戦艦に採用されました。
+      </p>
+      <p>
+        ※夢洲級には搭載されていません
+      </p>
+      <h3 class="description__chapter">ネザースター送信機 NSC-Y2</h3>
+      <p>
+        無線通信のためのネザースターを発射するTNTキャノンです。<br>
+        東西方向に射撃した際にやや艦尾側に逸れます。また、射程200メートルを前提にしていますが、5回に1回届きません。
+        今後の改良が必要です。
+      </p>
+    </div>
+
+    <div class="distributions">
+      <h2 class="distributions__name">配布フォーム</h2>
+      <div class="distributions__step">
+        <span>1. 下のリンクをクリック</span>
+        <div class="arrow sample5-2"></div>
+        <span>2. google form でアンケートに答える</span>
+        <div class="arrow sample5-2"></div>
+        <span>3. dropboxでデータを受け取る</span>
+      </div>
+      <div class="backbutton">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoIpMbReeyvPa_JGMCfigHJLvaymomTPFyoRC6Qzl4Q3vbSQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><span>アンケートに答えて装置群を入手！</span><span class="material-symbols-outlined">open_in_new</span></a>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link">不具合等報告フォーム<span class="material-symbols-outlined">open_in_new</span></a>
+      <p>※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。※google, dropboxのログインは不要です。</p>
+    </div>
+
+    <div class="links">
+      <h2 class="links__name">リンク</h2>
+      <div class="links__container">
+        <a href="../yumeshima/index.html">実装例として夢洲級フリゲートもダウンロードできます</a><br>
+      </div>
+    </div>
+
+    <div class="relatedMovie">
+      <h2>解説動画</h2>
+      <div class="iframe__container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dyVdrMcn1sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/b4g0k-twYXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+      </div>
+    </div>
+    <div id="iframeModal__background">
+      <div class="iframeModal__card">
+
+        <div id="iframeModal__closeButton">閉じる</div>
+      </div>
+    </div>
+
+    <div class="backbutton">
+      <a href="../index.html"><span>作品一覧へ戻る</span></a>
+    </div>
+
+  </main>
+
+  <footer id="footer">
+
+  </footer>
+  <script src="./script.js"></script>
+  <script src="../../shareScript.js"></script>
+</body>
+
+</html>
