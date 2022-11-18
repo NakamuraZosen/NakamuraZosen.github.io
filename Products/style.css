@@ -5,6 +5,39 @@
 body {
   background-color: gainsboro;
 }
+/*style for table*/
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+td, th {
+  padding: .2em .8em;
+  border-bottom: 1px solid silver;
+  font-weight: inherit;
+}
+.icon__wrapper {
+  padding: .5em;
+  border: 1px solid silver;
+}
+.icon__wrapper .material-symbols-outlined{
+  font-size: 2em;
+  margin: 1em;
+}
+.icon__wrapper span{
+  display: block;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  table {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
+  td, th {
+    border-bottom: 0;
+    border-right: 1px solid silver;
+  }
+}
+
 .Title {
   width: 100%;
   padding-top: 20px;
@@ -84,7 +117,7 @@ body {
   flex-wrap: wrap;
 }
 .Types__item {
-  margin: 0 10px;
+  margin: 10px;
 }
 .Types__item:hover {
   background-color: gainsboro;
@@ -108,10 +141,10 @@ body {
     display: none;
   }
   .Types {
-    margin: 10px;
+    margin: 0;
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    box-shadow: none;
     background-color: whitesmoke;
   }
   .Types__list {
