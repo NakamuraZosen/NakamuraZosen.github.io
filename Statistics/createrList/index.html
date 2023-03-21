@@ -19,7 +19,6 @@
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,ブログ">
   <meta name="description"
     content="マインクラフト軍事部系YouTubeチャンネル全数調査">
-  <link rel="stylesheet" href="../../Products/style_ships.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
@@ -35,8 +34,8 @@
     <div class="overview">
       <h1 class="overview__name">マインクラフト軍事部系YouTubeチャンネル全数調査</h1>
       <p class="overview__charactristics">
-        マインクラフト軍事部系YouTubeチャンネル全数調査（中村センサス）では業界の盛衰を把握するため、<br>
-        中村の手作業によりおよそ半年に一度、マインクラフト軍事部系YouTubeチャンネルの存在する数とその運営状況を収集しています。<br>
+        マインクラフト軍事部系YouTubeチャンネル全数調査（中村センサス）では、<br>
+        業界全体の動向を把握するため、中村の手作業によりおよそ半年に一度、マインクラフト軍事部系YouTubeチャンネルの存在する数とその運営状況を収集しています。<br>
         表の見方、それぞれのデータの意味と収集の目的等の詳細は<a href="../../News/diary/20220819.html">こちら</a>。
       </p>
     </div>
@@ -49,21 +48,37 @@
             <li><a href="./index.html?date=20210917">2021年09月17日</a></li>
             <li><a href="./index.html?date=20220301">2022年03月01日</a></li>
             <li><a href="./index.html?date=20220819">2022年08月19日</a></li>
+            <li><a href="./index.html?date=20230317">2023年03月17日</a></li>
           </ul>
           <p id="researchDate"></p>
           <p id="channels"></p>
         </div>
       </div>
     </div>
-    <br>
-    
-    <div id="iframeModal__background">
-      <div class="iframeModal__card">
-        <h2 id="shipName"></h2>
-        <div id="iframeModal__closeButton">閉じる</div>
-      </div>
+    <div id="filter__container" class="filter__container">
+      <h3>タグ検索</h3>
+      <form name="form1">
+        <label><input type="checkbox" name="tag" value="回路艦" />回路艦</label>
+        <label><input type="checkbox" name="tag" value="回路戦車" />回路戦車</label>
+        <label><input type="checkbox" name="tag" value="造形艦" />造形艦</label>
+        <label><input type="checkbox" name="tag" value="航空機" />航空機</label>
+        <label><input type="checkbox" name="tag" value="造形車両" />造形車両</label>
+        <label><input type="checkbox" name="tag" value="回路説明" />回路説明</label>
+        <label><input type="checkbox" name="tag" value="全方位キャノン" />全方位キャノン</label>
+        <label><input type="checkbox" name="tag" value="軍事茶番" />軍事茶番</label>
+        <label><input type="checkbox" name="tag" value="コマブロ" />コマブロ</label>
+        <label><input type="checkbox" name="tag" value="BE" />BE</label>
+        <label><input type="checkbox" name="tag" value="クソデカ" />クソデカ</label>
+        <label><input type="checkbox" name="tag" value="オリキャラ" />オリキャラ</label>
+        <label><input type="checkbox" name="tag" value="サブチャンネル" />サブチャンネル</label>
+        <label><input type="checkbox" name="tag" value="軍事部要素少な目" />軍事部要素少な目</label>
+        <label><input type="checkbox" name="tag" value="チャンネル消滅" />チャンネル消滅</label>
+      </form>
+      <input class="refresh__button" id="refresh_table" type="button" value="更新する">
+      <p id="hit_channels"></p>
     </div>
-
+    <br>
+        
     <table class="sort-table output_csv">
     </table>
 
