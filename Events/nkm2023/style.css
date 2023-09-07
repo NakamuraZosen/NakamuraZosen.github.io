@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url(../../sharestyle.css);
+
+/*style for content*/
+img {
+  width: 100%;
+  height: 100%;
+}
+.img {
+  width: 100%;
+  max-width: 1440px;
+  height: 40vw;
+  max-height: 576px;
+  margin: 0 auto;
+  background-color: gray;
+}
+.overview {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.overview__charactristics {
+  text-align: center;
+}
+.spacification {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.spacification__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*changed area*/
+.spacification__content {
+  margin: 0 1em 1em 1em;
+}
+.spacification__content-name {
+  text-align: center;
+}
+/*style for table*/
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+td, th {
+  padding: .2em .8em;
+  border-bottom: 1px solid silver;
+}
+tr:first-child td, th {
+  border-top: 1px solid silver;
+}
+/*end of changed area*/
+
+.description {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.description__chapter {
+  padding-left: 1em;
+  border-left: 6px solid #440088;
+}
+.relatedMovie {
+  width: 90%;
+  max-width: 1728px;
+  margin: 20px auto;
+}
+/*open iframe directly*/
+.iframe__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iframe__container iframe {
+  max-width: 100%;
+  margin: 10px 0;
+}
+/*open iframe in modal*/
+.relatedMovie__container {
+  width: 560px;
+  height: 315px;
+  max-width: 100%;
+  max-height: 50.625vw;
+  margin: 0 auto;
+  background-color: gray;
+}
+.relatedMovie__container img {
+  width: 100%;
+}
+#relatedMovie__button {
+  position: absolute;
+  width: 560px;
+  height: 315px;
+  max-width: 90%;
+  max-height: 50.625vw;
+  cursor : pointer;
+}
+#relatedMovie__button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*modal window*/
+#iframeModal__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 10;
+  transition: .5s;
+}
+.iframeModal__card {
+  width: 80%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.iframeModal__card iframe, .iframeModal__card img {
+  display: block;
+  width: 90%;
+  height: 40.5vw;
+  margin: 20px auto;
+}
+@media screen and (max-width: 767px) {
+  .iframeModal__card {
+    width: 95%;
+    height: auto;
+  }
+  .iframeModal__card iframe {
+    width: 95%;
+    height: 50.766vw;
+  }
+  .iframeModal__card img {
+    width: 95%;
+  }
+}
+#iframeModal__closeButton {
+  width: 6em;
+  border: 1px solid silver;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 2;
+  cursor: pointer;
+}
+#iframeModal__closeButton:hover {
+  color: #fff;
+  background-color: gray;
+}
+
+.links {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.links__container {
+  width: 10em;
+  margin: 16px auto;
+}
+.distributions {
+  width: 90%;
+  max-width: 1728px;
+  margin: 0 auto;
+  border-bottom: 1px solid silver;
+}
+.distributions__step {
+  font-weight: bold;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.distributions__step span {
+  padding: 4em 2em;
+  border-radius: 9px;
+  background-color: lightgray;
+}
+.arrow{
+  position: relative;
+  display: inline-block;
+  margin: 0 16px;
+  padding: 0 0 0 16px;
+  color: #000;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+}
+.arrow::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+.sample5-2::before{
+  width: 8px;
+  height: 8px;
+  border-top: 4px solid lightgray;
+  border-right: 4px solid lightgray;
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 767px) {
+  .distributions__step {
+    display: block;
+  }
+  .distributions__step span {
+    display: block;
+    padding: 1em 2em;
+  }
+  .arrow {
+    margin: 0 50%;
+  }
+  .sample5-2::before{
+    transform: rotate(135deg);
+  }
+}
+.backbutton:hover {
+  background-color: blueviolet;
+  transition: .2s;
+}
+.backbutton {
+  color: #fff;
+  background-color: #408;
+  width: max-content;
+  margin: 20px auto;
+  border: 2px solid silver;
+  border-radius: 9999px;
+}
+.backbutton a {
+  display: block;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: inherit;
+}
