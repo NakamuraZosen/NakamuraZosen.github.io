@@ -12,20 +12,30 @@ table {
 }
 td, th {
   padding: .2em .8em;
-  border-bottom: 1px solid silver;
   font-weight: inherit;
+}
+.icon__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .icon__wrapper {
   padding: .5em;
   border: 1px solid silver;
+  margin: .2em;
+}
+.icon__wrapper span {
+  display: block;
+  text-align: center;
 }
 .icon__wrapper .material-symbols-outlined{
   font-size: 2em;
   margin: 1em;
 }
-.icon__wrapper span{
-  display: block;
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .icon__wrapper {
+    font-size: .75em;
+  }
 }
 @media screen and (max-width: 767px) {
   table {
@@ -34,7 +44,6 @@ td, th {
   }
   td, th {
     border-bottom: 0;
-    border-right: 1px solid silver;
   }
 }
 
@@ -113,7 +122,6 @@ td, th {
   margin: 20px auto;
   padding: 0;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
 }
 .Types__item {
@@ -124,14 +132,28 @@ td, th {
 }
 .Types__item a {
   display: block;
+  width: min-content;
+  text-decoration: none;
+  color: inherit;
 }
 .Types__item img {
   width: 250px;
   height: 150px;
   object-fit: cover;
+  text-decoration: none;
 }
-.Types__item span {
-  display: block;
+.Types__item h4 {
+  font-size: 1.1em;
+  margin: 0;
+}
+.Types__item .material-symbols-outlined {
+  font-size: 1em;
+  padding-bottom: .5em;
+}
+.Types__item p {
+  margin: 0;
+  font-size: .8em;
+  overflow-wrap: break-word;
 }
 @media screen and (max-width: 767px) {
   .ColumnWrapper__Left {
@@ -155,6 +177,10 @@ td, th {
   }
   .Types__item {
     margin: 10px 0;
+  }
+  .Types__item a {
+    width: auto;
+    /*min-content of anchor element might suffer*/
   }
   .Types__item img {
     width: 100%;
@@ -193,7 +219,7 @@ td, th {
 }
 .button a {
   display: block;
-  padding: .5em 1em;  
+  padding: .5em 1em;
   text-decoration: none;
   color: inherit;
 }
