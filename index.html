@@ -19,7 +19,8 @@
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,">
   <meta name="description"
     content="中丸・中村造船が運営する公式ホームページ兼ブログです。中村造船は、TNTキャノンの開発、およびそれを搭載した戦車や戦艦を作ることを得意としています。このブログは月一くらいでゆっくり更新して行きます。">
-  <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="css/style_home.css" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" />
 </head>
 
@@ -29,82 +30,86 @@
   </header>
 
   <main>
-    <div class="hero">
-      <div class="hero__text">
-        <p class="hero__text-title">最新版2022年度上半期、<br>
-          マインクラフト軍事部系YouTubeチャンネル全数調査が<br>
-          完了！</p>
-        <div class="hero__text--button">
-          <a href="Statistics/createrList/index.html"><span>移動する</span></a>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/チャンネルアートgen7.png" class="d-block w-100 object-fit-cover" alt="...">
+      <div class="carousel-caption d-block">
+        <p>活動理念を更新しました。</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/まとめ2024.webp" class="d-block w-100 object-fit-cover" alt="...">
+      <div class="carousel-caption d-block">
+        <h5>動画更新</h5>
+        <p>2024年版ラインナップまとめ動画を公開。さっちゃんの3D立ち絵も初登場！</p>
+        <p><a class="btn btn-primary" href="https://youtu.be/j_ujYbdC1Ro" role="button" target="_blank" rel="noopener noreferrer">YouTubeへ<span class="material-symbols-outlined">open_in_new</span></a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/heropc.jpg" class="d-block w-100 object-fit-cover" alt="...">
+      <div class="carousel-caption d-block">
+        <h5>記事更新</h5>
+        <p>最新版2022年度上半期、マインクラフト軍事部系YouTubeチャンネル全数調査が完了！</p>
+        <p><a class="btn btn-primary" href="Statistics/createrList/index.html?date=20230908" role="button">ページへ</a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label (※デバッグ用)</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <section>
+      <h2>配信者の方へ</h2>
+      <p>動画企画や写真撮影のセットとして使える、様々な大きさや形の船を提供しております。<br>
+        作品ページに移動し、お好みの船をお選びください。配布中でない作品の配布をご希望される場合はXのDMや当該作品の紹介動画のコメント欄などにお申し付けください。</p>
+        <div class="button__wrapper">
+          <a class="button" href="./products/index.html"><span>作品一覧へ</span></a>
         </div>
-      </div>
-    </div>
-    <h1 class="title">中村のマインクラフト造船</h1>
+    </section>
 
-    <div class="lineup">
-      <div class="lineup__index">
-        <img class="lineup__index--img" src="./Products/Battleship/arimanakamura.webp" alt="戦艦">
-        <div class="lineup__index--description">
-          <h2>船たち</h2>
-          <p>TNTキャノンと制御装置、役割の異なる回路がひとつになり機能をつくる。<br>マインクラフトの工業製品。</p>
-        </div>
+    <section>
+      <h2>支援を頂けませんか</h2>
+      <p>YouTubeメンバーシップ、又はpixivFANBOXにて490円/月から支援を受け付けています。 </p>
+      <div class="button__wrapper">
+        <a class="button" href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span class="material-symbols-outlined">open_in_new</span></a>
+        <a class="button" href="https://nakamarunakamura.fanbox.cc/" target="_blank" rel="noopener noreferrer"><span>pixivFANBOX</span><span class="material-symbols-outlined">open_in_new</span></a>
       </div>
-      <ul class="lineup__list">
-        <li class="lineup__item"><a href="./Products/AircraftCareer/index.html"
-            class="lineup__item-link"><span>空母</span></a></li>
-        <li class="lineup__item"><a href="./Products/Battleship/index.html"
-            class="lineup__item-link"><span>戦艦</span></a></li>
-        <li class="lineup__item"><a href="./Products/Cruiser/index.html" class="lineup__item-link"><span>巡洋艦</span></a>
-        </li>
-        <li class="lineup__item"><a href="./Products/Destroyer/index.html"
-            class="lineup__item-link"><span>駆逐艦</span></a></li>
-      </ul>
-      <div class="lineup__more">
-        <a href="./Products/index.html#ships"><span>もっと見る</span></a>
-      </div>
-    </div>
+    </section>
 
-    <div class="lineup">
-      <div class="lineup__index">
-        <img class="lineup__index--img" src="./Products/FCS/fcsf1.webp" alt="FCS">
-        <div class="lineup__index--description">
-          <h2>回路たち</h2>
-          <p>TNTキャノンを制御し、プレイヤーによる操作を可能にする。<br>自動反撃、無線通信などの機能を提供する。</p>
-        </div>
+    <section>
+      <h2>ソーシャルメディア</h2>
+      <div class="iframe__container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/?list=UUzB8_PC3Siup1Zai8EfJC2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <ul class="lineup__list">
-        <li class="lineup__item"><a href="./Products/FCS/index.html" class="lineup__item-link"><span>FCS</span></a></li>
-        <li class="lineup__item"><a href="./Products/WCS/index.html" class="lineup__item-link"><span>WCS</span></a></li>
-        <li class="lineup__item"><a href="./Products/TCS/index.html" class="lineup__item-link"><span>砲塔制御装置</span></a>
-        </li>
-        <li class="lineup__item"><a href="./Products/SCS/index.html" class="lineup__item-link"><span>固定兵装制御装置</span></a>
-        </li>
-      </ul>
-      <div class="lineup__more">
-        <a href="./Products/index.html#circuits"><span>もっと見る</span></a>
-      </div>
-    </div>
-
-    <div class="relatedMovie">
-      <h2>関連動画</h2>
-      <div class="relatedMovie__container">
-        <span id="relatedMovie__button"></span>
-        <img src="thumbnail.webp" alt="play movie">
-      </div>
-    </div>
-    <div id="iframeModal__background">
-      <div class="iframeModal__card">
-
-        <div id="iframeModal__closeButton">閉じる</div>
-      </div>
-    </div>
+    </section>
 
   </main>
   <footer class="footer" id="footer">
 
   </footer>
-  <script src="script.js"></script>
   <script src="shareScript.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
 </html>
