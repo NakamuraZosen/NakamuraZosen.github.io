@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url(../sharestyle.css);
+
+/*style for content*/
+body {
+  background-color: gainsboro;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.carousel {
+  background-color: gray;
+}
+.carousel img {
+  height: 500px;
+}
+section {
+  width: 95%;
+  max-width: 1000px;
+  background-color: whitesmoke;
+  margin: 1em auto;
+  padding: .5em 2em;
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+section h2 {
+  padding: .25em 0;
+  letter-spacing: .5em;
+  border-bottom: 2px solid #97b881;
+}
+section p {
+  text-align: center;
+}
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  width: max-content;
+  margin: 10px;
+  padding: .5em 1em;
+  border: 1px solid silver;
+  border-radius: 9999px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+.button:hover {
+  background-color: lightgray;
+  transform: translateY(1px);
+  box-shadow: none;
+  transition: .2s;
+}
+/*open iframe directly*/
+.iframe__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iframe__container iframe {
+  max-width: 100%;
+  margin: 10px 0;
+}
