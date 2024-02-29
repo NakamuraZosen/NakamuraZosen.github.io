@@ -24,7 +24,7 @@ header.insertAdjacentHTML('afterbegin', `
       中丸・中村造船
     </p>
     <div class="header__logo-en">
-      MINECRAFT SHIPBUILDING
+      NNZ SHIPBUILDING
     </div>
   </a>
 </div>
@@ -57,7 +57,7 @@ footer.insertAdjacentHTML('afterbegin', `
       class="footer__item-link">公式Twitter<span class="material-symbols-outlined">open_in_new</span></a></li>
   </ul>
 </div>
-<p class="footer__copyright">©2021 Nakamaru Nakamura Shipbuilding, All rights reserved.</p>
+<p class="footer__copyright">©2024 NNZ Shipbuilding, All rights reserved.</p>
 `);
 
 //humburger menu controller on phone
