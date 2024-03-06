@@ -25,6 +25,20 @@ header a {
   text-decoration: none;
   color: inherit;
 }
+@media screen and (max-width: 767px) {
+  h1, h2 {
+    font-size: 1.5rem
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h1, h2, h3 {
+    margin: .5em 0;
+  }
+  main {
+    line-height: 1.5;
+  }
+}
 
 /*style for header on pc*/
 @media screen and (min-width: 768px) {
@@ -44,6 +58,7 @@ header a {
     display: block;
   }
   .header__logo-ja {
+    display: block;
     width: max-content;
     margin: 0 auto;
     text-align: center;
@@ -52,6 +67,7 @@ header a {
     letter-spacing: 0.2em;
   }
   .header__logo-en {
+    display: block;
     margin: 0;
     text-align: center;
     font-family: "Arial", sans-serif;
@@ -113,8 +129,10 @@ header a {
     /*spacer for included header "height: 56px;" had been deleted*/
     color: #440088;
     background-color: whitesmoke;
-    border-bottom: 2px solid #440088;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    z-index: 1;
   }
   .header__container {
     display: flex;
@@ -123,13 +141,19 @@ header a {
   }
   /*header logo*/
   .header__logo {
-    width: 15em;
-    padding: 5px 0;
+    width: 100%;
+    padding: 1em .5em;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #c3dab8, 20%, #6a4390);
+    color: white;
+    border-bottom: 2px solid white;
   }
   .header__logo a {
-    display: block;
+    flex-grow: 1;
   }
   .header__logo-ja {
+    display: block;
     margin: 0;
     text-align: center;
     font-family: 'Noto Serif JP', "游明朝", serif;
@@ -137,6 +161,7 @@ header a {
     letter-spacing: 0.2em;
   }
   .header__logo-en {
+    display: block;
     margin: 0;
     text-align: center;
     font-family: "Arial", sans-serif;
@@ -147,29 +172,28 @@ header a {
   #header__nav-button {
     width: 40px;
     height: 40px;
-    background-color: whitesmoke;
-    margin-left: auto;
-    margin-right: 10px;
-    z-index: 10;
+    background-color: transparent;
     /*cancel default button sytle*/
     border: none;
     padding: 0;
+    /*avoid to be covered by nav*/
+    z-index: 1;
   }
   .header__nav-button-line {
     display: block;
     position: relative;
     width: 60%;
-    height: 3px;
+    height: 2px;
     margin: 0 auto;
-    background-color: #440088;
+    background-color: white;
   }
   .header__nav-button-line::before , .header__nav-button-line::after {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
-    height: 3px;
-    background-color: #440088;
+    height: 2px;
+    background-color: white;
   }
   .header__nav-button-line::before {
     transform: translateY(-10px);
@@ -177,10 +201,22 @@ header a {
   .header__nav-button-line::after {
     transform: translateY(10px);
   }
+  #header__nav-button.active .header__nav-button-line {
+    background-color: transparent;
+  }
+  #header__nav-button.active .header__nav-button-line::before {
+    background-color: white;
+    transform: rotate(45deg);
+  }
+  #header__nav-button.active .header__nav-button-line::after {
+    background-color: white;
+    transform: rotate(-45deg);
+  }
   /*style of nav*/
+  /*
   #header__nav {
     position: absolute;
-    top: -350px;
+    top: -350px; translateをここでマイナスにして下で0は？？
     right: 0;
     width: 50%;
     height: 300px;
@@ -194,11 +230,33 @@ header a {
   .header__nav-open {
     transform: translateY(450px);
   }
+  */
+  #header__nav {
+    position: absolute;
+    top: 5em;
+    right: 0;
+    width: 100%;
+    height: 90vh;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #440088;
+    transition: .25s;
+    transform: translateX(-100%);
+  }
+  #header__nav.header__nav-open {
+    transform: translateX(0);
+  }
   .header__list {
-    width: 90%;
-    height: 90%;
-    margin: 5% auto;
-    padding: 0;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    top: 100px;
+    height: 50%;
+
+    margin: 2em 1em;
+
+    border-radius: 10px;
+    padding: 2em;
     display: flex;
     flex-direction: column;
   }
