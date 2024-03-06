@@ -2,7 +2,6 @@
 /*window.onload = function () {
   var CookieData = document.cookie + ';';
   var StartPositionOfVisited = CookieData.indexOf('visited=', 0);
-
   if (StartPositionOfVisited == -1) {
     alert('なかむらのホームページへようこそ。もしよければブックマークしてください。検索しても出てきませんから( ﾉД`)ｼｸｼｸ…');
     var expire = new Date();
@@ -20,24 +19,23 @@ header.insertAdjacentHTML('afterbegin', `
 <div class="header__container">
 <div class="header__logo">
   <a href="https://NakamuraZosen.github.io/">
-    <p class="header__logo-ja">
+    <span class="header__logo-ja">
       中丸・中村造船
-    </p>
-    <div class="header__logo-en">
+    </span>
+    <span class="header__logo-en">
       NNZ SHIPBUILDING
-    </div>
+    </span>
   </a>
+  
+  <button type="button" id="header__nav-button">
+    <span class="header__nav-button-line"></span>
+  </button>
 </div>
-
-<button type="button" id="header__nav-button">
-  <span class="header__nav-button-line"></span>
-</button>
-
 <nav id="header__nav">
   <ul class="header__list">
     <li class="header__item"><a href="https://NakamuraZosen.github.io/Products/index.html" class="header__item-link"><span>作品</span><small>products</small></a></li>
     <li class="header__item"><a href="https://NakamuraZosen.github.io/Events/index.html" class="header__item-link"><span>イベント情報</span><small>events</small></a></li>
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/Statistics/createrList/index.html?date=20230908" class="header__item-link"><span>中村センサス</span><small>census</small></a></li>
+    <li class="header__item"><a href="https://NakamuraZosen.github.io/Statistics/createrList/index.html?date=20230317" class="header__item-link"><span>中村センサス</span><small>census</small></a></li>
     <li class="header__item"><a href="https://NakamuraZosen.github.io/News/index.html" class="header__item-link"><span>ニュース</span><small>news</small></a></li>
     <li class="header__item"><a href="https://NakamuraZosen.github.io/About/index.html" class="header__item-link"><span>中村とは</span><small>about</small></a></li>
   </ul>
@@ -62,8 +60,25 @@ footer.insertAdjacentHTML('afterbegin', `
 
 //humburger menu controller on phone
 document.getElementById('header__nav-button').addEventListener('click', function () {
+  this.classList.toggle('active');
   hamburger();
 }, false);
 function hamburger() {
   document.getElementById('header__nav').classList.toggle('header__nav-open');
 };
+/*
+var openButton = document.getElementById('header__nav-button');
+var closeButton = document.getElementById('header__nav-button');
+var modalBackground = document.getElementById('header__nav');
+
+openButton.addEventListener('click', openModal);
+function openModal() {
+  modalBackground.style.display = 'block';
+};
+
+//closeButton.addEventListener('click', closeModal);
+modalBackground.addEventListener('click', closeModal);
+function closeModal() {
+  modalBackground.style.display = 'none';
+};
+*/
