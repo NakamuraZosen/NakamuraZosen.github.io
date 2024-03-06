@@ -74,7 +74,6 @@ tr:first-child td, th {
   border-bottom: 1px solid silver;
 }
 .links__container {
-  width: max-content;
   margin: 16px auto;
 }
 /*open iframe directly*/
@@ -138,7 +137,7 @@ tr:first-child td, th {
 .iframeModal__card iframe, .iframeModal__card img {
   display: block;
   width: 90%;
-  height: 40.5vw;  
+  height: 40.5vw;
   margin: 20px auto;
 }
 @media screen and (max-width: 767px) {
@@ -233,14 +232,15 @@ tr:first-child td, th {
 .backbutton {
   color: #fff;
   background-color: #408;
-  width: max-content;
   margin: 20px auto;
   border: 2px solid silver;
   border-radius: 9999px;
+  width: fit-content;
 }
 .backbutton a {
   display: block;
   padding: 1em 2em;
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
 }
