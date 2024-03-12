@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-208873990-1');
+  </script>
+
+  <title>戦艦伊勢｜再現艦。新模擬戦ルールに基づいたTNTキャノンを搭載。 - 中村のマインクラフト</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#440088">
+  <meta name="keywords" content="マインクラフト,中村造船,回路,船,戦艦">
+  <meta name="description" content="再現艦。新模擬戦ルールに基づいたTNTキャノンを搭載。">
+  <link href="../style_ships.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header" id="header">
+
+  </header>
+
+  <main>
+    <div class="img">
+      <img src="hero.webp" alt="伊勢" title="伊勢">
+    </div>
+    <div class="overview">
+      <h1 class="overview__name">戦艦伊勢</h1>
+      <p class="overview__charactristics">
+        再現艦。新模擬戦ルールに基づいたTNTキャノンを搭載。<br>
+        <br>
+      </p>
+    </div>
+
+    <div class="spacification">
+      <h2 class="spacification__name">仕様</h2>
+      <div class="spacification__container">
+        <div class="spacification__content">
+          <h3 class="spacification__content-name">大きさ</h3>
+          <table>
+            <tr>
+              <td>全長</td><td>319 m</td>
+            </tr>
+            <tr>
+              <td>全幅</td><td>45 m</td>
+            </tr>
+            <tr>
+              <td>吃水</td><td>13 m</td>
+            </tr>
+            <tr>
+              <td>総ブロック数</td><td>82,774</td>
+            </tr>
+          </table>
+        </div>
+        <div class="spacification__content">
+          <h3 class="spacification__content-name">装置</h3>
+          <table>
+            <tr>
+              <td>制御装置</td><td>FCS-Y11</td>
+            </tr>
+            <tr>
+              <td>砲塔制御装置</td><td>TCS-Y1</td>
+            </tr>
+          </table>
+        </div>
+        <div class="spacification__content">
+          <h3 class="spacification__content-name">兵装</h3>
+          <table>
+            <tr>
+              <th>種別</th><th>型式x搭載数</th><th>弾頭数</th>
+            </tr>
+            <tr>
+              <td>主砲</td><td>四一式36cm連装砲 x 6</td><td>16 x 2</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h2 class="description__name">解説</h2>
+      <h3 class="description__chapter">開発経緯</h3>
+      <p>
+        本艦の建造目的は二つです。
+        第一に、新しい模擬戦ルールの実証に用いる事です。新しい模擬戦ルールの概要と、その策定の目的は後半に紹介します。
+        第二に、夢洲世代制御装置の活用方法の例を示す事です。夢洲世代は、これまで自動反撃システムや無線通信といった豊富な機能性をアピールしてきましたが、装置の小ささや接続の簡単さも重要な特長です。
+        本艦は、兵装として主砲塔六基のみを搭載しており、自動反撃システムや無線通信は搭載しておりません。そんな本艦も、夢洲世代の採用により建造期間短縮を実現しています。
+      </p>
+      <h3 class="description__chapter">外観</h3>
+      <p>
+        本艦の外観は、名前の通り伊勢型戦艦を参考にしていますが、艦橋や兵装配置などは、航空戦艦改装後の姿を参考にしています。
+      </p>
+      <h3 class="description__chapter">兵装</h3>
+      <p>
+        兵装は、六基の45口径四一式36cm連装砲です。本砲は、新しい模擬戦ルールに定められる予定の弾頭数制限を受け、一門当たり最大弾頭数16個という弱い主砲です。
+        弾頭用ディスペンサーは一個、装薬用ディスペンサーは二個という、必要最小限の構成で砲機構を小型化するとともに後ろ側に寄せられ、砲塔の前半分を装甲としています。
+      </p>
+      <h3 class="description__chapter">装置</h3>
+      <p>
+        制御装置には、夢洲世代を採用しています。
+        自動反撃システムや無線通信を搭載していないため、船体首尾線上に綺麗に5本並んでいるのみです。これにより、建造期間の短縮が実現しました。
+        また、このシンプルな回路でありながら、夢洲世代が提供する装薬増加と射撃クロック数の変更が可能です。
+        艦の操作は、制御装置の真上にあるCICから行います。このCICは水面上にあり、4ブロックの装甲によって防御されています。
+      </p>
+      <h3 class="description__chapter">防御</h3>
+      <p>
+        本艦の防御は、新しい模擬戦ルールに定められる予定の制限を受け、水流装甲も金床装甲も用いず、ブロックの装甲に頼っています。
+        装甲は、砲塔やCICを囲むように配置された4ブロックから5ブロック厚の砲郭装甲と、船体側面に配置された2ブロック厚の装甲帯に大別できます。
+      </p>
+    </div>
+
+    <div class="distributions">
+      <h2 class="distributions__name">配布フォーム</h2>
+      <div class="distributions__step">
+        <span>1. google form でアンケートに答える</span>
+        <div class="arrow sample5-2"></div>
+        <span>2. dropboxでデータを受け取る</span>
+        <div class="arrow sample5-2"></div>
+        <span>3. MCEditでデータをワールドに導入</span>
+      </div>
+      <div class="backbutton">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdO90N480iRF0F_3bfpboqZWzFUoH_CllAdxLPTZGGkXklrXw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><span>アンケートに答えてこの船を入手！<span class="material-symbols-outlined">open_in_new</span></span></a>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">不具合等報告フォーム<span class="material-symbols-outlined">open_in_new</span></a>
+      <br>
+      <a href="../yumeshima-gen-system/Document_Yumeshima-gen_20240301.pdf" target="_blank" rel="noopener noreferrer">説明書（PDFダウンロード可）</a>
+      <p>※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。※google, dropboxのログインは不要です。</p>
+
+    </div>
+
+    <div class="relatedMovie">
+      <h2>出演動画</h2>
+      <div class="iframe__container">
+        <p>後日投稿</p>
+      </div>
+    </div>
+
+    <div class="backbutton">
+      <a href="../index.html"><span>作品一覧へ戻る</span></a>
+    </div>
+
+  </main>
+
+  <footer id="footer">
+
+  </footer>
+  <script src="./script.js"></script>
+  <script src="../../shareScript.js"></script>
+</body>
+
+</html>
