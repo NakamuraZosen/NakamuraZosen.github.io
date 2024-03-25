@@ -251,7 +251,6 @@ header a {
     background-color: whitesmoke;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     top: 100px;
-    height: 50%;
 
     margin: 2em 1em;
 
@@ -273,6 +272,7 @@ header a {
     flex: 1 1;
     flex-direction: column;
     justify-content: center;
+    padding: 1em 0;
   }
   .header__list small {
     color: #333;
