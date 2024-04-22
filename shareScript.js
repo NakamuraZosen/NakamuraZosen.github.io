@@ -63,7 +63,7 @@ footer.insertAdjacentHTML('afterbegin', `
   </div>
   <!-- 切り替えスイッチ -->
   <div class="footer__content">
-    <span class="footer__content-index">暗い背景</span>
+    <span class="footer__content-index">暗い背景（Beta）</span>
     <input
       type="checkbox"
       name="onoffswitch"
