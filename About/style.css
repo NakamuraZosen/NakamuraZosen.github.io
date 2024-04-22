@@ -77,14 +77,14 @@ section img {
 .x {
   background-color: lightblue;
 }
-@media (prefers-color-scheme: dark) {
-  .yt {
-    background-color: maroon;
-  }
-  .x {
-    background-color: midnightblue;
-  }
+:root,
+.darkmode .yt {
+  background-color: maroon;
 }
+.darkmode .x {
+  background-color: midnightblue;
+}
+
 .button:hover {
   background-color: var(--c-hover);
   transform: translateY(1px);
