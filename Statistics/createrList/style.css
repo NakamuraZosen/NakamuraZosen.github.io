@@ -86,15 +86,16 @@
   width: auto;
   margin: auto;
   text-align: inherit;
+  color: var(--c);
 }
 .tablesorter-default th {
   background-color: silver;
 }
 .tablesorter-default td {
-  background-color: whitesmoke;
+  background-color: var(--c-bg-base);
 }
 .tablesorter-default tr:nth-child(even) td {
-  background-color: #eee;
+  background-color: var(--c-bg-neutral);
 }
 .tablesorter-default a {
   display: block;
