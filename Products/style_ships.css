@@ -131,7 +131,7 @@ tr:first-child td, th {
 .iframeModal__card {
   width: 80%;
   height: auto;
-  background-color: #fff;
+  background-color: var(--c);
   border-radius: 20px;
 }
 .iframeModal__card iframe, .iframeModal__card img {
