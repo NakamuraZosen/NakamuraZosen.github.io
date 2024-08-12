@@ -105,11 +105,11 @@ modeSwitch.addEventListener("change", () => {
   console.log("chage theme to");
   if (modeSwitch.checked) {
     darkModeOn();
-    sessionStorage.setItem("darkMode", "on");
+    localStorage.setItem("darkMode", "on");
     console.log("dark");
     } else {
     darkModeOff();
-    sessionStorage.setItem("darkMode", "off");
+    localStorage.setItem("darkMode", "off");
     console.log("not dark");
   }
 });
@@ -148,10 +148,10 @@ listener(osDark);
 //MediaQueryList End
 
 // ロード時の状況に応じて切り替え
-if (sessionStorage.getItem("darkMode") === "on") {
+if (localStorage.getItem("darkMode") === "on") {
   console.log("theme is set as dark");
   darkModeOn();
-} else if (sessionStorage.getItem("darkMode") === "off") {
+} else if (localStorage.getItem("darkMode") === "off") {
   darkModeOff();
     console.log("theme is set as not dark");
 }
