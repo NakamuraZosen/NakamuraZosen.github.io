@@ -148,7 +148,7 @@ const target = document.getElementById('researchDate');
 
 if (params.has("date") == true) {
   target.innerText = "調査日時：" + params.get("date");
-  let json_path = 'https://NakamuraZosen.github.io/Statistics/createrList/createrList_' + params.get("date") + '.json';
+  let json_path = 'https://zosen.nnz-design.com/Statistics/createrList/createrList_' + params.get("date") + '.json';
   import_json(json_path);  
 } else {
   target.innerText = "調査日時が選択されていません。";
