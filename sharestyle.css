@@ -65,6 +65,10 @@ main {
   text-decoration: none;
   color: inherit;
 }
+svg {
+  fill: var(--c);
+  vertical-align: inherit;
+}
 @media screen and (max-width: 767px) {
   h1, h2 {
     font-size: 1.5rem
