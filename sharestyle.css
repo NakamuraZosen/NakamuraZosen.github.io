@@ -11,6 +11,7 @@ body {
   --c-heading: #440088;
   --c-border: darkgray;
   --c-hover: lightgray;
+  --main-color: #440088;
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -37,11 +38,14 @@ body {
  --c-heading: #fff;
  --c-border: mediumpurple;
  --c-hover: #666;
+ --main-color: mediumpurple;
 }
 .darkmode a {
  color: #8cb4ff;
 }
-
+a {
+  word-break: break-word;
+}
 /*style for all of page*/
 body{
   margin: 0;
@@ -64,6 +68,10 @@ main {
 #header a {
   text-decoration: none;
   color: inherit;
+}
+svg {
+  fill: var(--c);
+  vertical-align: inherit;
 }
 @media screen and (max-width: 767px) {
   h1, h2 {
