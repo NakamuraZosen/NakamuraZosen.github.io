@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-.filter__container {  
+.filter__container {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
@@ -41,7 +41,7 @@
 }
 .filter__container label {
   display: inline-block;
-  background-color: lightgrey;
+  background-color: var(--c-bg-highlight);
   padding: .5em;
   margin: .2em;
   border-radius: 4px;
