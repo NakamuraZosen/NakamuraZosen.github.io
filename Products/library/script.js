@@ -46,7 +46,7 @@ function draw_table(data_array) {
   });
 }
 
-import_csv('https://NakamuraZosen.github.io/Products/library/shipsLibrary.csv');
+import_csv('https://zosen.nnz-design.com/Products/library/shipsLibrary.csv');
 
 //reference: freelance321.com/javascript/load-csv/
 
