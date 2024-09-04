@@ -2,10 +2,17 @@
 @import url(../sharestyle.css);
 
 /*style for content*/
+
+.content__name {
+  padding: .5em;
+  border: 2px solid var(--main-color);
+  border-radius: 9px;
+  box-shadow:  0px 0px 10px 0px rgb(0, 0, 0, 0.25);
+}
 h3 {
+  margin-top: 2em;
   padding-left: 1em;
-  border-left: 6px solid #440088;
-  border-bottom: 1px solid silver;
+  border-left: 8px solid var(--main-color);
 }
 .card {
   width: 90%;
@@ -13,7 +20,7 @@ h3 {
   margin: 20px auto;
   border: 1px solid silver;
   border-radius: 20px;
-  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
 }
 .Title {
   width: 90%;
@@ -29,10 +36,6 @@ h3 {
   width: 90%;
   max-width: 1728px;
   margin: 0 auto;
-}
-.content__name {
-  background: linear-gradient(lightgray, whitesmoke);
-  border-radius: 9px;
 }
 .index {
   width: max-content;
@@ -62,10 +65,10 @@ img {
 .tableArea__content {
   margin: .5em;
   padding: .5em;
-  background-color: antiquewhite;
+  background-color: var(--c-bg-highlight);
   border-radius: 9px;
   border: 1px solid silver;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .tableArea__content h4 {
   text-align: center;
@@ -82,7 +85,7 @@ tr:first-child td, th {
   border-top: 1px solid silver;
 }
 .backbutton:hover {
-  background-color: lightgray;
+  background-color:  var(--c-hover);
   transform: translateY(1px);
   box-shadow: none;
   transition: .2s;
@@ -96,7 +99,8 @@ tr:first-child td, th {
 }
 .backbutton a {
   display: block;
-  padding: 1em 2em;  
+  padding: 1em 2em;
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
 }
