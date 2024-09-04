@@ -41,7 +41,7 @@ section p {
   display: flex;
   justify-content: center;
 }
-.button {
+.button__wrapper .button {
   width: max-content;
   margin: 10px;
   padding: .5em 1em;

@@ -1,4 +1,6 @@
+//------------------------------------------------------------------------------
 //bookmark alart of cookie
+//------------------------------------------------------------------------------
 /*window.onload = function () {
   var CookieData = document.cookie + ';';
   var StartPositionOfVisited = CookieData.indexOf('visited=', 0);
@@ -13,8 +15,9 @@
 };
 */
 
-
+//------------------------------------------------------------------------------
 //include header
+//------------------------------------------------------------------------------
 let header = document.getElementById('header');
 header.insertAdjacentHTML('afterbegin', `
 <div class="header__container">
@@ -44,7 +47,9 @@ header.insertAdjacentHTML('afterbegin', `
 </div>
 `);
 
+//------------------------------------------------------------------------------
 //include footer
+//------------------------------------------------------------------------------
 let footer = document.getElementById('footer');
 footer.insertAdjacentHTML('afterbegin', `
 <div class="footer__wrapper">
@@ -78,7 +83,9 @@ footer.insertAdjacentHTML('afterbegin', `
 <span class="footer__copyright">©2024 NNZ Shipbuilding, All rights reserved.</span>
 `);
 
+//------------------------------------------------------------------------------
 //humburger menu controller on phone
+//------------------------------------------------------------------------------
 document.getElementById('header__nav-button').addEventListener('click', function () {
   this.classList.toggle('active');
   hamburger();
@@ -87,32 +94,23 @@ function hamburger() {
   document.getElementById('header__nav').classList.toggle('header__nav-open');
 };
 
+//------------------------------------------------------------------------------
 //toggle darkmode reference: https://zenn.dev/chabatake_i/articles/darkmode_introductions
-// OSの設定がダークモード
-const osDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-// イベントリスナー
-const listener = (event) => {
-  if (event.matches) {
-    darkModeOn();
-  } else {
-    darkModeOff();
-  }
-};
-
-// リスナー登録
-//osDark.addEventListener("change", listener);
-
-
+//------------------------------------------------------------------------------
 // スイッチのinput要素（checkbox）
 const modeSwitch = document.getElementById("myonoffswitch");
 
 // スイッチの操作に応じて切り替え処理
 modeSwitch.addEventListener("change", () => {
+  console.log("chage theme to");
   if (modeSwitch.checked) {
     darkModeOn();
+    localStorage.setItem("darkMode", "on");
+    console.log("dark");
     } else {
     darkModeOff();
+    localStorage.setItem("darkMode", "off");
+    console.log("not dark");
   }
 });
 
@@ -127,8 +125,38 @@ function darkModeOff() {
   modeSwitch.checked = false;
 };
 
+//MediaQueryList Start
+// OSの設定がダークモード
+const osDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+// イベントリスナー
+const listener = (event) => {
+  console.log("prefers-color-scheme is");
+  if (event.matches) {
+    darkModeOn();
+    console.log("dark");
+  } else {
+    darkModeOff();
+    console.log("not dark");
+  }
+};
+
+// リスナー登録
+osDark.addEventListener("change", listener);
 // 初期化処理
-//listener(osDark);
+listener(osDark);
+//MediaQueryList End
+
+// ロード時の状況に応じて切り替え
+if (localStorage.getItem("darkMode") === "on") {
+  console.log("theme is set as dark");
+  darkModeOn();
+} else if (localStorage.getItem("darkMode") === "off") {
+  darkModeOff();
+    console.log("theme is set as not dark");
+}
+
+
 
 /*
 var openButton = document.getElementById('header__nav-button');
