@@ -391,7 +391,8 @@ svg {
   font-weight: bold;
 }
 .footer__content-list
-.footer__item {
+.footer__item svg {
+  fill: white;
 }
 .footer__copyright {
   display: block;
