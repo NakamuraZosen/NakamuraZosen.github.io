@@ -211,13 +211,17 @@ svg {
   }
   /*header logo*/
   .header__logo {
+    box-sizing: border-box;
     width: 100%;
-    padding: 1em .5em;
+    height: 80px;
+    padding: 0 .5em;
+    border-bottom: 2px solid white;
+
+    color: white;
+    background: linear-gradient(to right, #c3dab8, 20%, #6a4390);
+
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, #c3dab8, 20%, #6a4390);
-    color: white;
-    border-bottom: 2px solid white;
   }
   .header__logo a {
     flex-grow: 1;
@@ -226,20 +230,24 @@ svg {
     display: block;
     margin: 0;
     text-align: center;
+    /*
     font-family: 'Noto Serif JP', "游明朝", serif;
     font-size: 1.5em;
     letter-spacing: 0.2em;
+    */
   }
   .header__logo-ja img {
-    height: 20px;
-    vertical-align: baseline;
+    display: block;
+    height: 24px;
+    margin: 4px auto;
+    padding-bottom: 4px;
   }
   .header__logo-en {
     display: block;
     margin: 0;
     text-align: center;
     font-family: "Arial", sans-serif;
-    font-size: 0.6em;
+    font-size: 10px;
     letter-spacing: 0.2em;
   }
   /*nav button*/
