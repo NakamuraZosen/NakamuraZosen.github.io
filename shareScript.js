@@ -24,7 +24,7 @@ header.insertAdjacentHTML('afterbegin', `
 <div class="header__logo">
   <a href="https://NakamuraZosen.github.io/">
     <span class="header__logo-ja">
-      中丸・中村造船
+      <img src="/img/中丸中村造船.svg" />
     </span>
     <span class="header__logo-en">
       NNZ SHIPBUILDING
