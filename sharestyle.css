@@ -115,6 +115,10 @@ svg {
     font-size: 2em;
     letter-spacing: 0.2em;
   }
+  .header__logo-ja img {
+    height: 30px;
+    vertical-align: baseline;
+  }
   .header__logo-en {
     display: block;
     margin: 0;
@@ -226,6 +230,10 @@ svg {
     font-family: 'Noto Serif JP', "游明朝", serif;
     font-size: 1.5em;
     letter-spacing: 0.2em;
+  }
+  .header__logo-ja img {
+    height: 20px;
+    vertical-align: baseline;
   }
   .header__logo-en {
     display: block;
