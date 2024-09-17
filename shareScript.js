@@ -56,14 +56,35 @@ footer.insertAdjacentHTML('afterbegin', `
   <div class="footer__content">
     <span class="footer__content-index">SNS</span>
     <ul class="footer__content-list">
-      <li class="footer__item"><a href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer" class="footer__item-link">公式YouTube<span class="material-symbols-outlined">open_in_new</span></a></li>
-      <li class="footer__item"><a href="https://twitter.com/NHI_nakamura" target="_blank" rel="noopener noreferrer" class="footer__item-link">公式Twitter<span class="material-symbols-outlined">open_in_new</span></a></li>
+      <li class="footer__item">
+        <a href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer" class="footer__item-link">
+          公式YouTube
+          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
+            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="https://twitter.com/NHI_nakamura" target="_blank" rel="noopener noreferrer" class="footer__item-link">
+          公式Twitter
+          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
+            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+          </svg>
+        </a>
+      </li>
     </ul>
   </div>
   <div class="footer__content">
     <span class="footer__content-index">HPの不具合等</span>
     <ul class="footer__content-list">
-      <li class="footer__item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link">Google forms<span class="material-symbols-outlined">open_in_new</span></a></li>
+      <li class="footer__item">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link">
+          Google forms          
+          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
+            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+          </svg>
+        </a>
+      </li>
     </ul>
   </div>
   <!-- 切り替えスイッチ -->
