@@ -47,7 +47,7 @@ h3 {
 .index a {
   text-overflow: ellipsis;
 }
-img {
+main img {
   width: 480px;
   height: 270px;
   object-fit: cover;
