@@ -53,7 +53,7 @@ main img {
   object-fit: cover;
 }
 @media screen and (max-width: 767px) {
-  img {
+  main img {
     height: 180px;
     width: 100%;
   }
