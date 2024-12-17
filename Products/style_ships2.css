@@ -28,8 +28,8 @@
 .overview__wrapper {
   position: absolute;
   top: 50%;
-  left: 5%;
   transform: translate(-0%,-50%);
+  padding: 0 5%;
 
   color: white;
   text-shadow: #222 0 0 5px;
@@ -118,7 +118,7 @@
 }
 @media screen and (max-width: 1000px) {
   .flex-section {
-    margin: 0;
+    margin: 0 2px;
     margin-bottom: 5em;
     flex-direction: column;
   }
