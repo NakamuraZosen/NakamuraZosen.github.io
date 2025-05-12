@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^(./News/diary/20220315.html)$ https://blog.nnz-design.com/litematica-tutorial/ [R=301,L]
