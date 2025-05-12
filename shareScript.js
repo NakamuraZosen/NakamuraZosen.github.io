@@ -22,7 +22,7 @@ let header = document.getElementById('header');
 header.insertAdjacentHTML('afterbegin', `
 <div class="header__container">
 <div class="header__logo">
-  <a href="https://NakamuraZosen.github.io/">
+  <a href="https://zosen.nnz-design.com/">
     <span class="header__logo-ja">
       <img src="/img/中丸中村造船.svg" />
     </span>
@@ -37,11 +37,11 @@ header.insertAdjacentHTML('afterbegin', `
 </div>
 <nav id="header__nav">
   <ul class="header__list">
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/Products/index.html" class="header__item-link"><span>作品</span><small>products</small></a></li>
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/Events/index.html" class="header__item-link"><span>イベント情報</span><small>events</small></a></li>
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/Statistics/createrList/index.html?date=20240421" class="header__item-link"><span>中村センサス</span><small>census</small></a></li>
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/News/index.html" class="header__item-link"><span>ニュース</span><small>news</small></a></li>
-    <li class="header__item"><a href="https://NakamuraZosen.github.io/About/index.html" class="header__item-link"><span>中村とは</span><small>about</small></a></li>
+    <li class="header__item"><a href="https://zosen.nnz-design.com/Products/index.html" class="header__item-link"><span>作品</span><small>products</small></a></li>
+    <li class="header__item"><a href="https://zosen.nnz-design.com/Events/index.html" class="header__item-link"><span>イベント情報</span><small>events</small></a></li>
+    <li class="header__item"><a href="https://zosen.nnz-design.com/Statistics/createrList/index.html?date=20240421" class="header__item-link"><span>中村センサス</span><small>census</small></a></li>
+    <li class="header__item"><a href="https://zosen.nnz-design.com/News/index.html" class="header__item-link"><span>ニュース</span><small>news</small></a></li>
+    <li class="header__item"><a href="https://zosen.nnz-design.com/About/index.html" class="header__item-link"><span>中村とは</span><small>about</small></a></li>
   </ul>
 </nav>
 </div>
@@ -101,7 +101,7 @@ footer.insertAdjacentHTML('afterbegin', `
     </label>
   </div>
 </div>
-<span class="footer__copyright">©2024 NNZ Shipbuilding, All rights reserved.</span>
+<span class="footer__copyright">©2024-2025 NNZ Shipbuilding, All rights reserved.</span>
 `);
 
 //------------------------------------------------------------------------------
