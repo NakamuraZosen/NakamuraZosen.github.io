@@ -39,7 +39,7 @@ header.insertAdjacentHTML('afterbegin', `
   <ul class="header__list">
     <li class="header__item"><a href="https://zosen.nnz-design.com/Products/index.html" class="header__item-link"><span>作品</span><small>products</small></a></li>
     <li class="header__item"><a href="https://zosen.nnz-design.com/Events/index.html" class="header__item-link"><span>イベント情報</span><small>events</small></a></li>
-    <li class="header__item"><a href="https://zosen.nnz-design.com/Statistics/createrList/index.html?date=20240421" class="header__item-link"><span>中村センサス</span><small>census</small></a></li>
+    <li class="header__item"><a href="https://zosen.nnz-design.com/Statistics/createrList/index.html?date=20250521" class="header__item-link"><span>中村センサス</span><small>census</small></a></li>
     <li class="header__item"><a href="https://zosen.nnz-design.com/News/index.html" class="header__item-link"><span>ニュース</span><small>news</small></a></li>
     <li class="header__item"><a href="https://zosen.nnz-design.com/About/index.html" class="header__item-link"><span>中村とは</span><small>about</small></a></li>
   </ul>
