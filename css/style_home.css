@@ -17,22 +17,55 @@ a {
   background-color: gray;
 }
 .carousel img {
-  height: 500px;
+  height: 700px;
 }
 section {
-  width: 95%;
+  margin: 0;
+  padding: 8rem;
+}
+section:only-child {
+  padding: 0 1rem;
   max-width: 1000px;
-  background-color: var(--c-bg-base);
-  margin: 1em auto;
-  padding: .5em 2em;
-
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
 }
 section h2 {
-  padding: .25em 0;
   letter-spacing: .5em;
-  border-bottom: 2px solid #97b881;
+  font-size: 3em;
+  margin-bottom: 4rem;
+}
+section a {
+  font-size: 1.5em;
+}
+.section1 {
+  color: #fff;
+  background-color: #3f2f5b;
+}
+.section1 h2 {
+  color: #fff;
+}
+.section1 a {
+  background-color: #ddd4e5;
+}
+.section1 span {
+  color: #3f2f5b;
+}
+.section2 {
+  color: #3f2f5b;
+  background-color: #ddd4e5;
+}
+.section2 h2 {
+  color: #3f2f5b;
+}
+.section2 a {
+  background-color: #3f2f5b;
+}
+.section2 span {
+  color: #ddd4e5;
+}
+.section3 {
+  background-color: #92a5a1;
+}
+.section3 h2 {
+  color: white;
 }
 section p {
   text-align: center;
@@ -54,7 +87,7 @@ section p {
   font-weight: bold;
 }
 .button:hover {
-  background-color: var(--c-hover);
+  opacity: .75;
   transform: translateY(1px);
   box-shadow: none;
   transition: .2s;
@@ -68,4 +101,20 @@ section p {
 .iframe__container iframe {
   max-width: 100%;
   margin: 10px 0;
+}
+@media screen and (max-width: 767px) {
+  section {
+    margin: 0;
+    padding: 2rem;
+  }
+  section h2 {
+    font-size: 1.5em;
+  }
+  section a {
+    font-size: 1.2em;
+  }
+  section .button__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
