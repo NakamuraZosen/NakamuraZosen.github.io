@@ -35,7 +35,7 @@ td, th {
 }
 .icon__wrapper {
   padding: .5em;
-  border: 1px solid silver;
+  border: 1px solid var(--c-border);
   margin: .2em;
   border-radius: 10px;
   /*
@@ -98,7 +98,7 @@ td, th {
 .functions li {
   margin: 20px;
   padding: 5px;
-  border: 1px solid silver;
+  border: 1px solid var(--c-border);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,7 +125,7 @@ td, th {
   background-color: var(--c-bg-base);
 }
 .Types h3 {
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid var(--c-border);
 }
 .Types__name {
   margin: 0;
@@ -222,7 +222,7 @@ td, th {
 .index h3 {
   margin: 0;
   padding: .5em;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid var(--c-border);
   text-align: center;
 }
 .index__list {
@@ -231,7 +231,7 @@ td, th {
   padding: 0;
 }
 .index__list li {
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid var(--c-border);
 }
 .index__list a {
   display: inline-block;
