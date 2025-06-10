@@ -53,7 +53,7 @@ header.insertAdjacentHTML('afterbegin', `
 let footer = document.getElementById('footer');
 footer.insertAdjacentHTML('afterbegin', `
 <div class="footer__logo">
-  <img src="img/NNZ-Logo.svg" />
+  <img src="/img/NNZ-Logo.svg" />
 </div>
 <div class="footer__wrapper">
   <div class="footer__content">
