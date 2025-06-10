@@ -52,6 +52,9 @@ header.insertAdjacentHTML('afterbegin', `
 //------------------------------------------------------------------------------
 let footer = document.getElementById('footer');
 footer.insertAdjacentHTML('afterbegin', `
+<div class="footer__logo">
+  <img src="img/NNZ-Logo.svg" />
+</div>
 <div class="footer__wrapper">
   <div class="footer__content">
     <span class="footer__content-index">SNS</span>
@@ -114,7 +117,21 @@ document.getElementById('header__nav-button').addEventListener('click', function
 function hamburger() {
   document.getElementById('header__nav').classList.toggle('header__nav-open');
 };
-
+//------------------------------------------------------------------------------
+// highlight nav
+//------------------------------------------------------------------------------
+const currentCat = location.pathname.split("/")[4];
+console.log(location.pathname);
+console.log(currentCat);
+const navLists = document.getElementsByClassName("header__item");
+const cats = ["Products", "Events", "Statistics", "News", "About"];
+for (let i = 0; i < cats.length; i++) {
+  if (currentCat === cats[i]) {
+    navLists[i].classList.add("selectedNav");
+    console.log(i + "th element is selected");
+    break;
+  }
+};
 //------------------------------------------------------------------------------
 //toggle darkmode reference: https://zenn.dev/chabatake_i/articles/darkmode_introductions
 //------------------------------------------------------------------------------
