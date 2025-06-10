@@ -48,7 +48,7 @@ a {
 /*style for all of page*/
 body{
   margin: 0;
-  font-family: "游ゴシック", sans-serif;
+  font-family: sans-serif;
   background-color: var(--c-bg-base);
 }
 header ul, footer ul{
@@ -146,9 +146,13 @@ svg {
     justify-content: flex-end;
     margin: 0 auto;
   }
+  .selectedNav {
+    border-bottom: 3px solid #fff;
+  }
   .header__item {
     flex: 1 1;
     border-top: 1px solid rgb(255, 255, 255, 0.25);
+
     display: flex;
   }
   .header__item-link{
@@ -340,6 +344,10 @@ darkmode END*/
     display: flex;
     flex-direction: column;
   }
+  .selectedNav {
+    border-left: 6px solid var(--c-bg-highlight);
+    padding-left: 6px;
+  }
   .header__item {
     flex: 1 1;
     display: flex;
@@ -379,6 +387,16 @@ darkmode END*/
 #footer a {
   text-decoration: none;
   color: inherit;
+}
+.footer__logo {
+  padding-top: 2em;
+}
+.footer__logo img {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 2em;
+  height: 12rem;
 }
 .footer__wrapper {
   display: flex;
