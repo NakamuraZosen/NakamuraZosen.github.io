@@ -120,7 +120,7 @@ function hamburger() {
 //------------------------------------------------------------------------------
 // highlight nav
 //------------------------------------------------------------------------------
-const currentCat = location.pathname.split("/")[4];
+const currentCat = location.pathname.split("/")[1];
 console.log(location.pathname);
 console.log(currentCat);
 const navLists = document.getElementsByClassName("header__item");
