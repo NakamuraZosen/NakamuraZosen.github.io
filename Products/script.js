@@ -1,24 +1,38 @@
 const releases = document.getElementById('releases').innerHTML;
+const indexes = document.getElementById('index').textContent.split(",");
 
 function createButton(obj) {
-  const dlButton = document.getElementById("dlButton");
-  const url = obj["assets"][0]["browser_download_url"];
-  console.log(obj["assets"][0]["browser_download_url"]);
+  console.log(obj);
+  const dlButton = document.querySelectorAll('.dlButton');//getElementsByClassName使用不可
+  console.log(dlButton);
+  console.log(indexes);
 
-  dlButton.setAttribute('href', url);
+  dlButton.forEach((item, i) => {
+    const j = indexes[i]; //内容が0のときinnerHTML, textContentなど使用不可
+    console.log(j);
+    const url = obj["assets"][j]["browser_download_url"];
+    console.log(obj["assets"][j]["browser_download_url"]);
+
+    item.setAttribute('href', url);
+  });
 }
 
 function populateData(obj) {
   const dlStatus = document.getElementById('dlStatus');
-  console.log(obj["assets"][0]["name"]);
 
-  let newElement = document.createElement("li");
-  newElement.textContent = "ファイル名: " + obj["assets"][0]["name"];
-  dlStatus.appendChild(newElement);
+  indexes.forEach((item, i) => {
+    const newElement = document.createElement("tr");
 
-  let newNewElement = document.createElement("li");
-  newNewElement.textContent = "ダウンロード数: " + obj["assets"][0]["download_count"];
-  dlStatus.appendChild(newNewElement);
+    const td1 = document.createElement("td");
+    td1.textContent = obj["assets"][item]["name"];
+
+    const td2 = document.createElement("td");
+    td2.textContent = obj["assets"][item]["download_count"];
+
+    newElement.appendChild(td1);
+    newElement.appendChild(td2);
+    dlStatus.appendChild(newElement);
+  });
 }
 
 async function populate() {
