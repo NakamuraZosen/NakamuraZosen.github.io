@@ -174,19 +174,25 @@
         <div class="arrow sample5-2"></div>
         <span>3. MCEditでデータをワールドに導入</span>
       </div>
-      <div class="backbutton">
-        <a id="dlButton"><span>ダウンロード<span class="material-symbols-outlined">download</span></span></a>
+      <div class="button__wrapper">
+        <a class="dlButton button" id="dlButton"><span>SAI3級をダウンロード<span class="material-symbols-outlined">download</span></span></a>
       </div>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">不具合等報告フォーム<span class="material-symbols-outlined">open_in_new</span></a>
       <br>
       <p>※説明書はありません。出演動画を参考に操作してください。</p>
       <p>※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。</p>
 
-      <h3>統計</h3>
-      <ul id="dlStatus">
-        <li id="releases">v1.3.0</li>
-
+      <h3>ダウンロード情報</h3>
+      <ul id="dlRequest">
+        <li>releases: <span id="releases">v1.3.0</span></li>
+        <li>assets: <span id="index">0</span></li>
       </ul>
+      <h3>統計</h3>
+      <table id="dlStatus">
+        <tr>
+          <th>ファイル名</th><th>ダウンロード数</th>
+        </tr>
+      </table>
 
     </div>
 
