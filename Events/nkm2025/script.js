@@ -1,6 +1,6 @@
 //date count down
 var now = new Date();
-var point = new Date("2025/10/13");
+var point = new Date("2025/10/14");
 var countdown = Math.ceil((point.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
 console.log(countdown);
 if (countdown > -1) {
