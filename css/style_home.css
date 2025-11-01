@@ -19,6 +19,17 @@ a {
 .carousel img {
   height: 700px;
 }
+.carousel-caption p {
+  text-shadow: #000 0 0 20px;
+}
+.carousel-caption a {
+  font-size: 1.5em;
+  background-color: #fff;
+}
+.carousel-caption span {
+  color: #3f2f5b;
+
+}
 section {
   margin: 0;
   padding: 8rem;
