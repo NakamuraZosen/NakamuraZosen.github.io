@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=ja dir="ltr">
+<html lang="ja">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -14,11 +14,12 @@
 
   <title>ニュース - 中村のマインクラフト</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,作品">
   <meta name="description" content="中村のマインクラフトニュースの一覧です。">
-  <link href="../style_menu.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=open_in_new" />
 </head>
 
 <body>
@@ -27,44 +28,75 @@
   </header>
 
   <main>
-    <div class="Title">
+    <section class="Title">
       <h1 class="Title__name">ニュース</h1>
       <p class="Title__subtitle">
         お知らせや日記っぽいことを書いていきます。お楽しみに
       </p>
-    </div>
-    <div class="Types">
-      <h2 class="Types__name">月刊チャンネル運営</h2>
-      <p class="Types__description">
-        先月一か月間のチャンネル運営を振り返ります
-      </p>
-      <ul class="Types__list">
-        <li class="Types__item"><a href="./202211/index.html">2022年11月のチャンネル運営振り返り。</a><font color="red"><b> New</b></font></li>
-        <li class="Types__item"><a href="./202210/index.html">2022年10月のチャンネル運営振り返り。</a></li>
-        <li class="Types__item"><a href="./202209/index.html">2022年9月のチャンネル運営振り返り。</a></li>
-        <li class="Types__item"><a href="./202208/index.html">2022年8月のチャンネル運営振り返り。</a></li>
-        <li class="Types__item"><a href="./202207/index.html">2022年7月のチャンネル運営振り返り。</a></li>
-        <li class="Types__item"><a href="./202206/index.html">2022年6月のチャンネル運営振り返り。</a></li>
-        <li class="Types__item"><a href="./202205/index.html">2022年5月のチャンネル運営振り返り。</a></li>
-        <li class="Types__item"><a href="./202204/index.html">2022年4月のチャンネル運営振り返り。2022年5月4日</a></li>
-        <li class="Types__item"><a href="./202203/index.html">2022年3月のチャンネル運営振り返り。2022年4月15日</a></li>
-        <li class="Types__item"><a href="./202201-02/index.html">2022年1月から2月のチャンネル運営振り返り。2022年3月29日</a></li>
-        <li class="Types__item"><a href="./202112/index.html">2021年12月のチャンネル運営振り返り。2022年1月14日</a></li>
-        <li class="Types__item"><a href="./202109/index.html">公式ブログを開設しました。2021年9月30日</a></li>
-      </ul>
-    </div>
-    <div class="Types">
-      <h2 class="Types__name">日記</h2>
-      <p class="Types__description">
-        ちょっとした独り言
-      </p>
-      <ul class="Types__list">        
-        <li class="Types__item"><a href="https://blog.nnz-design.com/mcedit-unified-tutorial/">MCEditの導入と使い方</a><font color="red"><b> New</b></font></li>
-        <li class="Types__item"><a href="./diary/hariboteaircraft-tutorial.html">はりぼてエアクラフトの導入と使い方と設定方法</a></li>
-        <li class="Types__item"><a href="../../Statistics/createrList/index.html?date=20220819">マインクラフト軍事部系YouTubeチャンネル全数調査</a></li>
-        <li class="Types__item"><a href="./diary/20220315.html">Litematicaの使い方</a></li>
-        <li class="Types__item"><a href="./diary/20220114.html">ブログをリニューアルしました。 2022年1月14日</a></li>
-      </ul>
+    </section>
+    <div class="ColumnWrapper">
+      <div class="ColumnWrapper__Left">
+        <section class="Card" id="news">
+          <hgroup>
+            <h2 class="CardTitle">最新のできごと</h2>
+            <p>下線のあるものは個別ページがあります。新しいタブで開くマークのあるものは、関連のWebサイトに飛びます。</p>
+          </hgroup>
+          <ul class="News">
+            <li>本ドメインのGoogleへのインデックス登録トラブルが解消しました。<br><time datetime="2025-10-05">2025-10-05</time></li>
+            <li><a href="https://suzuri.jp/nnz-design" target="_blank" rel="noopener noreferrer">SUZURI公式ショップを開設し、グッズ販売を開始しました。<span class="material-symbols-outlined">open_in_new</span></a> <br><time datetime="2025-07-18">2025-07-18</time></li>
+            <li><a href="https://npnj.nnz-design.com/" target="_blank" rel="noopener noreferrer">マインクラフト軍事茶番「ねいぼぅぱわーんじゃすてぃす」公開<span class="material-symbols-outlined">open_in_new</span></a> <br><time datetime="2025-07-18">2025-07-18</time></li>
+            <li><a href="https://blog.nnz-design.com/" target="_blank" rel="noopener noreferrer">ブログ（このサイトと違い、ハウツー記事を掲載）を移転<span class="material-symbols-outlined">open_in_new</span></a> <br><time datetime="2024-08-25">2024-08-25</time></li>
+            <li>ドメイン「nnz-design.com」の運用を開始しました。<br><time datetime="2024-08-19">2024-08-19</time></li>
+            <li><a href="./diary/20220114.html">サイトをリニューアルしました。</a> <br><time datetime="2022-01-14">2022.01.14</time></li>
+            <li><a href="./202109/index.html">公式サイトを開設しました。</a> <br><time datetime="2021-09-30">2021-09-30</time></li>
+          </ul>
+        </section>
+        <section class="Card" id="howto">
+          <hgroup>
+            <h2 class="CardTitle">ハウツー記事</h2>
+            <p>MODや外部ツールについての情報です。現在は<a href="https://blog.nnz-design.com/" target="_blank" rel="noopener noreferrer">ブログ</a>に記事を追加しています。</p>
+          </hgroup>
+          <ul class="News">
+            <li class=""><a href="https://blog.nnz-design.com/mcedit-unified-tutorial/">MCEditの導入と使い方<span class="material-symbols-outlined">open_in_new</span></a><span class="red"><b> New</b></span></li>
+            <li class=""><a href="./diary/hariboteaircraft-tutorial.html">はりぼてエアクラフトの導入と使い方と設定方法</a></li>
+            <li class=""><a
+                href="../../Statistics/createrList/index.html?date=20220819">マインクラフト軍事部系YouTubeチャンネル全数調査</a></li>
+            <li class=""><a href="./diary/20220315.html">Litematicaの使い方</a></li>
+          </ul>
+        </section>
+        <section class="Card" id="channel">
+          <hgroup>
+            <h2 class="CardTitle">チャンネル運営</h2>
+            <p>2022年の1年間に行っていたチャンネル運営の報告です。</p>
+            <small>現在は公式YouTubeチャンネルのメンバーシップ特典、またはpixivFANBOX支援者特典として配信しています。お値段490円/月。</small>
+          </hgroup>
+          <ul class="News">
+            <li class=""><a href="./202211/index.html">2022年11月のチャンネル運営振り返り。</a><span class="red"><b> New</b></span></li>
+            <li class=""><a href="./202210/index.html">2022年10月のチャンネル運営振り返り。</a></li>
+            <li class=""><a href="./202209/index.html">2022年9月のチャンネル運営振り返り。</a></li>
+            <li class=""><a href="./202208/index.html">2022年8月のチャンネル運営振り返り。</a></li>
+            <li class=""><a href="./202207/index.html">2022年7月のチャンネル運営振り返り。</a></li>
+            <li class=""><a href="./202206/index.html">2022年6月のチャンネル運営振り返り。</a></li>
+            <li class=""><a href="./202205/index.html">2022年5月のチャンネル運営振り返り。</a></li>
+            <li class=""><a href="./202204/index.html">2022年4月のチャンネル運営振り返り。2022年5月4日</a></li>
+            <li class=""><a href="./202203/index.html">2022年3月のチャンネル運営振り返り。2022年4月15日</a></li>
+            <li class=""><a href="./202201-02/index.html">2022年1月から2月のチャンネル運営振り返り。2022年3月29日</a></li>
+            <li class=""><a href="./202112/index.html">2021年12月のチャンネル運営振り返り。2022年1月14日</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="ColumnWrapper__Right">
+        <div class="index">
+          <h3>目次</h3>
+          <ul class="index__list">
+            <li><span class="dli-chevron-down"></span><a href="#news">ニュース</a></li>
+            <li><span class="dli-chevron-down"></span><a href="#howto">ハウツー記事</a></li>
+            <li><span class="dli-chevron-down"></span><a href="#channel">チャンネル運営</a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </main>
 
