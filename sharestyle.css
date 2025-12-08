@@ -96,6 +96,8 @@ svg {
     background: linear-gradient(to left, #c3dab8, 20%, #6a4390);
     color: #fff;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 9999;
   }
   /*style of header logo*/
   .header__logo {
