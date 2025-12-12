@@ -216,11 +216,14 @@ body {
   background-color: var(--c-bg-base);
   border-radius: 10px;
 }
-.index h3 {
+.aside__title {
   margin: 0;
   padding: .5em;
   border-bottom: 1px solid var(--c-border);
   text-align: center;
+
+  font-size: large;
+  font-weight: bold;
 }
 .index__list {
   list-style: none;
@@ -231,7 +234,33 @@ body {
   display: inline-block;
   padding: .5em;
 }
-
+/**********table**************************************************/
+table {
+  padding: 1em;
+}
+td, th {
+  padding: .2em .8em;
+  background-color: rgba(146, 146, 146, 0.25);
+  border-radius: 5px;
+}
+th {
+  background-color: var(--c-bg-highlight);
+}
+/**********for Events**************************************************/
+.close {
+  background-color: dimgray;
+  color: white;
+  border-radius: 8px;
+  padding: 0 .6em;
+  margin: 1em;
+}
+.open {
+  background-color: seagreen;
+  color: white;
+  border-radius: 8px;
+  padding: 0 .6em;
+  margin: 1em;
+}
 /**********Button**************************************************/
 .button:hover {
   background-color: var(--c-hover);
