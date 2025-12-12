@@ -1,54 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="ja">
 
-  gtag('config', 'UA-208873990-1');
-</script>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208873990-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <title>イベント情報 - 中村のマインクラフト</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#440088">
-    <meta name="keywords" content="マインクラフト,中村造船,回路,船,レッドストーン">
-    <meta name="description" content="イベント情報">
-    <link href="../style_menu.css" rel="stylesheet">
-  </head>
-  <body>
+    gtag('config', 'UA-208873990-1');
+  </script>
+
+  <title>イベント情報 - 中村のマインクラフト</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#440088">
+  <meta name="keywords" content="マインクラフト,中村造船,回路,船,作品">
+  <meta name="description" content="イベント情報の一覧です。視聴者参加型模擬戦企画、マルチプレイ企画など。">
+  <link href="../News/style.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=open_in_new" />
+</head>
+
+<body>
   <header class="header" id="header">
-    
+
   </header>
 
-    <main>
-      <div class="Title">
-        <h1 class="Title__name">イベント情報</h1>
-        <p class="Title__subtitle">
-          中村が開催するイベントの情報を掲載します。
-        </p>
+  <main>
+    <section class="Title">
+      <h1 class="Title__name">イベント情報</h1>
+      <p class="Title__subtitle">中村が開催するイベントの情報を掲載します。</p>
+    </section>
+    <div class="ColumnWrapper">
+      <div class="ColumnWrapper__Left">
+        <section class="Card" id="events">
+          <hgroup>
+            <h2 class="CardTitle">模擬戦・マルチサーバー企画一覧</h2>
+          </hgroup>
+          <ul class="News">
+            <li><a href="./nkm2025/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2025 &amp; マルチプレイ企画</a><br><time datetime="2025">2025</time><span class="open">開催中</span></li>
+            <hr>
+            <li class=""><a href="./nkm2024/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2024</a><br><time datetime="2024">2024</time><span class="close">終了</span></li>
+            <li class=""><a href="./nkm2024-multiplayer/index.html">中村杯艦船模擬戦2024付属マルチプレイ企画</a><br><time datetime="2024">2024</time><span class="close">終了</span></li>
+            <hr>
+            <li class=""><a href="./nkm2023/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2023</a><br><time datetime="2023">2023</time><span class="close">終了</span></li>
+            <hr>
+            <li class=""><a href="./NKM2022/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2022</a><br><time datetime="2022">2022</time><span class="close">終了</span></li>
+          </ul>
+        </section>
+        <section class="Card" id="server">
+          <hgroup>
+            <h2 class="CardTitle">現在開催中のマイクラサーバー</h2>
+          </hgroup>
+          <table class="News">
+            <tr>
+              <td>資格</td><td>模擬戦参加者 (ホワイトリスト方式)</td>
+            </tr>
+            <tr>
+              <td>アドレス</td><td>micramulti.nnz-design.com</td>
+            </tr>
+            <tr>
+              <td>バージョン</td><td>1.21.8</td>
+            </tr>
+            <tr>
+              <td>motd</td><td>Nakamura Server</td>
+            </tr>
+          </table>
+        </section>
       </div>
-      <div class="Types">
-        <h2 class="Types__name"></h2>
-        <p class="Types__description">
-          模擬戦イベント開催中！
-        </p>
-        <ul class="Types__list">
-          <li class="Types__item"><a href="./NKM2022/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2022</a>（終了）</li>
-          <li class="Types__item"><a href="./nkm2023/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2023</a>（終了）</li>
-          <li class="Types__item"><a href="./nkm2024/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2024</a>（終了）</li>
-          <li class="Types__item"><a href="./nkm2024-multiplayer/index.html">中村杯艦船模擬戦2024付属マルチプレイ企画</a></li>
-          <li class="Types__item"><a href="./nkm2025/index.html">視聴者参加型模擬戦、中村杯艦船模擬戦2025 & マルチプレイ企画</a></li>
-        </ul>
+
+      <div class="ColumnWrapper__Right">
+        <aside class="index">
+          <p class="aside__title">目次</p>
+          <ul class="index__list">
+            <li><span class="dli-chevron-down"></span><a href="#events">企画一覧</a></li>
+            <li><span class="dli-chevron-down"></span><a href="#server">現在開催中のマイクラサーバー</a></li>
+          </ul>
+        </aside>
       </div>
-    </main>
-    
-    <footer id="footer">
-      
-    </footer>
-    <script src="../shareScript.js"></script>
-  </body>
+
+    </div>
+  </main>
+
+  <footer id="footer">
+
+  </footer>
+  <script src="../shareScript.js"></script>
+</body>
+
 </html>
