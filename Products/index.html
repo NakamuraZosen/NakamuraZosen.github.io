@@ -14,11 +14,13 @@
 
   <title>中村のマインクラフト作品一覧 - 中村のマインクラフト</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,作品">
-  <meta name="description" content="中村がマインクラフトで作った作品の一覧です。">
-  <link href="./style.css" rel="stylesheet">
+  <meta name="description" content="中村がマインクラフトで作った作品の一覧です。一部の作品はダウンロード可能です。">
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="../css/menu1.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=open_in_new" />
 </head>
 
 <body>
@@ -27,38 +29,28 @@
   </header>
 
   <main>
-    <div class="Title">
-      <h1 class="Title__name">作品のまとめ</h1>
+    <section class="Title">
+      <h1 class="Title__name">作品一覧</h1>
       <p class="Title__subtitle">
         私、中村造船はTNTキャノンの開発と、それを搭載した戦車、戦艦を作ることを得意としています。<br>
         ここでは、私の作品の集大成である船系作品と、それに搭載している装置を解説します
       </p>
-    </div>
+    </section>
     <div class="ColumnWrapper">
       <div class="ColumnWrapper__Left">
-        <div class="Types" id="generation">
-          <h2 class="functions__name">生態系</h2>
-          <h3>ver1.16作品</h3>
-          <p>全方位TNTキャノンを搭載した作品を中心に展開。キャノンの射程と精度の向上、インターフェースの開発が進行中。</p>
-          <div class="icon__container">
-            <div class="icon__wrapper"><span class="material-symbols-outlined">gamepad</span><span>16方位武器システム</span></div>
-          </div>
-          <h3>ver1.7作品</h3>
-          <p>MOD"HAC"を利用した砲塔を搭載する作品を中心に展開。TNTキャノン技術と平行し、下記の各種機能を持つ制御システムを開発した。</p>
-          <div class="icon__container">
-            <div class="icon__wrapper"><span class="material-symbols-outlined">motion_sensor_active</span><span>砲塔センサー</span></div>
-            <div class="icon__wrapper"><span class="material-symbols-outlined">vertical_align_top</span><span>直上イージス</span></div>
-            <div class="icon__wrapper"><span class="material-symbols-outlined">redo</span><span>自動反撃</span></div>
-            <div class="icon__wrapper"><span class="material-symbols-outlined">wifi</span><span>無線通信</span></div>
-          </div>
-
-        </div>
-        <div class="Types" id="ships">
-          <h2 class="Types__name">艦船系作品</h2>
-          <p class="Types__description">
-            TNTキャノンやレッドストーン回路からなる装置を搭載した船の作品です。
-          </p>
-          <h3>ver1.16作品群</h3>
+        <section class="Card" id="1.16">
+          <hgroup class="Types__title ver16">
+            <h2 class="CardTitle">ver1.16 <span class="small">以降</span> 環境</h2>
+            <p>全方位TNTキャノンを搭載した作品を中心に展開。キャノンの射程と精度の向上、インターフェースの開発が進行中。</p>
+            <ul class="functions__list">
+              <li>
+                <span class="material-symbols-outlined">gamepad</span>
+                <p class="functions__name">16方位武器システム</p>
+                <a href="https://youtu.be/8Bu86mVZnpU">解説動画</a>
+              </li>
+            </ul>
+          </hgroup>
+          <h3>艦船</h3>
           <ul class="Types__list">
             <li class="Types__item">
               <a href="./juso/index.html">
@@ -84,6 +76,40 @@
               </a>
             </li>
           </ul>
+          <h3>回路・装置</h3>
+          <ul class="Types__list">
+            <li class="Types__item"><a href="./x16-system/index.html"><img src="./x16-system/hero.webp" alt="16方位武器システム"><span>16方位武器システム</span></a></li>
+            <li class="Types__item"><a href="./type-c1000/index.html"><img src="./type-c1000/hero.webp" alt="Type C1000 三次元座標指定式TNTキャノン"><span>Type C1000 三次元座標指定式TNTキャノン</span></a></li>
+          </ul>
+        </section>
+        <section class="Card" id="1.7">
+          <hgroup class="Types__title ver7">
+            <h2 class="CardTitle">ver1.7 環境</h2>
+            <p>MOD “HAC” を利用した砲塔を搭載する作品を中心に展開。TNTキャノン技術と平行し、下記の各種機能を持つ制御システムを開発しました。<br>世代間には装置と兵装の互換性がありません。</p>
+            <ul class="functions__list">
+              <li>
+                <span class="material-symbols-outlined">motion_sensor_active</span>
+                <p class="functions__name">砲塔センサー</p>
+                <a href="https://youtu.be/dKgsZ2VAyUk">解説動画</a>
+              </li>
+              <li>
+                <span class="material-symbols-outlined">vertical_align_top</span>
+                <p class="functions__name">直上イージス</p>
+                <a href="https://youtu.be/BGtO39JHjtY">解説動画</a>
+              </li>
+              <li>
+                <span class="material-symbols-outlined">redo</span>
+                <p class="functions__name">自動反撃</p>
+                <a href="https://youtu.be/5xruhgVadps">解説動画</a>
+              </li>
+              <li>
+                <span class="material-symbols-outlined">wifi</span>
+                <p class="functions__name">無線通信</p>
+                <a href="https://youtu.be/dyVdrMcn1sg">解説動画</a>
+              </li>
+            </ul>
+          </hgroup>
+          
           <h3>夢洲世代作品群</h3>
           <ul class="Types__list">
             <li class="Types__item">
@@ -113,6 +139,8 @@
                 <p>ウースター級、ギアリング級、ボルチモア級。ウスターマウントを採用した模擬戦新ルール向け再現艦。</p>
               </a>
             </li>
+            <li class="Types__item"><a href="./yumeshima-gen-system/index.html"><img src="./yumeshima-gen-system/hero.webp" alt="夢洲世代装置群"><span>夢洲世代装置群</span></a></li>
+            <li class="Types__item"><a href="./mky2/index.html"><img src="./mky2/hero.webp" alt="Mk.Y1 幅7単装砲"><span>Mk.Y1 幅7単装砲</span></a></li>
           </ul>
           <h3>有馬世代作品群</h3>
           <ul class="Types__list">
@@ -138,6 +166,14 @@
                 <p>第二世代四天王プラットフォームをはじめて搭載した艦。</p>
               </a>
             </li>
+            <li class="Types__item"><a href="./FCS/index.html"><img src="./FCS/fcsf1.webp" alt="有馬世代 FCS-F1"><span>有馬世代 FCS-F1</span></a></li>
+            <li class="Types__item"><a href="./WCS/index.html"><img src="./WCS/wcsf1.webp" alt="有馬世代 WCS-F1"><span>有馬世代 WCS-F1</span></a></li>
+            <li class="Types__item"><a href="./TCS/index.html"><img src="./TCS/tcsf1.webp" alt="有馬世代 TCS-F1"><span>有馬世代 TCS-F1</span></a></li>
+            <li class="Types__item"><a href="./SCS/index.html"><img src="./SCS/scsf1.webp" alt="有馬世代 SCS-F1"><span>有馬世代 SCS-F1</span></a></li>
+            <li class="Types__item"><a href="./mka1/index.html"><img src="./mka1/mka1.webp" alt="Mk.A1 戦艦用連装主砲"><span>Mk.A1 戦艦用連装主砲</span></a></li>
+            <li class="Types__item"><a href="./mkj2/index.html"><img src="./mkj2/mkj2.webp" alt="Mk.J2 連装砲"><span>Mk.J2 連装砲</span></a></li>
+            <li class="Types__item"><a href="./typeOG/index.html"><img src="./typeOG/typeog.webp" alt="TYPE OG 汎用対艦拡散砲"><span>TYPE OG 汎用対艦拡散砲</span></a></li>
+            <li class="Types__item"><a href="./typeF/index.html"><img src="./typeF/typef.webp" alt="TYPE F 汎用VLS（対空拡散砲）"><span>TYPE F 汎用VLS（対空拡散砲）</span></a></li>
           </ul>
           <ul class="Types__list">
           </ul>
@@ -170,60 +206,28 @@
                 <p>AINA2, RB8, Superbird3と共に黄金世代を築いた四天王世代のフラッグシップ。</p>
               </a>
             </li>
-          </ul>
-          <div class="button">
-            <a href="./library/index.html"><span>過去のすべての作品を見る</span></a>
-          </div>
-        </div>
-        <div class="Types" id=circuits>
-          <h2 class="Types__name">回路・装置系作品</h2>
-          <p class="Types__description">
-            TNTキャノンを制御するためのレッドストーン回路からなる装置の作品です。<br>
-          </p>
-          <h3>ver1.16</h3>
-          <ul class="Types__list">
-            <li class="Types__item"><a href="./x16-system/index.html"><img src="./x16-system/hero.webp" alt="16方位武器システム"><span>16方位武器システム</span></a></li>
-          </ul>
-          <h3>ver1.7</h3>
-          <ul class="Types__list">
-            <li class="Types__item"><a href="./yumeshima-gen-system/index.html"><img src="./yumeshima-gen-system/hero.webp" alt="夢洲世代装置群"><span>夢洲世代装置群</span></a></li>
-            <li class="Types__item"><a href="./FCS/index.html"><img src="./FCS/fcsf1.webp" alt="有馬世代 FCS-F1"><span>有馬世代 FCS-F1</span></a></li>
-            <li class="Types__item"><a href="./WCS/index.html"><img src="./WCS/wcsf1.webp" alt="有馬世代 WCS-F1"><span>有馬世代 WCS-F1</span></a></li>
-            <li class="Types__item"><a href="./TCS/index.html"><img src="./TCS/tcsf1.webp" alt="有馬世代 TCS-F1"><span>有馬世代 TCS-F1</span></a></li>
-            <li class="Types__item"><a href="./SCS/index.html"><img src="./SCS/scsf1.webp" alt="有馬世代 SCS-F1"><span>有馬世代 SCS-F1</span></a></li>
             <li class="Types__item"><a href="./big4-gen-system/index.html"><img src="./big4-gen-system/hero.webp" alt="第一世代四天王プラットフォーム装置群"><span>第一世代四天王プラットフォーム装置群</span></a></li>
           </ul>
-        </div>
-        <div class="Types" id="cannons">
-          <h2 class="Types__name">TNTキャノン系作品</h2>
-          <p class="Types__description">
-            TNTキャノンです。
-          </p>
-          <h3>ver1.16</h3>
-          <ul class="Types__list">
-            <li class="Types__item"><a href="./type-c1000/index.html"><img src="./type-c1000/hero.webp" alt="Type C1000 三次元座標指定式TNTキャノン"><span>Type C1000 三次元座標指定式TNTキャノン</span></a></li>
-          </ul>
-          <h3>ver1.7</h3>
-          <ul class="Types__list">
-            <li class="Types__item"><a href="./mky2/index.html"><img src="./mky2/hero.webp" alt="Mk.Y1 幅7単装砲"><span>Mk.Y1 幅7単装砲</span></a></li>
-            <li class="Types__item"><a href="./mka1/index.html"><img src="./mka1/mka1.webp" alt="Mk.A1 戦艦用連装主砲"><span>Mk.A1 戦艦用連装主砲</span></a></li>
-            <li class="Types__item"><a href="./mkj2/index.html"><img src="./mkj2/mkj2.webp" alt="Mk.J2 連装砲"><span>Mk.J2 連装砲</span></a></li>
-            <li class="Types__item"><a href="./typeOG/index.html"><img src="./typeOG/typeog.webp" alt="TYPE OG 汎用対艦拡散砲"><span>TYPE OG 汎用対艦拡散砲</span></a></li>
-            <li class="Types__item"><a href="./typeF/index.html"><img src="./typeF/typef.webp" alt="TYPE F 汎用VLS（対空拡散砲）"><span>TYPE F 汎用VLS（対空拡散砲）</span></a></li>
-          </ul>
-        </div>
+        </section>
+        <section class="Card" id="old-works">
+          <hgroup>
+            <h2 class="CardTitle">古い作品</h2>
+            <p>過去のすべての作品の画像を見られます。</p>
+          </hgroup>
+          <p class="News"><a href="./library/index.html">過去のすべての作品を見る</a></p>
+
+        </section>
       </div>
 
       <div class="ColumnWrapper__Right">
-        <div class="index">
-          <h3>目次</h3>
+        <aside class="index">
+          <p class="aside__title">目次</p>
           <ul class="index__list">
-            <li><span class="dli-chevron-down"></span><a href="#">生態系</a></li>
-            <li><span class="dli-chevron-down"></span><a href="#ships">艦船系作品</a></li>
-            <li><span class="dli-chevron-down"></span><a href="#circuits">回路・装置系作品</a></li>
-            <li><span class="dli-chevron-down"></span><a href="#cannons">TNTキャノン系作品</a></li>
+            <li><span class="dli-chevron-down"></span><a href="#1.16">ver1.16環境</a></li>
+            <li><span class="dli-chevron-down"></span><a href="#1.7">ver1.7環境</a></li>
+            <li><span class="dli-chevron-down"></span><a href="#old-works">古い作品</a></li>
           </ul>
-        </div>
+        </aside>
       </div>
 
     </div>
