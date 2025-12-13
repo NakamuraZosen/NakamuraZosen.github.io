@@ -1,0 +1,507 @@
+@charset "utf-8";
+/**********This sheet contains styles of**************************************************/
+/**********header, footer, web fonts, color and elemetnts of body, a, headings**************************************************/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+/*color*/
+body {
+  --c-bg-base: whitesmoke;
+  --c-bg-neutral: gainsboro;
+  --c-bg-highlight: #dbcce9;
+  --c: #333;
+  --c-heading: #440088;
+  --c-border: silver;
+  --c-hover: lightgray;
+  --main-color: #440088;
+  --text-link: #0069c2;
+}
+/*
+@media (prefers-color-scheme: dark) {
+  body {
+    --c-bg-base: #333;
+    --c-bg-neutral: #222;
+    --c-bg-highlight: #604a8d;
+    --c: #fff;
+    --c-heading: #fff;
+    --c-border: mediumpurple;
+    --c-hover: #666;
+  }
+  a {
+    color: #8cb4ff;
+  }
+}
+*/
+:root,
+.darkmode body {
+ --c-bg-base: #333;
+ --c-bg-neutral: #222;
+ --c-bg-highlight: #604a8d;
+ --c: #fff;
+ --c-heading: #fff;
+ --c-border: dimgray;
+ --c-hover: #666;
+ --main-color: mediumpurple;
+ --text-link: #8cb4ff;
+}
+a {
+  color: var(--text-link);
+  word-wrap: break-word;
+}
+/*style for all of page*/
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--c-bg-base);
+}
+header ul, footer ul{
+  list-style: none;
+  padding: 0;
+}
+h1 ,h2 {
+  text-align: center;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: var(--c-heading);
+}
+main {
+  color: var(--c);
+  line-height: 1.6;
+}
+#header a {
+  text-decoration: none;
+  color: inherit;
+}
+svg {
+  fill: var(--c);
+  vertical-align: inherit;
+}
+@media screen and (max-width: 767px) {
+  h1, h2 {
+    font-size: 1.5rem
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h1, h2, h3 {
+    margin: .5em 0;
+  }
+  main {
+    line-height: 1.5;
+  }
+}
+
+/**********header**************************************************/
+/*style for header on pc*/
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    /*spacer for included header "height: 144px" had been deleted*/
+    background: linear-gradient(to left, #c3dab8, 20%, #6a4390);
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 9999;
+  }
+  /*style of header logo*/
+  .header__logo {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .header__logo a {
+    display: block;
+  }
+  .header__logo-ja {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Noto Serif JP', "游明朝", serif;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+  }
+  .header__logo-ja img {
+    height: 30px;
+    vertical-align: baseline;
+  }
+  .header__logo-en {
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+  }
+  /*hide nav button on pc*/
+  #header__nav-button {
+    display: none;
+  }
+  /*style of nav bar*/
+  #header__nav {
+    width: 100%;
+    height: 4em;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .header__list {
+    height: 100%;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+  }
+  .selectedNav {
+    border-bottom: 3px solid #fff;
+  }
+  .header__item {
+    flex: 1 1;
+    border-top: 1px solid rgb(255, 255, 255, 0.25);
+
+    display: flex;
+  }
+  .header__item-link{
+    flex: 1 1;
+    padding: 0;
+    border-bottom: 3px solid rgb(255, 255, 255, 0);
+    transition: .2s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__list small {
+    color: #fff;
+    font-size: 0.5em;
+  }
+  .header__item-link:hover {
+    opacity: .5;
+    border-bottom: 3px solid #fff;
+    transition: .2s;
+  }
+/*darkmode
+:root,
+    .darkmode #header__nav {
+      color: #fff;
+      background-color: #555;
+      border-bottom: 2px solid  #fff;
+    }
+    .darkmode .header__item {
+      border-left: 1px solid mediumpurple;
+    }
+    .darkmode .header__item:last-child {
+      border-right: 1px solid mediumpurple;
+    }
+    .darkmode .header__list small {
+      color: #ccc;
+    }
+darkmode END*/
+}
+/*END of style for header on pc*/
+
+/*style for header on phone*/
+@media screen and (max-width: 767px) {
+  header {
+    width: 100%;
+    /*spacer for included header "height: 56px;" had been deleted*/
+    color: #440088;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    z-index: 9999;
+  }
+  .header__container {
+    display: flex;
+    /*put it for centering button. container height depend on logo height*/
+    align-items: center;
+  }
+  /*header logo*/
+  .header__logo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    padding: 0 .5em;
+    border-bottom: 2px solid white;
+
+    color: white;
+    background: linear-gradient(to right, #c3dab8, 20%, #6a4390);
+
+    display: flex;
+    align-items: center;
+  }
+  .header__logo a {
+    flex-grow: 1;
+  }
+  .header__logo-ja {
+    display: block;
+    margin: 0;
+    text-align: center;
+    /*
+    font-family: 'Noto Serif JP', "游明朝", serif;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    */
+  }
+  .header__logo-ja img {
+    display: block;
+    height: 24px;
+    margin: 4px auto;
+    padding-bottom: 4px;
+  }
+  .header__logo-en {
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+  /*nav button*/
+  #header__nav-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    /*cancel default button sytle*/
+    border: none;
+    padding: 0;
+    /*avoid to be covered by nav*/
+    z-index: 1;
+  }
+  .header__nav-button-line {
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .header__nav-button-line::before , .header__nav-button-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  .header__nav-button-line::before {
+    transform: translateY(-10px);
+  }
+  .header__nav-button-line::after {
+    transform: translateY(10px);
+  }
+  #header__nav-button.active .header__nav-button-line {
+    background-color: transparent;
+  }
+  #header__nav-button.active .header__nav-button-line::before {
+    background-color: white;
+    transform: rotate(45deg);
+  }
+  #header__nav-button.active .header__nav-button-line::after {
+    background-color: white;
+    transform: rotate(-45deg);
+  }
+  /*style of nav*/
+  /*
+  #header__nav {
+    position: absolute;
+    top: -350px; translateをここでマイナスにして下で0は？？
+    right: 0;
+    width: 50%;
+    height: 300px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #440088;
+    transition: .5s;
+    z-index: 10;
+  }
+  .header__nav-open {
+    transform: translateY(450px);
+  }
+  */
+  #header__nav {
+    position: absolute;
+    top: 5em;
+    right: 0;
+    width: 100%;
+    height: 90vh;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #440088;
+    transition: .25s;
+    transform: translateX(-100%);
+    z-index: 2;
+  }
+  #header__nav.header__nav-open {
+    transform: translateX(0);
+  }
+  .header__list {
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    top: 100px;
+
+    margin: 2em 1em;
+
+    border-radius: 10px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+
+    z-index: 9999;
+  }
+  .selectedNav {
+    border-left: 6px solid var(--c-bg-highlight);
+    padding-left: 6px;
+  }
+  .header__item {
+    flex: 1 1;
+    display: flex;
+    border-top: 1px solid silver;
+  }
+  .header__item:last-child {
+    border-bottom: 1px solid silver;
+  }
+  .header__item-link {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 0;
+  }
+  .header__list small {
+    color: #333;
+    font-size: 0.5em;
+  }
+  :root,
+  .darkmode .header__list {
+    color: #fff;
+    background-color: #555;
+  }
+  .darkmode .header__list small {
+    color: #ccc;
+  }
+
+}
+/*END of style for header on phone*/
+/**********footer**************************************************/
+/*style for footer*/
+#footer {
+  background: linear-gradient(to top, #c3dab8, 5%, #6a4390);
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer__logo {
+  padding-top: 2em;
+}
+.footer__logo img {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 2em;
+  height: 12rem;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+  padding: 2em 0;
+  flex-wrap: wrap;
+}
+.footer__content {
+  padding: 0 1em;
+}
+/*.footer__content:first-child {
+  border-right: 1px solid silver;
+}*/
+.footer__content-index {
+  font-weight: bold;
+}
+.footer__content-list
+.footer__item svg {
+  fill: white;
+}
+.footer__copyright {
+  display: block;
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 0.7em;
+}
+/*onoffswitch original css*/
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block;
+    box-sizing: content-box;
+    height: 1.5rem; width: 3rem;
+    border-radius: 9999px;
+    border: 2px solid silver;
+    background-color: #9E9E9E;
+    margin: 0.2em auto;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #FFF;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block;
+    height: 1.5rem; width: 1.5rem;
+    border-radius: 9999px;
+    background: #FFFFFF;
+    transition: .2s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    transform: translateX(1.5rem);
+    background-color: mediumpurple;
+    transition: .2s;
+}
+/*onoffswitch https://proto.io/freebies/onoff/
+.onoffswitch {
+    position: relative; width: 55px;
+    margin: 0 auto;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 20px; padding: 0; line-height: 20px;
+    border: 0px solid #FFFFFF; border-radius: 30px;
+    background-color: #9E9E9E;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 30px; height: 30px;
+    background: #FFFFFF;
+    position: absolute; bottom: -5px;
+    right: 31px;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px 0px #757575;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px;
+    background-color: #2196F3;
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
+*/
