@@ -107,12 +107,49 @@ body {
   }
 }
 /**********for Products**************************************************/
-.Types__name {
-  margin: 0;
-  text-align: left;
+.Card .Types__title {
+  padding: 4em 2em;
+  border-bottom: none;
+  background-position: center;
+  background-size: cover;
 }
-.Types__description {
+.Types__title h2 {
+  font-size: xx-large;
+}
+.ver16 {
+  background-image: linear-gradient(rgb(from var(--c-bg-base) r g b/ 0.75),rgb(from var(--c-bg-base) r g b/ 1)), url(../Products/x16-system/hero.webp);
+}
+.ver7 {
+  background-image: linear-gradient(rgb(from var(--c-bg-base) r g b/ 0.75),rgb(from var(--c-bg-base) r g b/ 1)), url(../Products/yumeshima-gen-system/hero.webp);
+}
+.functions__list {
+  list-style: none;
+  padding: 0;
+  margin: 32px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.functions__list li {
+  flex: 1 1;
+  flex-basis: 6em;
+  margin: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.functions__list .material-symbols-outlined {
+  font-size: 2em;
+  padding: .4em;
+  background-color: #604a8d;
+  color: white;
+  border-radius: 10px;
+}
+.functions__name {
   margin: 0;
+  font-weight: bold;
+  margin-top: 1em;
 }
 .Types__list {
   list-style: none;
@@ -159,27 +196,8 @@ body {
   font-size: .8em;
   overflow-wrap: break-word;
 }
-.functions {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.functions li {
-  margin: 20px;
-  padding: 5px;
-  border: 1px solid var(--c-border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.functions li span {
-  font-size: 50px;
-  margin: 70px;
-}
-.functions li small {
-  text-align: center;
+.small {
+  font-size: small;
 }
 @media screen and (max-width: 767px) {
   .Types__list {
@@ -197,9 +215,8 @@ body {
     height: 180px;
     object-fit: cover;
   }
-  .functions li {
-    flex-direction: row;
-    width: 90%;
+  .functions__list {
+    margin: 32px 6px;
   }
 }
 
