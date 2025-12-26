@@ -52,59 +52,62 @@ header.insertAdjacentHTML('afterbegin', `
 //------------------------------------------------------------------------------
 let footer = document.getElementById('footer');
 footer.insertAdjacentHTML('afterbegin', `
-<div class="footer__logo">
-  <img src="/img/NNZ-Logo.svg" />
-</div>
-<div class="footer__wrapper">
-  <div class="footer__content">
-    <span class="footer__content-index">SNS</span>
-    <ul class="footer__content-list">
-      <li class="footer__item">
-        <a href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" target="_blank" rel="noopener noreferrer" class="footer__item-link">
-          公式YouTube
-          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
-            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
-          </svg>
+    <div class="footer-in wrap">
+      <div class="PageTop">
+        <a href="#" aria-label="PageTop">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-424-56-56 280-280 280 280-56 56-224-223-224 223Z"/></svg>
         </a>
-      </li>
-      <li class="footer__item">
-        <a href="https://twitter.com/NHI_nakamura" target="_blank" rel="noopener noreferrer" class="footer__item-link">
-          公式Twitter
-          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
-            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+      </div>
+      <img class="footer-logo" src="/img/NNZ-Logo.svg" alt="nnz design ロゴ">
+      <div class="links">
+        <a class="link" href="https://www.youtube.com/channel/UCzB8_PC3Siup1Zai8EfJC2g" aria-label="youtube" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 576 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
           </svg>
+          <span>YouTube</span>
         </a>
-      </li>
-    </ul>
-  </div>
-  <div class="footer__content">
-    <span class="footer__content-index">HPの不具合等</span>
-    <ul class="footer__content-list">
-      <li class="footer__item">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link">
-          Google forms          
-          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
-            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+        <a class="link" href="https://twitter.com/NHI_nakamura" aria-label="x" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
           </svg>
+          <span>X</span>
         </a>
-      </li>
-    </ul>
-  </div>
-  <!-- 切り替えスイッチ -->
-  <div class="footer__content">
-    <span class="footer__content-index">暗い背景（Beta）</span>
-    <input
-      type="checkbox"
-      name="onoffswitch"
-      class="onoffswitch-checkbox"
-      id="myonoffswitch"
-      tabindex="0"
-    />
-    <label class="onoffswitch-label" for="myonoffswitch">
-    </label>
-  </div>
-</div>
-<span class="footer__copyright">©2024-2025 NNZ Shipbuilding, All rights reserved.</span>
+        <a class="link" href="https://blog.nnz-design.com/" aria-label="blog" target="_blank" rel="noopener noreferrer">
+          <img src="https://zosen.nnz-design.com/img/icon-blog.webp" alt="ブログのアイコン">
+          <span>公式 Blog</span>
+        </a>
+        <div class="link inactive">
+          <img src="https://zosen.nnz-design.com/img/icon-zosen.webp" alt="マイクラ部門のアイコン">
+          <span>マイクラ作品 いまここ</span>
+        </div>
+      </div>
+      <div class="footer__wrapper">
+        <!-- 切り替えスイッチ -->
+        <div class="footer__content">
+          <span class="footer__content-index">暗い背景</span>
+          <input
+            type="checkbox"
+            name="onoffswitch"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch"
+            tabindex="0"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch">
+          </label>
+        </div>
+        <div class="footer__content">
+          <span class="footer__content-index">問い合わせ</span>
+          <a href="#">
+            サイトの不具合等報告フォーム
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 -960 960 960">
+              <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <span class="copyright">© 2024-2025 NNZ Design, All rights reserved.</span>
 `);
 
 //------------------------------------------------------------------------------
