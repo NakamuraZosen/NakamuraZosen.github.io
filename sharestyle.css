@@ -409,6 +409,9 @@ darkmode END*/
 .footer__content {
   padding: 1em;
 }
+.footer__content a {
+  color: inherit;
+}
 .footer__content svg {
   fill: white;
 }
