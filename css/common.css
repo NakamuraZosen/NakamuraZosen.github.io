@@ -444,14 +444,14 @@ darkmode END*/
 .footer-logo {
   height: 100px;
 }
-.links {
+.footer__links {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
-.link {
+.footer__link {
   flex: 1 1;
   flex-basis: 150px;
   margin: .5rem;
@@ -469,26 +469,27 @@ darkmode END*/
   align-items: center;
   gap: .5em;
 }
-.link:hover {
+.footer__link:hover {
   background-color: inherit;
   transition: .2s;
 }
-.inactive {
+.footer__inactive {
   background-color: inherit;
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
 }
-.link img {
+.footer__link img {
   height: 3em;
+  width: 3em;
   border-radius: 9999px;
   vertical-align: middle;
 }
-.link svg {
+.footer__link svg {
   box-sizing: content-box;
   height: 2em;
   fill: white;
   vertical-align: middle;
 }
-.link span {
+.footer__link span {
   vertical-align: middle;
   padding: 0;
   font-size: .6em;
