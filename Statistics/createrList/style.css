@@ -93,9 +93,15 @@
 }
 .tablesorter-default td {
   background-color: var(--c-bg-base);
+  border-bottom: none;
 }
 .tablesorter-default tr:nth-child(even) td {
   background-color: var(--c-bg-neutral);
+}
+.tablesorter-default tr:hover {
+  
+  background-color: #000;
+
 }
 .tablesorter-default a {
   display: block;
