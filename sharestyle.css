@@ -173,8 +173,8 @@ svg {
     font-size: 0.5em;
   }
   .header__item-link:hover {
-    opacity: .5;
-    border-bottom: 3px solid #fff;
+    background-color: rgb(255 255 255 / .1);
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / .1);
     transition: .2s;
   }
 /*darkmode
@@ -450,7 +450,7 @@ darkmode END*/
 }
 .footer__link {
   flex: 1 1;
-  flex-basis: 150px;
+  flex-basis: 8em;
   margin: .5rem;
   padding: 1rem;
   border-radius: 0px;
