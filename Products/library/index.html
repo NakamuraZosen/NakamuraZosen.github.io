@@ -14,16 +14,17 @@
 
   <title>すべての作品 - 中村のマインクラフト</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,ブログ">
   <meta name="description"
     content="過去のすべての艦艇のリストです。">
-  <link rel="stylesheet" href="../style_ships.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
+  <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -36,7 +37,7 @@
       <h1 class="overview__name">過去のすべての艦艇</h1>
       <p class="overview__charactristics">
         過去のすべての艦艇のリストです。<br>
-        各項目で並べ替えることができます。項目をクリックすると画像が表示されます。見られる画像は今後増えていきます。<br>
+        各項目で並べ替えることができます。項目をクリックすると画像が表示されます。<br>
         <br>
         「等級」とは艦のハイテク度を表します。<br>
         1.四天王プラットフォームを搭載する艦。最もハイテク<br>
@@ -46,14 +47,12 @@
         <br>
       </p>
     </div>
-    <br>
-    
-    <div id="iframeModal__background">
-      <div class="iframeModal__card">
-        <h2 id="shipName"></h2>
-        <div id="iframeModal__closeButton">閉じる</div>
-      </div>
-    </div>
+    <br>    
+
+    <dialog closedby="any" class="modal__card">
+      <h2 id="shipName"></h2>
+      <button><span class="material-symbols-outlined">close</span> 閉じる</button>
+    </dialog>
 
     <table class="sort-table">
       <thead>
