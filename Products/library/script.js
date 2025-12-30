@@ -50,34 +50,39 @@ import_csv('https://zosen.nnz-design.com/Products/library/shipsLibrary.csv');
 
 //reference: freelance321.com/javascript/load-csv/
 
-//modal controller of iframe
-const closeButton = document.getElementById('iframeModal__closeButton');
-const modalBackground = document.getElementById('iframeModal__background');
-
+//modal controller
+const dialog = document.querySelector("dialog");
+// When Open 
 document.addEventListener('click', function(e) {
   //avoid matches closebutton
   if (e.target.matches('td')) {
-    modalBackground.style.display = 'flex';
     var clickedTr = e.target.parentNode;
+    //load ship name
+    var shipName = clickedTr.children[1].textContent;
+    var shipClass = clickedTr.children[3].textContent;
     //load img
     var shipNo = clickedTr.id;
     var imgElement = document.createElement('img');
     imgElement.src = './img/' + shipNo + '.webp';
-    imgElement.alt = shipNo + 'の画像はありません。';
-    imgElement.title = shipNo;
+    imgElement.alt = shipName + '級' + shipClass + 'の画像';
+    imgElement.title = shipName + '級' + shipClass;
     imgElement.id = 'img';
-    //load ship name
-    var shipName = clickedTr.children[1].textContent;
-    var shipClass = clickedTr.children[3].textContent;
+    //post
     document.getElementById('shipName').insertAdjacentText('afterbegin',shipName + '級' + shipClass);
-
     closeButton.before(imgElement);
+    // show modal
+    dialog.showModal();
   };
 });
 
-modalBackground.addEventListener('click', closeModal);
-function closeModal() {
+// When Close 
+const closeButton = document.querySelector("dialog button");
+// ［閉じる］ボタンでダイアログを閉じる
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+// 閉じられたら内容を削除する。ボタンのクリックで発動させると、それ以外の方法で閉じた場合に削除できない。
+dialog.addEventListener("close", () => {
   document.getElementById('img').remove();
   document.getElementById('shipName').textContent = '';
-  modalBackground.style.display = 'none';
-};
+});
