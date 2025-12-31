@@ -13,12 +13,17 @@
   </script>
 
   <title>米艦三隻セット｜中村のマインクラフト</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,戦艦">
   <meta name="description" content="米艦三隻セット。ウースター級、ギアリング級、ボルチモア級。ウスターマウントを採用した模擬戦新ルール向け再現艦。">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#440088">
+  <link href="../../css/common.css" rel="stylesheet">
   <link href="../style_ships2.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="../../js/include.js" defer></script>
+  <script src="../../js/common.js" defer></script>
+  <script src="../dist.js" defer></script>
 </head>
 
 <body>
@@ -29,6 +34,7 @@
   <main>
     <div class="overview">
       <img  class="hero-img" src="1.webp" alt="米艦三隻セット" title="米艦三隻セット">
+      <div class="filter"></div>
       <div class="overview__wrapper">
         <h1 class="overview__name">米艦三隻セット</h1>
         <p class="overview__charactristics">
@@ -39,12 +45,12 @@
       </div>
     </div>
 
-    <div class="spacification">
+    <section class="spacification">
       <h2 class="spacification__name">仕様</h2>
       <div class="spacification__container">
         <div class="spacification__content">
-          <h3 class="spacification__content-name">ウースター級</h3>
           <table>
+            <caption class="spacification__content-name">ウースター級</caption>
             <tr>
               <td>再現倍率</td><td>1.5/1</td>
             </tr>
@@ -57,8 +63,8 @@
           </table>
         </div>
         <div class="spacification__content">
-          <h3 class="spacification__content-name">ギアリング級</h3>
           <table>
+            <caption class="spacification__content-name">ギアリング級</caption>
             <tr>
               <td>再現倍率</td><td>1.5/1</td>
             </tr>
@@ -71,8 +77,8 @@
           </table>
         </div>
         <div class="spacification__content">
-          <h3 class="spacification__content-name">ボルチモア級</h3>
           <table>
+            <caption class="spacification__content-name">ボルチモア級</caption>
             <tr>
               <td>再現倍率</td><td>1.5/1</td>
             </tr>
@@ -85,9 +91,12 @@
           </table>
         </div>
       </div>
+    </section>
+    <div class="images">
+      <img src="./resized/baltimore.webp" alt="">
+      <div class="filter"></div>
     </div>
-
-    <div class="description">
+    <section class="description">
       <div class="section__description">
         <h2 class="description__name">解説</h2>
         <h3 class="description__chapter">開発経緯</h3>
@@ -95,21 +104,40 @@
           本艦の開発経緯は <a href="../ise/">伊勢型</a>と同じく、 <a href="../yumeshima-gen-system/">夢洲世代制御装置</a>の活用例を示す事です。夢洲世代は、これまで自動反撃システムや無線通信といった豊富な機能性をアピールしてきましたが、装置の小ささや接続の簡単さも重要な特長です。
           また、この三隻は伊勢型の模擬戦データをもとに改良された砲塔マウントであるウスターマウントを採用しています。
         </p>
-        <h3 class="description__chapter">ウスターマウントについて</h3>
-        <p>この三隻は <a href="../ise/">伊勢型</a>の模擬戦データをもとに改良された砲塔マウントであるウスターマウントを採用しています。</p>
-        <p>ウスターマウントは、弱点となっていた船体と砲塔を接続する端子部分の防御力を改善した砲塔マウント方式です。</p>
-        <p>従来のマウントでは駆動用ピストンが砲塔の隣の水面上にあり、その付近をブロック製の装甲で覆っていましたが、このマウントではピストンを砲塔内にめり込ませることにより、丈夫なバーベット装甲によって覆われています。</p>
-        <p>ウスターマウント開発の様子は <a href="https://www.youtube.com/watch?v=XZjULn8f9s0" target="_blank">造船日記シリーズ第5話</a>でも取り上げています。</p>
         <h3 class="description__chapter">兵装</h3>
         <p>ウースター級には砲身間3ブロックの連装砲を搭載しています。ギアリング級のものと比較すると、回路の横幅が狭く、その分防御力が高くなっています。また、ターレットが長いので、乾舷の低いギアリング級には搭載できません。</p>
         <p>ギアリング級には砲身間3ブロックの連装砲を搭載しています。艦尾の砲塔は船底に制御装置を設置するスペースが無いため回路の延長を行っており、その分防御力が低下しました。同じ砲塔がボルチモア級の副砲としても搭載されています。</p>
         <p>ボルチモア級には砲身間2ブロックの3連装砲を搭載しています。装置の幅は最小の7ブロックに抑え、装甲厚を左右に2ブロックずつ確保しています。</p>
       </div>
+    </section>
+
+    <div class="flex-section">
+      <div class="section-img">
+        <img  class="img-section" src="resized/2.png" alt="本作品の制御装置">
+      </div>
+      <div class="secton-txt">
+        <h3 class="description__chapter">ウスターマウントについて</h3>
+        <p>この三隻は <a href="../ise/">伊勢型</a>の模擬戦データをもとに改良された砲塔マウントであるウスターマウントを採用しています。</p>
+        <p>ウスターマウントは、弱点となっていた船体と砲塔を接続する端子部分の防御力を改善した砲塔マウント方式です。</p>
+        <p>従来のマウントでは駆動用ピストンが砲塔の隣の水面上にあり、その付近をブロック製の装甲で覆っていましたが、このマウントではピストンを砲塔内にめり込ませることにより、丈夫なバーベット装甲によって覆われています。</p>
+        <p>ウスターマウント開発の様子は <a href="https://www.youtube.com/watch?v=XZjULn8f9s0" target="_blank">造船日記シリーズ第5話</a>でも取り上げています。</p>
+      </div>
+    </div>    
+    <div class="images">
+      <img src="./resized/gearing.webp" alt="">
+      <div class="filter"></div>
     </div>
 
-    <div class="distributions">
+    <section class="distributions">
       <h2 class="distributions__name">配布フォーム</h2>
       <p>配布フォームが新しくなりました！この場ですぐにダウンロードできます！</p>
+      <p>
+        ※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。
+        <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">不具合等報告フォーム<span class="material-symbols-outlined">open_in_new</span></a>
+        <br>
+        <a href="../yumeshima-gen-system/Document_Yumeshima-gen_20240301.pdf" target="_blank" rel="noopener noreferrer">説明書（PDFダウンロード可）</a>
+      </p>
       <div class="distributions__step">
         <span>1. ダウンロードをクリック</span>
         <div class="arrow sample5-2"></div>
@@ -120,10 +148,6 @@
         <a class="dlButton button" id="dlButton"><span>ギアリング級をダウンロード<span class="material-symbols-outlined">download</span></span></a>
         <a class="dlButton button" id="dlButton"><span>ウースター級をダウンロード<span class="material-symbols-outlined">download</span></span></a>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">不具合等報告フォーム<span class="material-symbols-outlined">open_in_new</span></a>
-      <br>
-      <a href="../yumeshima-gen-system/Document_Yumeshima-gen_20240301.pdf" target="_blank" rel="noopener noreferrer">説明書（PDFダウンロード可）</a>
-      <p>※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。</p>
 
       <h3>ダウンロード情報</h3>
       <ul id="dlRequest">
@@ -137,17 +161,17 @@
         </tr>
       </table>
 
-    </div>
+    </section>
 
-    <div class="relatedMovie">
+    <section class="relatedMovie">
       <h2>出演動画</h2>
       <div class="iframe__container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/aczci37IG8U?si=B8f1e-1YqdDZqC5K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-    </div>
+    </section>
 
     <div class="backbutton">
-      <a href="../index.html"><span>作品一覧へ戻る</span></a>
+      <a href="../index.html"><span class="material-symbols-outlined">arrow_back</span> <span>作品一覧へ戻る</span></a>
     </div>
 
   </main>
@@ -155,8 +179,6 @@
   <footer id="footer">
 
   </footer>
-  <script src="../script.js"></script>
-  <script src="../../shareScript.js"></script>
 </body>
 
 </html>
