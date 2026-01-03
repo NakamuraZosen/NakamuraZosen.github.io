@@ -30,15 +30,21 @@ function convert_array(csv_data) {
 
 // テーブル描画
 function draw_table(data_array) {
+  const urlRegex = /(https?:\/\/[^\s<>"]+)/g;
   data_array.forEach((elements,index) => {
     const tr = document.createElement('tr');
     tr.id = 'no' + (index + 1);
     output_csv_element.appendChild(tr);
-    elements.forEach(element => {
+    for (let i = 0; i < 8; i++) {
       let td = document.createElement('td');
-      td.innerText = element
+      td.innerText = elements[i]
+      
+      td.innerHTML = td.innerHTML.replace(urlRegex, url => {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">YouTube<span class="material-symbols-outlined">open_in_new</span></a>`;
+      });
+
       tr.appendChild(td);
-    });
+    };
   });
   //tablesorter
   $(function() {
@@ -57,11 +63,11 @@ document.addEventListener('click', function(e) {
   //avoid matches closebutton
   if (e.target.matches('td')) {
     var clickedTr = e.target.parentNode;
+    var shipNo = clickedTr.id;
     //load ship name
     var shipName = clickedTr.children[1].textContent;
     var shipClass = clickedTr.children[3].textContent;
     //load img
-    var shipNo = clickedTr.id;
     var imgElement = document.createElement('img');
     imgElement.src = './img/' + shipNo + '.webp';
     imgElement.alt = shipName + '級' + shipClass + 'の画像';
