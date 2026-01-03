@@ -25,9 +25,15 @@
   }
 }
 /***********************Tablesorter**********************/
+.table-wrapper {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
+}
 .tablesorter-default {
-  width: auto;
-  margin: auto;
+  width: max-content;
+  margin: 0;
   text-align: inherit;
   color:  var(--c);
 }
@@ -44,6 +50,9 @@
 /*以下優先順位のため機能せず*/
 .tablesorter-headerAsc {
   border-bottom: 2px solid mediumpurple;
+}
+.tablesorter-default span {
+  font-size: 1em;
 }
 /***********************Modal Dialog**********************/
 dialog {
