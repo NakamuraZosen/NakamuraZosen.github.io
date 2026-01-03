@@ -12,13 +12,18 @@
     gtag('config', 'UA-208873990-1');
   </script>
 
-  <title>有馬・中村級戦艦｜砂式無線通信に対応した戦艦 - 中村のマインクラフト</title>
+  <title>有馬・中村級戦艦 - 中村のマインクラフト</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,戦艦">
   <meta name="description" content="マインクラフトのレッドストーン回路でTNTキャノンを制御できる戦艦です。砂式の無線通信に対応しています。">
-  <link href="../style_ships.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <link href="../style_ships2.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="../../js/include.js" defer></script>
+  <script src="../../js/common.js" defer></script>
+  <script src="../../js/modal.js" defer></script>
 </head>
 
 <body>
@@ -27,40 +32,41 @@
   </header>
 
   <main>
-    <div class="img">
-      <img src="arimanakamura.webp" alt="戦艦有馬" title="戦艦有馬">
-    </div>
     <div class="overview">
-      <h1 class="overview__name">有馬・中村級戦艦</h1>
-      <p class="overview__charactristics">
-        中村の最新フラッグシップモデル。<br>
-        最も高い攻撃、及び防御性能を持つ。基本制御装置として第二世代四天王プラットフォームを搭載。<br>
-      </p>
+      <img  class="hero-img" src="arimanakamura.webp" alt="SAI3級戦艦" title="SAI3級戦艦">
+      <div class="filter"></div>
+      <div class="overview__wrapper">
+        <h1 class="overview__name">有馬・中村級戦艦</h1>
+        <p class="overview__charactristics">
+          中村の最新フラッグシップモデル。<br>
+          最も高い攻撃、及び防御性能を持つ。基本制御装置として第二世代四天王プラットフォームを搭載。
+        </p>
+      </div>
     </div>
 
-    <div class="spacification">
+    <section class="spacification">
       <h2 class="spacification__name">仕様</h2>
       <div class="spacification__container">
         <div class="spacification__content">
-          <h3 class="spacification__content-name">大きさ</h3>
           <table>
+            <caption class="spacification__content-name">寸法</caption>
             <tr>
-              <td>全長</td><td>317m</td>
+              <td>全長</td><td>317 m</td>
             </tr>
             <tr>
-              <td>全幅</td><td>41m</td>
+              <td>全幅</td><td>41 m</td>
             </tr>
             <tr>
-              <td>吃水</td><td>14m</td>
+              <td>吃水</td><td>14 m</td>
             </tr>
             <tr>
-              <td>総ブロック数</td><td>103115</td>
+              <td>総ブロック数</td><td>103,115</td>
             </tr>
           </table>
         </div>
         <div class="spacification__content">
-          <h3 class="spacification__content-name">装置</h3>
           <table>
+            <caption class="spacification__content-name">装置</caption>
             <tr>
               <td>主制御装置</td><td><a href="https://zosen.nnz-design.com/Products/FCS/index.html">FCS-F1</a></td>
             </tr>
@@ -76,29 +82,35 @@
           </table>
         </div>
         <div class="spacification__content">
-          <h3 class="spacification__content-name">兵装</h3>
           <table>
+            <caption class="spacification__content-name">兵装</caption>
             <tr>
-              <th>種別</th><th>型式x搭載数</th><th>弾頭数</th>
+              <th>種別</th><th>型式 (16c時弾頭数)</th><th>搭載数</th>
             </tr>
             <tr>
-              <td>主砲</td><td><a href="https://zosen.nnz-design.com/Products/mka1/index.html">Mk.A1</a> x 4</td><td>480 x 2</td>
+              <td>主砲</td><td><a href="https://zosen.nnz-design.com/Products/mka1/index.html">Mk.A1</a> (960)</td><td>4</td>
             </tr>
             <tr>
-              <td>副砲</td><td><a href="https://zosen.nnz-design.com/Products/mkj2/index.html">Mk.J2</a> x 8</td><td>280 x 2</td>
+              <td>副砲</td><td><a href="https://zosen.nnz-design.com/Products/mkj2/index.html">Mk.J2</a> (560)</td><td>8</td>
             </tr>
             <tr>
-              <td>拡散砲</td><td><a href="https://zosen.nnz-design.com/Products/typeOG/index.html">Type OG</a> x 2</td><td>416</td>
+              <td>拡散砲</td><td><a href="https://zosen.nnz-design.com/Products/typeOG/index.html">Type OG</a> (416)</td><td>2</td>
             </tr>
             <tr>
-              <td>対空砲</td><td><a href="https://zosen.nnz-design.com/Products/typeF/index.html">Type F</a> x 4</td><td></td>
+              <td>対空砲</td><td><a href="https://zosen.nnz-design.com/Products/typeF/index.html">Type F L</a> </td><td></td>
             </tr>
           </table>
         </div>
       </div>
+    </section>
+
+    <div class="images">
+      <img src="./resized/arima-1.webp" alt="本作品の前面">
+      <img src="./resized/arima-2.webp" alt="本作品の背面">
+      <div class="filter"></div>
     </div>
 
-    <div class="description">
+    <section class="description">
       <h2 class="description__name">解説</h2>
       <h3 class="description__chapter">開発経緯</h3>
       <p>
@@ -115,7 +127,7 @@
       </p>
       <h3 class="description__chapter">兵装</h3>
       <p>
-        　主砲配置は最も合理的な連装4基配置。これは前作と同じですが、副砲配置は大きく変わりました。片舷あたり連装4基8門、これは我が社の巡洋艦1隻分と同じです。前作と比較すると、攻撃力は4倍、防御力についても砲塔数が増加した分だけ向上しています。
+        　主砲配置は最も合理的な連装4基配置。これは前作と同じですが、副砲配置は大きく変わりました。片舷あたり連装4基8門、これは同世代の巡洋艦1隻分と同じです。前作と比較すると、攻撃力は4倍、防御力についても砲塔数が増加した分だけ向上しています。
       </p>
       <h3 class="description__chapter">装置</h3>
       <p>
@@ -126,9 +138,20 @@
         　船体内はほとんどが居住区としてデザインされています。寝室、食堂、そして風呂などが再現されています。また、天井に照明の回路をつなげてあるので艦内の照明は一斉操作可能です
         。
       </p>
+    </section>
+
+    <div class="images">
+      <img src="./resized/scrshot2.webp" alt="">
+      <div class="filter"></div>
     </div>
-    <div class="distributions">
+
+    <section class="distributions">
       <h2 class="distributions__name">配布フォーム</h2>
+      <p>
+        ※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。<br>
+        ※google, dropboxのログインは不要です。<br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh8NzM_RGn50L5WsNhh13nltpO50aodwJcDDqJiKV-cVgtsA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">不具合等報告フォーム<span class="material-symbols-outlined">open_in_new</span></a>
+      </p>
       <div class="distributions__step">
         <span>1. 下のリンクをクリック</span>
         <div class="arrow sample5-2"></div>
@@ -136,28 +159,26 @@
         <div class="arrow sample5-2"></div>
         <span>3. dropboxでデータを受け取る</span>
       </div>
-      <div class="backbutton">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6vRR-7UtbxdBxaqhmPtfpr2UolB1nOSqInThDx21Q7An8nA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><span>アンケートに答えてこの船を入手！</span></a>
+      <div class="button__wrapper">
+        <a class="dlButton button" id="dlButton" href="https://docs.google.com/forms/d/e/1FAIpQLSc6vRR-7UtbxdBxaqhmPtfpr2UolB1nOSqInThDx21Q7An8nA/viewform?usp=sf_link"><span>アンケートに答えてこの船を入手<span class="material-symbols-outlined">open_in_new</span></span></a>
       </div>
-      <p>※PC版マインクラフト用のデータです。形式は.schematic（ワードデータではない）で、これを扱うにはMCEditが必要です。※google, dropboxのログインは不要です。</p>
-      </div>
-    </div>
-    <div class="relatedMovie">
+    </section>
+
+    <section class="relatedMovie">
       <h2>出演動画</h2>
       <div class="relatedMovie__container">
-        <span id="relatedMovie__button"></span>
+        <span id="showModal"></span>
         <img src="thumbnail.webp" alt="play movie">
       </div>
-    </div>
-    <div id="iframeModal__background">
-      <div class="iframeModal__card">
+    </section>
 
-        <div id="iframeModal__closeButton">閉じる</div>
-      </div>
-    </div>
+    <dialog closedby="any" class="iframeModal__card">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/m7SgsqS9Woo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button><span class="material-symbols-outlined">close</span> 閉じる</button>
+    </dialog>
 
     <div class="backbutton">
-      <a href="https://zosen.nnz-design.com/Products/index.html"><span>作品一覧へ戻る</span></a>
+      <a href="../index.html"><span class="material-symbols-outlined">arrow_back</span> <span>作品一覧へ戻る</span></a>
     </div>
 
   </main>
@@ -165,8 +186,6 @@
   <footer id="footer">
 
   </footer>
-  <script src="./script.js"></script>
-  <script src="../../shareScript.js"></script>
 </body>
 
 </html>
