@@ -22,14 +22,26 @@ function import_json(json_path) {
 function memorise_json(data) {
   console.log(data);
   data_array = data;
-  draw_table();
+  first_draw();
 }
 
 //　検索とフィルタを読み取り
 const refresh_button = document.querySelector('#refresh_table');
-refresh_button.addEventListener('click', refresh_table);
+const and_search = document.querySelector('#and_search');
+//OR検索
+refresh_button.addEventListener('click', function() {
+  const isIncludes = (arr, target) => arr.some(el => target.includes(el));
+  refresh_table(isIncludes);
+});
+//AND検索
+and_search.addEventListener('click', function() {
+  const isSubset = (array1, array2) =>
+    array2.every((element) => array1.includes(element));
+  refresh_table(isSubset);
+  //https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+});
 // テーブルを更新
-function refresh_table() {
+function refresh_table(isMatch) {
   // チェックボックスを読み取り
   const chk1 = document.form1.tag;
   let selectedTags = [];
@@ -38,8 +50,6 @@ function refresh_table() {
       selectedTags.push(chk1[i].value);
     }
   }
-  console.log('filter refreshed: ');
-  console.log(selectedTags);
 
   //現在のテーブルを削除
   while (tbody.firstChild) {
@@ -47,47 +57,16 @@ function refresh_table() {
   }
 
   // テーブル本体を作成
-  for (var i = 0; i < data_array.length; i++) {
-    // チェックされている場合、タグが選択されてい無ければ飛ばす。
-    if (selectedTags.length !== 0) {
-      const isIncludes = (arr, target) => arr.some(el => target.includes(el));
-      if (isIncludes(data_array[i]['tags'], selectedTags) === false) {
-        console.log('skipped');
-        continue;
-      }
-    }
-    // tr要素を生成
-    var tr = document.createElement('tr');
-    tr.id = 'no' + (i + 1);
-    // th・td部分のループ
-    for (var key in data_array[0]) {
-      // td要素を生成
-      var td = document.createElement('td');
-      // td要素内にテキストを追加
-      // idならリンク化
-      if (key === "リンク") {
-        let anchor = document.createElement('a');
-        anchor.href = data_array[i][key]
-        anchor.target = '_blank'
-        anchor.innerText = key
-        td.appendChild(anchor);
-      } else {
-        //　リンクでなければ追加
-        td.textContent = data_array[i][key];
-      }
-      // td要素をtr要素の子要素に追加
-      tr.appendChild(td);
-    }
-    // tr要素をtable要素の子要素に追加
-    tbody.appendChild(tr);
-  }
+  draw_table(selectedTags, isMatch);
+
   document.getElementById('hit_channels').innerText = 'ヒットしたチャンネル数：' + tbody.children.length;
   //tablesorter更新
   $(".sort-table").trigger("update");
 }
 
 // テーブルを描画
-function draw_table() {
+function first_draw() {
+  let selectedTags = [];
 
   // ヘッダーを作成
   const thead_tr = document.createElement('tr');
@@ -104,32 +83,7 @@ function draw_table() {
   thead.appendChild(thead_tr);
 
   // テーブル本体を作成
-  for (var i = 0; i < data_array.length; i++) {
-    // tr要素を生成
-    var tr = document.createElement('tr');
-    tr.id = 'no' + (i + 1);
-    // th・td部分のループ
-    for (var key in data_array[0]) {
-      // td要素を生成
-      var td = document.createElement('td');
-      // td要素内にテキストを追加
-      // idならリンク化
-      if (key === "リンク") {
-        let anchor = document.createElement('a');
-        anchor.href = data_array[i][key]
-        anchor.target = '_blank'
-        anchor.innerText = key
-        td.appendChild(anchor);
-      } else {
-        //　リンクでなければ追加
-        td.textContent = data_array[i][key];
-      }
-      // td要素をtr要素の子要素に追加
-      tr.appendChild(td);
-    }
-    // tr要素をtable要素の子要素に追加
-    tbody.appendChild(tr);
-  }
+  draw_table(selectedTags);
 
   //channel quantity
   document.getElementById('channels').innerText = '調査済みチャンネル数：' + data_array.length;
@@ -139,8 +93,38 @@ function draw_table() {
   });
 }
 
-
-
+// テーブル本体を作成
+function draw_table(selectedTags, isMatch) {
+  console.log(selectedTags);
+  // リンク化の条件
+  const urlRegex = /(https?:\/\/[^\s<>"]+)/g;
+  for (var i = 0; i < data_array.length; i++) {// 列の処理
+    
+    if (selectedTags.length !== 0) {// 検索条件を満たしてい無ければ飛ばす。  
+      if (isMatch(data_array[i]['tags'], selectedTags) === false) {
+        continue;
+      }
+    }
+    // tr要素を生成
+    var tr = document.createElement('tr');
+    tr.id = 'no' + (i + 1);
+    // th・td部分のループ
+    for (var key in data_array[0]) {// 行の処理
+      // td要素を生成
+      var td = document.createElement('td');
+      // td要素内にテキストを追加
+      td.innerHTML = data_array[i][key];
+      // td内が
+      td.innerHTML = td.innerHTML.replace(urlRegex, url => {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">開く</a>`;
+      });
+      // td要素をtr要素の子要素に追加
+      tr.appendChild(td);
+    }
+    // tr要素をtable要素の子要素に追加
+    tbody.appendChild(tr);
+  }
+}
 
 //select research date form url query parameter
 const params = new URLSearchParams(window.location.search);
@@ -151,7 +135,9 @@ if (params.has("date") == true) {
   let json_path = 'https://zosen.nnz-design.com/Statistics/createrList/createrList_' + params.get("date") + '.json';
   import_json(json_path);  
 } else {
-  target.innerText = "調査日時が選択されていません。";
+  const latestDate = document.getElementById("latest").href;
+  window.location.href = latestDate;
+  // target.innerText = "調査日時が選択されていません。";
 }
 // 古い調査ではタグ検索を隠す
 console.log(Number(params.get("date")));
