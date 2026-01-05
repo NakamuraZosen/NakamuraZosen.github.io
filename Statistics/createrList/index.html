@@ -14,7 +14,7 @@
 
   <title>マインクラフト軍事部系YouTubeチャンネル全数調査 - 中村のマインクラフト</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#440088">
   <meta name="keywords" content="マインクラフト,中村造船,回路,船,ブログ">
   <meta name="description"
@@ -23,6 +23,9 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
   <link rel="stylesheet" href="./style.css">
+  <script src="../../js/include.js" defer></script>
+  <script src="../../js/common.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -39,10 +42,8 @@
         表の見方、それぞれのデータの意味と収集の目的等の詳細は<a href="../../News/diary/20220819.html">こちら</a>。
       </p>
     </div>
-    <div class="spacification">
-      <div class="spacification__container">
-        <div class="spacification__content">
-          <h3>調査年月日を変更できます</h3>
+    <div class="section dateSelection">
+          <p>調査年月日を変更できます</p>
           <ul>
             <li><a href="./index.html?date=20210404">2021年04月04日</a></li>
             <li><a href="./index.html?date=20210917">2021年09月17日</a></li>
@@ -51,13 +52,13 @@
             <li><a href="./index.html?date=20230317">2023年03月17日</a></li>
             <li><a href="./index.html?date=20230908">2023年09月08日</a></li>
             <li><a href="./index.html?date=20240421">2024年04月21日</a></li>
-            <li><a href="./index.html?date=20250521">2025年05月21日</a><font color="red"><b> New</b></font></li>
+            <li><a href="./index.html?date=20250521" id="latest">2025年05月21日</a><font color="red"><b> New</b></font></li>
           </ul>
-          <p id="researchDate"></p>
-          <p id="channels"></p>
-        </div>
-      </div>
     </div>
+
+    <h2><span id="researchDate"></span></h2>
+    <p id="channels"></p>
+
     <div id="filter__container" class="filter__container">
       <h3>タグ検索</h3>
       <form name="form1">
@@ -77,20 +78,23 @@
         <label><input type="checkbox" name="tag" value="軍事部要素少な目" />軍事部要素少な目</label>
         <label><input type="checkbox" name="tag" value="チャンネル消滅" />チャンネル消滅</label>
       </form>
-      <input class="refresh__button" id="refresh_table" type="button" value="更新する">
+      <div class="button_wrapper">
+        <input class="refresh__button" id="refresh_table" type="button" value="OR検索">
+        <input class="refresh__button" id="and_search" type="button" value="AND検索">
+      </div>
       <p id="hit_channels"></p>
     </div>
     <br>
-        
-    <table class="sort-table output_csv">
-    </table>
+    
+    <div class="table-wrapper">
+      <table class="sort-table output_csv"></table>
+    </div>
+    
   </main>
 
   <footer id="footer">
 
   </footer>
-  <script src="../../shareScript.js"></script>
-  <script src="./script.js"></script>
 </body>
 
 </html>
