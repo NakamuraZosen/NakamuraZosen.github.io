@@ -1,15 +1,14 @@
 @charset "UTF-8";
-@import url(../../sharestyle.css);
+@import url(../../css/common.css);
 
+/**********Title**************************************************/
 .overview {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-bottom: 1px solid silver;
+  padding: 1em;
 }
 .overview__charactristics {
   text-align: center;
 }
+/*
 .spacification {
   width: 90%;
   max-width: 1000px;
@@ -26,18 +25,49 @@
 }
 .spacification__content-name {
   text-align: center;
+}*/
+.dateSelection {
+  padding: 1em;
+  background-color: var(--c-bg-neutral);
+  box-shadow: inset  0px 0px 10px 0px rgba(0 0 0 / 0.25);
+}
+.dateSelection p {
+  margin-top: 0;
+  font-weight: bold;
+}
+.dateSelection ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*overflow-x: scroll;*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+.dateSelection li {
+  word-break: keep-all;
+  padding: .5em;
+  background-color: var(--c-bg-base);
+  border-radius: 10px;
 }
 
+/**********Title h2**************************************************/
+#channels {
+  text-align: center;
+}
+
+/**********Tag filter**************************************************/
 .filter__container {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 1em;
+
+  border: 1px solid mediumpurple;
+  border-radius: 10px;
 }
 .filter__container h3 {
   text-align: center;
-}
-.filter__container form {
-  padding: .5em;
 }
 .filter__container label {
   display: inline-block;
@@ -49,38 +79,34 @@
 .filter__container p {
   text-align: center;
 }
-
-
+.button_wrapper {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
 .refresh__button {
-  font-weight: bold;
-  color: #333;
-  display: block;
-  margin: 0 auto;
-  padding: .5em 1em;
-}
-
-.backbutton:hover {
-  background-color: blueviolet;
-  transition: .2s;
-}
-.backbutton {
-  color: #fff;
-  background-color: #408;
-  width: max-content;
-  margin: 20px auto;
-  border: 2px solid silver;
-  border-radius: 9999px;
-}
-.backbutton a {
-  display: block;
+  margin: 0 1em;
   padding: 1em 2em;
-  text-decoration: none;
-  color: inherit;
-}
+  border: none;
+  border-radius: 10px;
+  border: 1px solid gray;
+  background-color: rgb(from dimgray r g b / 0.1);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
+  color: var(--c);
+  font-weight: bold;
+  text-align: center;
+}
+.refresh__button:hover {
+  background-color: rgb(from dimgray r g b / 0.2);
+}
 /*reset tablesorter style*/
-.tableWrapper {
-  width: 100vw;
+.table-wrapper {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  overflow-x: scroll;
 }
 .tablesorter-default {
   width: auto;
@@ -94,14 +120,13 @@
 .tablesorter-default td {
   background-color: var(--c-bg-base);
   border-bottom: none;
+  padding: 2px;
 }
 .tablesorter-default tr:nth-child(even) td {
   background-color: var(--c-bg-neutral);
 }
-.tablesorter-default tr:hover {
-  
+.tablesorter-default tr:hover {  
   background-color: #000;
-
 }
 .tablesorter-default a {
   display: block;
