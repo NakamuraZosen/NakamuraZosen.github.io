@@ -279,7 +279,7 @@ tr:first-child td, th {
   width: 90%;
   max-width: 1000px;
   padding: 1.5em 2em;
-  background-color: rgb(from dimgray r g b / .25);
+  background-color: rgb(from gray r g b / .1);
   box-shadow: 0px 2px 10px 0px rgba(0 0 0 / 0.25);
   border-radius: 10px;
 
@@ -342,20 +342,24 @@ tr:first-child td, th {
   max-height: 50.625vw;
   margin: 0 auto;
   background-color: gray;
+  /*以下なぜかbuttonに適用不可*/
+  border-radius: 10px;
+  overflow: hidden;  
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .relatedMovie__container img {
+  display: block;
   width: 100%;
 }
-#showModal {
-  position: absolute;
-  width: 560px;
-  height: 315px;
-  max-width: 90%;
-  max-height: 50.625vw;
-  cursor : pointer;
+.relatedMovie__container img:hover {
+  filter: brightness(0.75);
 }
-#showModal:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+#showModal {
+  display: block;
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  cursor : pointer;
 }
 
 dialog {
