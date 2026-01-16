@@ -1,51 +1,58 @@
 @charset "utf-8";
-@import url(../sharestyle.css);
+@import url(../css/common.css);
 
-/*style for content*/
+/***********************style for card**********************/
+body {
+  background-color: var(--c-bg-neutral);
+}
+.card {
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 1000px;
+  margin: 60px auto;
+  margin-bottom: 2em;
+  padding: 60px;
+  border-radius: 20px;
 
-.content__name {
+  background-color: var(--c-bg-base);
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.ColumnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.content__name {/*h2*/
+  margin-top: 3em;
   padding: .5em;
   border: 2px solid var(--main-color);
   border-radius: 9px;
   box-shadow:  0px 0px 10px 0px rgb(0, 0, 0, 0.25);
 }
+.Title {
+  border-bottom: 1px solid var(--c-border);
+}
+.Title p {/*date*/
+  margin: 0;
+  font-size: small;
+  font-weight: bold;
+  opacity: 0.75;
+}
+.Title__subtitle {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .card {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+}
+
+/***********************style for content**********************/
 h3 {
   margin-top: 2em;
   padding-left: 1em;
   border-left: 8px solid var(--main-color);
-}
-.card {
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
-  border: 1px solid silver;
-  border-radius: 20px;
-  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
-}
-.Title {
-  width: 90%;
-  max-width: 1728px;
-  margin: 0 auto;
-  border-bottom: 1px solid silver;
-}
-
-.Title__subtitle {
-  text-align: center;
-}
-.content {
-  width: 90%;
-  max-width: 1728px;
-  margin: 0 auto;
-}
-.index {
-  width: max-content;
-  padding: 1em 2em;
-  margin: 0 auto;
-  border: 1px solid silver;
-  border-radius: 9px;
-}
-.index a {
-  text-overflow: ellipsis;
 }
 main img {
   width: 480px;
@@ -65,10 +72,8 @@ main img {
 .tableArea__content {
   margin: .5em;
   padding: .5em;
-  background-color: var(--c-bg-highlight);
   border-radius: 9px;
-  border: 1px solid silver;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--main-color);
 }
 .tableArea__content h4 {
   text-align: center;
@@ -79,28 +84,85 @@ table {
 }
 td, th {
   padding: .2em .8em;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid var(--c-border);
 }
 tr:first-child td, th {
-  border-top: 1px solid silver;
+  border-top: 1px solid var(--c-border);
 }
-.backbutton:hover {
-  background-color:  var(--c-hover);
+
+/***********************style for toc**********************/
+.index {
+  padding: 60px;
+  margin: 60px auto;
+  border: 1px solid var(--c-border);
+  border-radius: 9px;
+}
+.index a {
+  text-overflow: ellipsis;
+}
+/***********************Back Button**********************/
+.backbutton {
+  margin: 2em auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.backbutton a {
+  box-sizing: border-box;
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  padding: 1.5em 2em;
+  background-color: rgb(from gray r g b / .1);
+  box-shadow: 0px 2px 10px 0px rgba(0 0 0 / 0.25);
+  border-radius: 10px;
+  border: 1px solid var(--c-border);
+
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  font-weight: bold;
+
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+  position: relative;
+}
+.backbutton a:hover {
+  opacity: 0.75;
   transform: translateY(1px);
   box-shadow: none;
   transition: .2s;
 }
-.backbutton {
-  width: max-content;
-  margin: 20px auto;
-  border: 2px solid silver;
-  border-radius: 9999px;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+.backbutton .material-symbols-outlined {
+  position: absolute;
+  left: 1.5em;
 }
-.backbutton a {
-  display: block;
-  padding: 1em 2em;
+
+/***********************New Button**********************/
+.button__wrapper {
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.button__wrapper .button {
+  width: max-content;
+  padding: .75em 1em;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  background-color: rgb(from gray r g b / .1);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   color: inherit;
   font-weight: bold;
+}
+.button:hover {
+  background-color: var(--c-hover);
+  transform: translateY(1px);
+  box-shadow: none;
+  transition: .2s;
 }
