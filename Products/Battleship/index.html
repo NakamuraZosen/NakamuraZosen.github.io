@@ -23,7 +23,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="../../js/include.js" defer></script>
   <script src="../../js/common.js" defer></script>
-  <script src="../../js/modal.js" defer></script>
 </head>
 
 <body>
@@ -167,14 +166,15 @@
     <section class="relatedMovie">
       <h2>出演動画</h2>
       <div class="relatedMovie__container">
-        <span id="showModal"></span>
-        <img src="thumbnail.webp" alt="play movie">
+        <button type="button" id="showModal" commandfor="dialog" command="show-modal">
+          <img src="thumbnail.webp" alt="関連動画のサムネイル">
+        </button>
       </div>
     </section>
 
-    <dialog closedby="any" class="iframeModal__card">
+    <dialog closedby="any" class="iframeModal__card" id="dialog">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/m7SgsqS9Woo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <button><span class="material-symbols-outlined">close</span> 閉じる</button>
+      <button type="button" commandfor="dialog" command="close"><span class="material-symbols-outlined">close</span> 閉じる</button>
     </dialog>
 
     <div class="backbutton">
