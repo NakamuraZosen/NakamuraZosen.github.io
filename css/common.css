@@ -5,9 +5,9 @@
 /*@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");*/
 /*color*/
 body {
-  --c-bg-base: whitesmoke;
-  --c-bg-neutral: gainsboro;
-  --c-bg-highlight: #dbcce9;
+  --c-bg-base: white;
+  --c-bg-neutral: #f0f0f0;
+  --c-bg-highlight: #e8dbf7;
   --c: #333;
   --c-heading: #440088;
   --c-border: silver;
