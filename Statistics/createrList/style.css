@@ -61,37 +61,41 @@
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 1em;
 
-  border: 1px solid mediumpurple;
+  border: 1px solid var(--c-border);
   border-radius: 10px;
 }
 .filter__container h3 {
-  text-align: center;
+  border-bottom: 1px solid  var(--c-border);
+  margin: 0;
+  padding: 1em;
 }
 .filter__container label {
   display: inline-block;
-  background-color: var(--c-bg-highlight);
+  
+  background-color: var(--c-bg-neutral);
   padding: .5em;
   margin: .2em;
   border-radius: 4px;
+}
+.filter__container form {
+  margin: 1em;
 }
 .filter__container p {
   text-align: center;
 }
 .button_wrapper {
-  margin-top: 1em;
+  margin: 1em;
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  gap: 1em;
 }
 .refresh__button {
-  margin: 0 1em;
-  padding: 1em 2em;
+  padding: .75em 1em;
   border: none;
-  border-radius: 10px;
-  border: 1px solid gray;
+  border-radius: 5px;
+  border: 2px solid mediumpurple;
   background-color: rgb(from dimgray r g b / 0.1);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
   color: var(--c);
   font-weight: bold;
