@@ -43,20 +43,29 @@ main img {
 .spacification__content-name {
   text-align: center;
 }
-/*style for table*/
-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-}
+/**********table**************************************************/
 td, th {
   padding: .2em .8em;
-  border-bottom: 1px solid silver;
+  border-radius: 5px;
+  border: 1px solid var(--c-border);
 }
-tr:first-child td, th {
-  border-top: 1px solid silver;
+th {
+  background-color: var(--c-bg-highlight);
 }
 /*end of changed area*/
 
+/**********column**************************************************/
+.ColumnWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+.ColumnWrapper div {
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+/**********column end**************************************************/
 .description {
   width: 90%;
   max-width: 1728px;
